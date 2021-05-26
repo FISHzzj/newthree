@@ -58,7 +58,7 @@ export default {
 .footer {
     .nav_1 {
         position: fixed;
-        background: #fff;
+        background: #000000;
         bottom: 0;
         left: 0;
         width: 100%;
@@ -77,7 +77,7 @@ export default {
                 font-size: 3.2vw;
                 color: #999;
                 &.on {
-                    color: #333;
+                    color: #fff;
                 }
             }
         }

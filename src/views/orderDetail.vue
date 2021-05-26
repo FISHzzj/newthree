@@ -257,7 +257,7 @@ export default {
         top: 0;
         left: 0;
         position: fixed;
-        background: #da428d;
+        background: #000000;
         z-index: 100;
         color: #fff;
     }
@@ -267,7 +267,7 @@ export default {
         left: 0;
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #da428d, #fff);
+        background-image: linear-gradient(180deg, #000000, #fff);
     }
     .top {
         position: relative;
@@ -323,7 +323,7 @@ export default {
             }
             .copy {
                 color: #fff;
-                background: #da428d;
+                background: #000000;
                 line-height: 8vw;
                 border-radius: 4vw;
                 padding: 0 3vw;
@@ -349,7 +349,7 @@ export default {
                 width: 25vw;
                 text-align: center;
                 .num {
-                    color:#da428d;
+                    color:#000000;
                     font-weight: 600;
                     font-size: 10vw;
                 }
@@ -395,7 +395,7 @@ export default {
                         width: 1vw;
                         height: 4.5vw;
                         left: 0;
-                        background: #da428d;
+                        background: #000000;
                         margin: auto 0;
                         position: absolute;
                     }
@@ -425,7 +425,7 @@ export default {
                     color: #fc4142;
                 }
                 .right {
-                    color: #da428d;
+                    color: #000000;
                 }
                 .middle {
                     width: 60%;
@@ -439,7 +439,7 @@ export default {
                         span {
                             position: absolute;
                             color: #fff;
-                            background: #da428d;
+                            background: #000000;
                             padding: 0 2vw;
                             border-radius: 1vw;
                             right: -4vw;
@@ -458,7 +458,7 @@ export default {
                 text-align: right;
                 padding-right: 3vw;
                 p {
-                    color: #da428d;
+                    color: #000000;
                     span {
                         font-size: 6vw;
                         font-weight: 600;
@@ -476,7 +476,7 @@ export default {
             .left {
                 color: #333;
                 span {
-                    color: #da428d;
+                    color: #000000;
                     font-weight: 600;
                 }
             }
@@ -499,7 +499,7 @@ export default {
             .name1 {
                 width: 60vw;
                 height: 4vw;
-                background: #da428d;
+                background: #000000;
             }
             .des {
                 color: #666;
@@ -524,7 +524,7 @@ export default {
                     margin: 0 1vw;
                     font-weight: 600;
                     font-size: 3.47vw;
-                    color: #da428d;
+                    color: #000000;
                 }
             }
         }
@@ -589,7 +589,7 @@ export default {
             text-align: center;
             line-height: 12vw;
             border-radius: 2vw;
-            background: #da428d;
+            background: #000000;
         }
     }
 }

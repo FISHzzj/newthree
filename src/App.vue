@@ -63,7 +63,7 @@ export default {
     width: 100%;
     box-sizing: border-box;
     height: 100vh;
-    background-color: #fff;
+    background-color: #000000;
 }
 /* 过度动画 */
 /* 进入 新页面 */

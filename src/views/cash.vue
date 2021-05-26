@@ -26,7 +26,7 @@
             </div> -->
         </div>
   
-        <van-tabs v-model="active" line-height="0" title-active-color="#da428d" swipe-threshold="4" :animated="true" :swipeable="true">
+        <van-tabs v-model="active" line-height="0" title-active-color="#000000" swipe-threshold="4" :animated="true" :swipeable="true">
             <van-tab :name="item.type" :title="item.name" v-for="(item, index) in navList" :key="index">
                 <div class="buy_num">
                     <div class="title">提现数量</div>
@@ -326,7 +326,7 @@ export default {
             height: 12vw;
         }
         .tips {
-            color: #da428d;
+            color: #000000;
             font-size: 3.2vw;
             line-height: 10vw;
         }
@@ -351,7 +351,7 @@ export default {
         line-height: 12vw;
         text-align: center;
         color: #fff;
-        background: #da428d;
+        background: #000000;
         border-radius: 1vw;
     }
     .mask {

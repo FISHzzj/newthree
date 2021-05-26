@@ -1,16 +1,21 @@
 <template>
     <div class="products">
+        <div class="header">
+            <van-icon @click="$router.go(-1)" name="arrow-left" size="20" />
+            <p>产品</p>
+        </div>
+        <div style="height:12vw"></div>
         <!-- 首页轮播 -->
-        <swiper ref="mySwiper" class="mySwiper" :options="swiperOptions">
+        <!-- <swiper ref="mySwiper" class="mySwiper" :options="swiperOptions">
             <swiper-slide v-for="(item, index) in banner" :key="index">
                 <a href="#">
                     <img :src="item" alt="">
                 </a>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
-        </swiper>
+        </swiper> -->
         <!-- 顶部导航 -->
-        <div class="nav flex ali_center flex_around">
+        <!-- <div class="nav flex ali_center flex_around">
             <div class="item" @click.stop="changenav(item.id, index)" v-for="(item, index) in nav" :key="index" :class="{on: status == item.id}">
                 
                 <img :src="b" alt="" v-if="index == 0">
@@ -19,7 +24,7 @@
                 <img :src="x" alt="" v-if="index == 3">
                 <div>{{item.name}}专区</div>
             </div>
-        </div>
+        </div> -->
         <!-- 商品列表 -->
         <div class="list">
             <van-list
@@ -51,11 +56,11 @@
             </van-list>
 
         </div>
-        <div class="bgbottom flex ali_center">
+        <!-- <div class="bgbottom flex ali_center">
             <img src="@/assets/images/home/laba_bai.png" alt="">
             <div>专业的矿机租赁 算力交易平台</div>
-        </div>
-        <bottom-nav></bottom-nav>
+        </div> -->
+        <!-- <bottom-nav></bottom-nav> -->
     </div>
 </template>
 <script>
@@ -192,6 +197,30 @@ export default {
 </script>
 <style lang="less" scope>
 .products {
+    .header {
+        width: 100%;
+        height: 12vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: #000;
+        color: #fff;
+        .van-icon {
+            position: absolute;
+            top: 0;
+            left: 3vw;
+            bottom: 0;
+            height: 4vw;
+            margin: auto 0;
+        }
+        p {
+            width: 100%;
+            line-height: 12vw;
+            font-size: 4vw;
+            text-align: center;
+        }
+    }
     .mySwiper {
         .swiper-container {
             background: #ccc;
@@ -276,7 +305,7 @@ export default {
                     padding-left: 2vw;
                     // color:#fff;
                     span {
-                        color: #da428d;
+                        color: #fff;
                         margin: 0 1vw;
                     }
                 }
@@ -304,7 +333,7 @@ export default {
                     right: 0;
                     text-align: right;
                     .price {
-                        color: #da428d;
+                        color: #fff;
                         font-size: 6vw;
                         font-weight: 600;
                         span {

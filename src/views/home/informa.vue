@@ -94,7 +94,7 @@ export default {
             background: #ccc;
         }
         .pagination-bullet-active {
-            color: #da428d!important;
+            color: #000000!important;
         }
         .swiper-slide {
             height: 50vw;

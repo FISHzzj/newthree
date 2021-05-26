@@ -134,7 +134,7 @@ export default {
         top: 0;
         left: 0;
         position: fixed;
-        background: #da428d;
+        background: #000000;
         z-index: 100;
         color: #fff;
     }
@@ -144,7 +144,7 @@ export default {
         left: 0;
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #da428d, #fff);
+        background-image: linear-gradient(180deg, #000000, #fff);
     }
     .top {
         position: relative;
@@ -158,7 +158,7 @@ export default {
             line-height: 12vw;
             font-size: 3.47vw;
             color: #333;
-            background:#da428d;
+            background:#000000;
         }
         .order_status {
             padding: 0 4vw;
@@ -200,7 +200,7 @@ export default {
             }
             .copy {
                 color: #fff;
-                background: #da428d;
+                background: #000000;
                 line-height: 8vw;
                 border-radius: 4vw;
                 padding: 0 3vw;
@@ -225,7 +225,7 @@ export default {
             .name1 {
                 width: 60vw;
                 height: 4vw;
-                background: #da428d;
+                background: #000000;
             }
             .des {
                 color: #666;
@@ -250,7 +250,7 @@ export default {
                     margin: 0 1vw;
                     font-weight: 600;
                     font-size: 3.47vw;
-                    color: #da428d;
+                    color: #000000;
                 }
             }
         }

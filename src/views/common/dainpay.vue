@@ -96,11 +96,11 @@ export default {
                 color: #fff;
                 border-radius: 4vw;
                 text-align: center;
-                background: #da428d;
+                background: #000000;
             }
         }
         .forget {
-            color: #da428d;
+            color: #000000;
             font-size: 3.47vw;
             line-height: 12vw;
         }

@@ -139,7 +139,7 @@ export default {
             border-radius: 1vw;
             text-align: center;
             span {
-                color: #da428d;
+                color: #000000;
                 margin: 0 1vw;
             }
             background: #fff;
@@ -167,7 +167,7 @@ export default {
         }
     }
     .save {
-        background: #da428d;
+        background: #000000;
         width: 92vw;
         position: fixed;
         bottom: 2vw;

@@ -27,7 +27,7 @@
                         <!-- <img src="" alt=""> -->
                     </div>
                 </div>
-                <div class="nav flex ali_center flex_between">
+                <!-- <div class="nav flex ali_center flex_between">
                     <div class="item">
                         <div class="num">{{fil}}</div>
                         <div class="type">FIL佣金</div>
@@ -40,27 +40,27 @@
                         <div class="num">{{btc}}</div>
                         <div class="type">BTC佣金</div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="teaminfo">
                 <div class="infos">
-                    <div class="title">团队总人数</div>
-                    <div class="num"><span>{{team}}</span>人</div>
+                    <!-- <div class="title">团队总人数</div>
+                    <div class="num"><span>{{team}}</span>人</div> -->
                     <div class="title">团队总投资</div>
                 </div>
                 <div class="nav flex ali_center flex_between">
                     <div class="item">
-                        <div class="type">CNY总投资</div>
+                        <div class="type">团队总人数</div>
                         <div class="num">{{cnyinfo}}</div>
                     </div>
                     <div class="item">
-                        <div class="type">USDT总投资</div>
+                        <div class="type">团队总业绩</div>
                         <div class="num">{{usdtinfo}}</div>
                     </div>
-                    <div class="item">
+                    <!-- <div class="item">
                         <div class="type">BTC总投资</div>
                         <div class="num">{{btcinfo}}</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="list">
@@ -211,7 +211,7 @@ export default {
         width: 92vw;
         bottom: 4vw;
         left: 4vw;
-        background: #da428d;
+        background: #000000;
         height: 12vw;
         text-align: center;
         color: #fff;
@@ -223,7 +223,7 @@ export default {
             background: #999!important;
         }
     .top {
-        background: #da428d;
+        background: #000000;
         background-size: 100% 100%;
         padding: 0 4vw 8vw;
         .infos {

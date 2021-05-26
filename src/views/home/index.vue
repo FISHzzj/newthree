@@ -11,10 +11,10 @@
         </swiper>
         <!-- 公告 -->
         <div class="notice flex ali_center">
-            <img src="@/assets/images/home/laba1.jpg" alt="">
+            <img src="@/assets/images/home/laba.png" alt="">
             <swiper ref="notice" class="swiper" :options="noticeSwiper">
                 <swiper-slide v-for="(item, index) in bannerTxt" :key="index" >
-                    <div style="color:#da428d;">
+                    <div >
                         <p class="line" @click="$router.push('/gonggao/'+ item.id )">{{item.title}}</p>
                     </div>
                 </swiper-slide>
@@ -22,8 +22,8 @@
             <div class="more"></div>
         </div>
         <!-- 导航控件 -->
-        <van-grid :border="false" :column-num="4">
-             <van-grid-item v-for="(item, index) in gridlist" :key="index" icon="home-o" :text="item.text" to="/" />
+        <van-grid :border="false" :column-num="4" icon-size="40" style="background:#000000;">
+             <van-grid-item v-for="(item, index) in gridlist" :key="index" :icon="item.img" :text="item.text"  :to="item.url" />
         </van-grid>
         <!-- 数据 -->
         <section class="wrapper">
@@ -37,7 +37,7 @@
                     <van-icon name="warning-o" color="#999" />
                 </div> -->
                 <div class="somenum flex ali_center">
-                    <div class="item_1" style="    width: 100%;">
+                    <div class="item_1" style="width: 100%;">
                         <div class="type" style="font-size: 3.47vw;">官方算力(T/天)</div>
                         <div class="num" style="font-size: 9.5vw;">531245.55</div>
                     </div>
@@ -165,19 +165,29 @@
         </section>
 
         <!-- 底部轮播 -->
-        <div class="activeCenter">
-            <div>USDT矿池</div>
-            <a v-for="(item, index) in footer" :key="index" @click="$router.push('/products')" href="javascript:;"><img :src="item.thumb" alt="" class="img1"></a>
+         <div class="activeCenter">
+            <div>XCH矿池</div>
+            <a  @click="$router.push('/products')" href="javascript:;"><img src="@/assets/images/bg_xch.png" alt="" class="img1"></a>
             
         </div>
         <div class="activeCenter">
-            <div>XCH矿池</div>
-            <a v-for="(item, index) in footer" :key="index" @click="$router.push('/products')" href="javascript:;"><img :src="item.thumb" alt="" class="img1"></a>
+            <div>BTC矿池</div>
+            <a href="javascript:;"><img src="@/assets/images/bg_btc.png" alt="" class="img1"></a>
+            
+        </div>
+        <div class="activeCenter">
+            <div>ETH矿池</div>
+            <a  href="javascript:;"><img src="@/assets/images/bg_eth.png" alt="" class="img1"></a>
+            
+        </div>
+        <div class="activeCenter">
+            <div>FIL矿池</div>
+            <a href="javascript:;"><img src="@/assets/images/bg_fil.png" alt="" class="img1"></a>
             
         </div>
         <div class="bgbottom flex ali_center">
             <!-- <img src="@/assets/images/home/laba_bai.png" alt=""> -->
-            <div>专业的矿机租赁 算力交易平台</div>
+             <div>专业的矿机租赁 算力交易平台</div>
         </div>
         <bottom-nav></bottom-nav>
     </div>
@@ -240,10 +250,10 @@ export default {
             fil_url: "",
             xch_url:"",
             gridlist:[
-                {img:"@/assets/images/home/laba2.jpg", text:"充币"},
-                {img:"@/assets/images/home/laba2.jpg", text:"提币"},
-                {img:"@/assets/images/home/laba2.jpg", text:"收益"},
-                {img:"@/assets/images/home/laba2.jpg", text:"邀请好友"}
+                {img:require("@/assets/images/icon/chongbi1.png"), text:"充币", url:'/exchange/USDT/转入'},
+                {img:require("@/assets/images/icon/tibi1.png"), text:"提币", url:'/exchangechu/USDT/转出'},
+                {img:require("@/assets/images/icon/shouyi1.png"), text:"收益", url: '/moneyDetail/USDT/0.00000000'},
+                {img:require("@/assets/images/icon/yaoqinghaoyou1.png"), text:"邀请好友", url: '/poster'}
             ]
         };
     },
@@ -307,13 +317,20 @@ export default {
 }
 </script>
 <style lang="less" scope>
+.van-grid-item__content{
+    background-color: #000000;
+}
+.van-grid-item__text{
+    color: #fff;
+}
 .index {
+    
     .mySwiper {
         .swiper-container {
             background: #ccc;
         }
         .pagination-bullet-active {
-            color: #da428d!important;
+            color: #000000!important;
         }
         .swiper-slide {
             height: 50vw;
@@ -325,6 +342,7 @@ export default {
     }
     .notice {
         padding: 0 4vw;
+        color: #fff;
         img {
             width: 5.33vw;
             height: 5.33vw;
@@ -339,12 +357,13 @@ export default {
             }
         }
         .more {
-            color: #999;
+            color: #fff;
             font-size: 3.2vw;
         }
     }
     .wrapper {
         padding: 0 4vw;
+        color: #fff;
         .title {
             height: 12vw;
             img {
@@ -359,7 +378,7 @@ export default {
             }
         }
         .item {
-            box-shadow: 2px 2px 2px 1px #e4e0e0;
+            box-shadow: 2px 2px 2px 1px #161817;
              border-radius: 5px;
              margin-bottom: 15px;
             .title_1 {
@@ -375,7 +394,7 @@ export default {
                         height: 4vw;
                         top: 0;
                         left: 0;
-                        background: #343434;
+                        background: #161817;
                         bottom: 0;
                         margin: auto 0;
                     }
@@ -384,16 +403,17 @@ export default {
             .somenum {
                 height: 28vw;
                 flex-wrap: wrap;
+                background-color: #161817;
                 .item_1 {
                     width: 32%;
                     text-align: center;
                     margin-bottom: 10px;
                     .type {
-                        color: #666;
+                        color: #fff;
                         font-size: 2.47vw;
                     }
                     .num {
-                        color: #333;
+                        color: #fff;
                         font-size: 2.5vw;
                         font-weight: 600;
                     }
@@ -402,9 +422,9 @@ export default {
         }
     }
     .activeCenter{
-        
+        background-color: #000000;
         div{
-            color: #000;
+            color: #fff;
             // padding: 10px ;
             // height: 12vw;
             padding-left: 15px;
@@ -414,8 +434,8 @@ export default {
         a{
             img{
                 width: 100vw;
-                height: 25vw;
-                border-radius: 30px;
+                height: 30vw;
+                border-radius: 5px;
                 padding: 5px 10px;
                 box-sizing: border-box;
             }
@@ -423,7 +443,8 @@ export default {
     }
     .bgbottom{
         flex-direction: column;
-        background: #eee;
+        background: #000;
+
         img{
             width: 50px;
             height: 50px;
@@ -431,7 +452,7 @@ export default {
         div{
             padding: 10px 10px;
             font-size: 12px;
-            color: #484646;
+            color: #fff;
         }
     }
 }

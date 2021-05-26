@@ -213,10 +213,10 @@ export default {
                 .realname_1 {
                     color: #fff;
                     font-size: 3.2vw;
-                    border: 1px solid #da428d;
+                    border: 1px solid #000000;
                     padding: 0.5vw 1vw;
                     border-radius: 0.5vw;
-                    background: #da428d;
+                    background: #000000;
                 }
             }
         }
@@ -249,7 +249,7 @@ export default {
         text-align: center;
         margin-top: 3vw;
         background: #fff;
-        color: #da428d;
+        color: #000000;
         font-weight: 600;
         font-size: 3.2vw;
         

@@ -260,7 +260,7 @@ export default {
                 height: 12vw;
                 width: 100%;
                 line-height: 12vw;
-                border-bottom: 1px solid #da428d;
+                border-bottom: 1px solid #000000;
             }
         }
         .usdt {
@@ -281,8 +281,8 @@ export default {
                     text-align: center;
                     margin-right: 3vw;
                     &.on {
-                        color: #da428d;
-                        border: 1px solid #da428d;
+                        color: #000000;
+                        border: 1px solid #000000;
                         background: transparent;
                     }
                 }
@@ -328,7 +328,7 @@ export default {
     .submit {
         width: 92vw;
         color: #fff;
-        background: #da428d;
+        background: #000000;
         font-size: 4.2vw;
         line-height: 12vw;
         height: 12vw;

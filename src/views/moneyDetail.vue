@@ -62,8 +62,8 @@
                 <van-icon name="exchange" color="blue" />
                 <span>兑换</span>
             </div>
-            <div class="cash" :class="{on:type == 'USDT' || type == 'CNY'}" @click="$router.push('/cash')">提现</div>
-            <div class="recharge" :class="{on:type == 'USDT' || type == 'CNY'}" @click="gorecharge">充值</div>
+            <!-- <div class="cash" :class="{on:type == 'USDT' || type == 'CNY'}" @click="$router.push('/cash')">提现</div>
+            <div class="recharge" :class="{on:type == 'USDT' || type == 'CNY'}" @click="gorecharge">充值</div> -->
         </div>
     </div>
 </template>
@@ -321,7 +321,7 @@ export default {
         .recharge {
             color: #fff;
             line-height: 12vw;
-            background: #da428d;
+            background: #000000;
             &.on {
                 width: 44vw;
             }

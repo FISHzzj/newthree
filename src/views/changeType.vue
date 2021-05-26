@@ -247,7 +247,7 @@ export default {
     .header {
         width: 100%;
         height: 12vw;
-        background: #da428d;
+        background: #000000;
         position: relative;
         color: #fff;
         .van-icon {
@@ -278,7 +278,7 @@ export default {
     .top_1 {
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #da428d, #fff);
+        background-image: linear-gradient(180deg, #000000, #fff);
     }
     .top {
         width: 92vw;
@@ -368,7 +368,7 @@ export default {
             .left {
                 color: #fc4142;
                 span {
-                    color: #da428d;
+                    color: #000000;
                 }
             }
         }
@@ -381,7 +381,7 @@ export default {
                 line-height: 6.5vw;
             }
             .right {
-                color: #da428d;
+                color: #000000;
             }
         }
     }
@@ -406,7 +406,7 @@ export default {
         left: 4vw;
         text-align: center;
         color: #fff;
-        background: #da428d;
+        background: #000000;
         border-radius: 2vw;
         width: 92vw;
     }

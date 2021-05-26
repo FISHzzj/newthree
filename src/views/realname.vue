@@ -98,7 +98,7 @@ export default {
         text-align: center;
         color: #fff;
         margin: 15vw 4vw 0;
-        background: #da428d;
+        background: #000000;
         border-radius: 1vw;
     }
 }

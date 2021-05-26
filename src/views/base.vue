@@ -90,12 +90,12 @@ export default {
             right: 4vw;
             bottom: 0;
             margin: auto 0;
-            color: #da428d;
+            color: #000000;
             font-size: 3.47vw;
         }
     }
     .top {
-        background: #da428d;
+        background: #000000;
         color: #fff;
         width:92vw;
         margin: 2vw 4vw;

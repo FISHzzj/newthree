@@ -9,8 +9,8 @@
             <img src="@/assets/images/icon/jyjl.png" alt="" />
             <div class="status success">{{log.statusText}}</div>
             <!-- <div class="status fail">充值失败</div> -->
-            <div class="tips">充值失败，请核实充值信息后再次提交充值，如有疑问请联系哈希矿场客服</div>
-            <div class="tips">资金预估在1小时内到达帐户，非工作时间，到账时间可能会有延迟，如有疑问请联系哈希矿场平台客服</div>
+            <div class="tips">充值失败，请核实充值信息后再次提交充值，如有疑问请联系中科动地云客服</div>
+            <div class="tips">资金预估在1小时内到达帐户，非工作时间，到账时间可能会有延迟，如有疑问请联系中科动地云平台客服</div>
         </div>
         <div class="content">
             <div class="item flex ali_center flex_between">
@@ -93,7 +93,7 @@ export default {
             right: 4vw;
             font-size: 3.47vw;
             margin: auto 0;
-            color: #da428d;
+            color: #000000;
             line-height: 12vw;
         }
         p {
@@ -112,7 +112,7 @@ export default {
             height: 20vw;
         }
         .success {
-            color: #da428d;
+            color: #000000;
             font-size: 4.5vw;
             line-height: 8vw;
             font-weight: 600;
@@ -142,7 +142,7 @@ export default {
                 font-weight: 600;
                 font-size: 3.47vw;
                 &.num {
-                    color: #da428d;
+                    color: #000000;
                 }
             }
         }

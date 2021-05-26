@@ -75,9 +75,9 @@
             <!-- <div class="left">资产预估(CNY) <span>≈ {{credit2}}</span></div> -->
             <div class="left"></div>
             <div class="right flex ali_center" >
-                <div class="cash" @click="$router.push('/cash')">提现</div>
-                <p></p>
-                <div class="recharge" @click="$router.push('/recharge/CNY')">充值</div>
+                <!-- <div class="cash" @click="$router.push('/cash')">提现</div>
+                <p></p> -->
+                <div class="recharge" @click="$router.push('/exchange/USDT/转入')">充值</div>
             </div>
         </div>
         <div class="list">
@@ -285,7 +285,7 @@ export default {
         .bottom {
             width: 92vw;
             border-radius: 3vw;
-            background: #da428d;
+            background: #000000;
             flex-wrap: wrap;
             .item {
                 width: 50%;
@@ -332,7 +332,7 @@ export default {
                 color: #afafb1;
             }
             .recharge {
-                color: #da428d;
+                color: #000000;
             }
             p {
                 width: 1px;

@@ -8,7 +8,7 @@
         <div style="height:12vw;"></div>
         <div class="money">
             <div class="top flex ali_center">
-                <div class="type">折合资产【CNY】</div>
+                <div class="type">折合资产【USDT】</div>
                 <i @click="iconeyeclose = !iconeyeclose" v-if="iconeyeclose" class="iconfont iconeyeopen"></i>
                 <i @click="iconeyeclose = !iconeyeclose" v-else class="iconfont iconeyeclose"></i>
             </div>
@@ -20,7 +20,7 @@
                 <span class="recharge" @click="changetype(1)">转入</span>
                 <span class="cash" @click="changetype(2)">转出</span>
                 <span class="exchange" @click="changetype(3)">兑换</span>
-                <span class="huzhuan" @click="changetype(4)">互转</span>
+                <!-- <span class="huzhuan" @click="changetype(4)">互转</span> -->
             </div>
         </div>
         <div class="list">
@@ -28,7 +28,7 @@
                 <div class="left">币种</div>
                 <div class="right">可用</div>
             </div>
-            <div @click="godetail(`CNY/${cny}`)" class="item flex ali_center">
+            <!-- <div @click="godetail(`CNY/${cny}`)" class="item flex ali_center">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/1.png" alt="" />
                     <span>CNY</span>
@@ -39,7 +39,7 @@
                     <span class="num1" v-if="iconeyeclose">≈{{cny}}CNY</span>
                     <div class="num1" v-else>* * * *</div>
                 </div>
-            </div>
+            </div> -->
             <div @click="godetail(`USDT/${usdt}`)" class="item flex ali_center">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/5.png" alt="" />
@@ -52,7 +52,7 @@
                     <div class="num1" v-else>* * * *</div>
                 </div>
             </div>
-            <div @click="godetail(`BTC/${btc}`)" class="item flex ali_center">
+            <!-- <div @click="godetail(`BTC/${btc}`)" class="item flex ali_center">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/4.png" alt="" />
                     <span>BTC</span>
@@ -63,8 +63,8 @@
                     <span class="num1" v-if="iconeyeclose">≈ {{btctocny}}CNY</span>
                     <div class="num1" v-else>* * * *</div>
                 </div>
-            </div>
-            <div @click="godetail(`ETH/${eth}`)" class="item flex ali_center">
+            </div> -->
+            <!-- <div @click="godetail(`ETH/${eth}`)" class="item flex ali_center">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/2.png" alt="" />
                     <span>ETH</span>
@@ -75,8 +75,8 @@
                     <span class="num1" v-if="iconeyeclose">≈ {{ethtocny}}CNY</span>
                     <div class="num1" v-else>* * * *</div>
                 </div>
-            </div>
-            <div @click="godetail(`FIL/${fil}`)" class="item flex ali_center">
+            </div> -->
+            <!-- <div @click="godetail(`FIL/${fil}`)" class="item flex ali_center">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/3.png" alt="" />
                     <span>FIL</span>
@@ -87,7 +87,7 @@
                     <span class="num1" v-if="iconeyeclose">≈ {{filtocny}}CNY</span>
                     <div class="num1" v-else>* * * *</div>
                 </div>
-            </div>
+            </div> -->
             <div @click="godetail(`XCH/${xch}`)" class="item flex ali_center">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/6.png" alt="" />
@@ -107,20 +107,20 @@
                 <span>选择币种</span>
                 <van-icon name="cross" @click="showmask = false"></van-icon>
             </div>
-            <div v-if="type != 3" class="item flex ali_center" @click="gonext('CNY')">
+            <!-- <div v-if="type != 3" class="item flex ali_center" @click="gonext('CNY')">
                 <img src="@/assets/images/icon/1.png" alt="">
                 <div class="info">
                     <div class="num">CNY</div>
                     <div class="type">余额：{{cny}}CNY</div>
                 </div>
-            </div>
-            <div class="item flex ali_center" @click="gonext('BTC')">
+            </div> -->
+            <!-- <div class="item flex ali_center" @click="gonext('BTC')">
                 <img src="@/assets/images/icon/4.png" alt="">
                 <div class="info">
                     <div class="num">BTC</div>
                     <div class="type">余额：{{btc}}BTC</div>
                 </div>
-            </div>
+            </div> -->
             <div v-if="type != 3" class="item flex ali_center" @click="gonext('USDT')">
                 <img src="@/assets/images/icon/5.png" alt="">
                 <div class="info">
@@ -128,20 +128,20 @@
                     <div class="type">余额：{{usdt}}USDT</div>
                 </div>
             </div>
-            <div class="item flex ali_center" @click="gonext('ETH')">
+            <!-- <div class="item flex ali_center" @click="gonext('ETH')">
                 <img src="@/assets/images/icon/2.png" alt="">
                 <div class="info">
                     <div class="num">ETH</div>
                     <div class="type">余额：{{eth}}ETH</div>
                 </div>
-            </div>
-            <div class="item flex ali_center" @click="gonext('FIL')">
+            </div> -->
+            <!-- <div class="item flex ali_center" @click="gonext('FIL')">
                 <img src="@/assets/images/icon/3.png" alt="">
                 <div class="info">
                     <div class="num">FIL</div>
                     <div class="type">余额：{{fil}}FIL</div>
                 </div>
-            </div>
+            </div> -->
             <div class="item flex ali_center" @click="gonext('XCH')">
                 <img src="@/assets/images/icon/6.png" alt="">
                 <div class="info">
@@ -290,7 +290,7 @@ export default {
         top: 0;
         left: 0;
         position: fixed;
-        background: #da428d;
+        background: #000000;
         z-index: 100;
         color: #fff;
         .van-icon {
@@ -320,7 +320,7 @@ export default {
     }
     .money {
         width: 100%;
-        background: #da428d;
+        background: #000000;
         color: #fff;
         padding: 3vw 4vw;
         .top {
@@ -351,7 +351,7 @@ export default {
         .title {
             padding: 0 4vw;
             font-size: 3.2vw;
-            color: #da428d;
+            color: #000000;
             height: 10vw;
             background: rgba(0,0,255,0.1);
             .left {

@@ -132,7 +132,7 @@ export default {
         }
     }
     .submit {
-        background: #da428d;
+        background: #000000;
         color: #fff;
         height: 12vw;
         line-height: 12vw;
