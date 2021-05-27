@@ -123,6 +123,7 @@ export default {
             background: #333;
             border-bottom: 1px solid #999;
             margin-bottom: 10px;
+            border-radius: 10px;
             .content{
                 margin-right: 10px;
                 padding: 0 5px;
@@ -141,6 +142,7 @@ export default {
                 img{
                     height: 120px;
                     width: 170px;
+                    border-radius: 10px;
                 }
             }
         }

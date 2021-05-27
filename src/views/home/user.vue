@@ -24,7 +24,7 @@
                 <p class="type">我的钱包</p>
             </div>
             <div class="item" @click="$router.push('/poster')">
-                <img src="@/assets/images/icon/jia.png" alt="" />
+                <img src="@/assets/images/icon/yaoqinghaoyou1.png" alt="" />
                 <p class="type">邀请好友</p>
             </div>
         </div>
@@ -77,7 +77,7 @@
             <div class="right flex ali_center" >
                 <!-- <div class="cash" @click="$router.push('/cash')">提现</div>
                 <p></p> -->
-                <div class="recharge" @click="$router.push('/exchange/USDT/转入')">充值</div>
+                <!-- <div class="recharge" @click="$router.push('/exchange/USDT/转入')">充值</div> -->
             </div>
         </div>
         <div class="list">
@@ -219,10 +219,10 @@ export default {
             .nickname {
                 font-size: 4.2vw;
                 font-weight: 600;
-                color: #333;
+                color: #fff;
             }
             .mobile {
-                color: #999;
+                color: #fff;
                 font-size: 3.2vw;
                 margin-top: 1.5vw;
             }
@@ -235,16 +235,17 @@ export default {
             background: #333;
             border-radius: 2vw;
             padding: 2vw;
-            height: 17vw;
+            height: 26vw;
+            text-align: center;
             img {
-                width: 5.33vw;
-                height: 5.33vw;
+                width: 12.33vw;
+                height: 12.33vw;
                 // background: #000;
                 margin-bottom: 1vw;
             }
             p {
                 color: #fff;
-                font-size: 3.2vw;
+                font-size: 4.2vw;
                 font-weight: 600;
             }
         }
@@ -348,7 +349,7 @@ export default {
         .item {
             padding: 0 4vw;
             height: 14vw;
-            border-bottom: 0.5px solid #999;
+            // border-bottom: 0.5px solid #999;
             .left {
                 img {
                     width: 5.33vw;

@@ -9,6 +9,10 @@
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
+        <!-- 导航控件 -->
+        <van-grid :border="false" :column-num="4" icon-size="40" style="background:#000000;">
+             <van-grid-item v-for="(item, index) in gridlist" :key="index" :icon="item.img" :text="item.text"  :to="item.url" />
+        </van-grid>
         <!-- 公告 -->
         <div class="notice flex ali_center">
             <img src="@/assets/images/home/laba.png" alt="">
@@ -21,16 +25,13 @@
             </swiper>
             <div class="more"></div>
         </div>
-        <!-- 导航控件 -->
-        <van-grid :border="false" :column-num="4" icon-size="40" style="background:#000000;">
-             <van-grid-item v-for="(item, index) in gridlist" :key="index" :icon="item.img" :text="item.text"  :to="item.url" />
-        </van-grid>
+        
         <!-- 数据 -->
         <section class="wrapper">
-            <div class="title flex ali_center">
-                <!-- <img src="@/assets/images/home/laba2.jpg" alt=""> -->
+            <!-- <div class="title flex ali_center">
+                <img src="@/assets/images/home/laba2.jpg" alt="">
                 <p>矿场运营数据</p>
-            </div>
+            </div> -->
             <div class="item" >
                 <!-- <div class="title_1 flex ali_center">
                     <p>BTC矿场</p>
@@ -39,7 +40,7 @@
                 <div class="somenum flex ali_center">
                     <div class="item_1" style="width: 100%;">
                         <div class="type" style="font-size: 3.47vw;">官方算力(T/天)</div>
-                        <div class="num" style="font-size: 9.5vw;">531245.55</div>
+                        <div class="num" style="font-size: 7.5vw;">531245.55</div>
                     </div>
                     <!-- <div class="item_1">
                         <div class="type">今日新增</div>
@@ -166,22 +167,21 @@
 
         <!-- 底部轮播 -->
          <div class="activeCenter">
-            <div>XCH矿场</div>
+            <div>矿场</div>
             <a  @click="$router.push('/products')" href="javascript:;"><img src="@/assets/images/bg_xch.png" alt="" class="img1"></a>
-            
         </div>
         <div class="activeCenter">
-            <div>BTC矿场</div>
+            <!-- <div>BTC矿场</div> -->
             <a href="javascript:;"><img src="@/assets/images/bg_btc.png" alt="" class="img1"></a>
             
         </div>
         <div class="activeCenter">
-            <div>ETH矿场</div>
+            <!-- <div>ETH矿场</div> -->
             <a  href="javascript:;"><img src="@/assets/images/bg_eth.png" alt="" class="img1"></a>
             
         </div>
         <div class="activeCenter">
-            <div>FIL矿场</div>
+            <!-- <div>FIL矿场</div> -->
             <a href="javascript:;"><img src="@/assets/images/bg_fil.png" alt="" class="img1"></a>
             
         </div>
@@ -401,7 +401,7 @@ export default {
                 }
             }
             .somenum {
-                height: 28vw;
+                height: 15vw;
                 flex-wrap: wrap;
                 background-color: #161817;
                 .item_1 {
@@ -410,11 +410,11 @@ export default {
                     margin-bottom: 10px;
                     .type {
                         color: #fff;
-                        font-size: 2.47vw;
+                        font-size: 4.47vw;
                     }
                     .num {
                         color: #fff;
-                        font-size: 2.5vw;
+                        font-size: 4.5vw;
                         font-weight: 600;
                     }
                 }
