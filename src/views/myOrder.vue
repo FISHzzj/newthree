@@ -67,12 +67,13 @@ export default {
     box-sizing: border-box;
 }
 .myOrder {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #fff;
+        background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -94,7 +95,7 @@ export default {
             width: 100%;
             height: 25vw;
             margin-bottom: 2.4vw;
-            background: #fff;
+            background: #333;
             border-radius: 3vw;
             padding: 6vw 4vw;
             img {
@@ -106,7 +107,7 @@ export default {
                 .name {
                     font-size: 4vw;
                     font-weight: 600;
-                    color: #333;
+                    color: #fff;
                 }
                 .flex {
                     p {
@@ -115,7 +116,7 @@ export default {
                         font-size: 3.2vw;
                         margin-right: 4vw;
                         span {
-                            color: #333;
+                            color: #fff;
                             font-size: 3.47vw;
                             font-weight: 600;
                         }

@@ -111,7 +111,7 @@ export default {
             let num = this.num
             let price = this.all_money
             let pid = this.status
-            if(!this.status) return Toast('请先选择规格')
+            // if(!this.status) return Toast('请先选择规格')
             this.$router.push({name: 'orderSubmit', query: {
                 id,
                 num,

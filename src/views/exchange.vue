@@ -197,12 +197,14 @@ export default {
     box-sizing: border-box;
 }
 .exchange {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
+    // height: auto;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #fff;
+        background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -230,7 +232,7 @@ export default {
     }
     .content {
         width: 92vw;
-        background: #fff;
+        background: #999;
         border-radius: 3vw;
         height: 120vw;
         margin: 0 4vw;
@@ -291,7 +293,7 @@ export default {
         }
     }
     .pays {
-        background: #fff;
+        background: #999;
         width: 92vw;
         margin: 4vw;
         padding: 0 4vw;
@@ -329,7 +331,7 @@ export default {
         border-radius: 1vw;
         margin: 4vw;
         &.on{
-            background: #000000;
+            background: #333;
         }
     }
 }

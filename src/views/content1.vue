@@ -42,10 +42,12 @@ export default {
 </script>
 <style lang="less" scoped>
 .content1 {
+    color: #fff;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;

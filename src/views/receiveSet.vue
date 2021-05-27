@@ -1,7 +1,7 @@
 <template>
     <div class="orderDetail">
         <div class="header flex flex_between ali_center">
-            <van-icon @click="$router.go(-1)" name="arrow-left" color="#000" size="20" />
+            <van-icon @click="$router.go(-1)" name="arrow-left" color="#fff" size="20" />
             <p>收/付款设置</p>
             <van-icon name="plus" @click="showList = true" color="blue" />
         </div>
@@ -145,7 +145,7 @@ export default {
 }
 .orderDetail {
     padding: 0 4vw;
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     overflow: auto;
     .header {
         width: 100vw;
@@ -154,9 +154,9 @@ export default {
         top: 0;
         left: 0;
         position: fixed;
-        background: #fff;
+        background: #000000;
         z-index: 100;
-        color: #000;
+        color: #fff;
     }
     .list {
         .item {

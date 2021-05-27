@@ -3,8 +3,8 @@
         <div class="header flex flex_between ali_center">
             <div class="title">我的</div>
             <div class="right">
-                <van-icon @click="showService = true" name="service-o" size="20" />
-                <van-icon @click="$router.push('/setting')" name="setting-o" size="20" />
+                <!-- <van-icon @click="showService = true" name="service-o" size="20" /> -->
+                <van-icon @click="$router.push('/setting')" name="setting-o" size="20" color="#fff" />
             </div>
         </div>
         <div class="userInfo flex ali_center">
@@ -190,16 +190,17 @@ export default {
     box-sizing: border-box;
 }
 .user {
-    background: #f7f7f7 !important;
+    // background: #f7f7f7 !important;
     .header {
         height: 12vw;
         padding: 0 4vw;
         .title {
             font-size: 4.8vw;
             font-weight: 600;
-            color: #333;
+            color: #fff;
         }
         .right {
+            color: #fff;
             .van-icon {
                 margin-left: 4vw;
             }
@@ -231,7 +232,7 @@ export default {
         padding: 0 4vw;
         .item {
             width: 28vw;
-            background: #fff;
+            background: #333;
             border-radius: 2vw;
             padding: 2vw;
             height: 17vw;
@@ -242,7 +243,7 @@ export default {
                 margin-bottom: 1vw;
             }
             p {
-                color: #333;
+                color: #fff;
                 font-size: 3.2vw;
                 font-weight: 600;
             }
@@ -332,7 +333,7 @@ export default {
                 color: #afafb1;
             }
             .recharge {
-                color: #000000;
+                color: #fff;
             }
             p {
                 width: 1px;
@@ -342,11 +343,12 @@ export default {
         }
     }
     .list {
-        background: #fff;
+        background: #000;
+        color: #fff;
         .item {
             padding: 0 4vw;
             height: 14vw;
-            border-bottom: 0.5px solid #eee;
+            border-bottom: 0.5px solid #999;
             .left {
                 img {
                     width: 5.33vw;

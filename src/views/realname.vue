@@ -56,12 +56,13 @@ export default {
 </script>
 <style lang="less" scoped>
 .realname {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #fff;
+        background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -86,7 +87,8 @@ export default {
     .item {
         padding: 0 4vw;
         height: 12vw;
-        background: #fff;
+        background: #333;
+        color: #fff;
         .label {
             width: 30vw;
         }
@@ -98,7 +100,7 @@ export default {
         text-align: center;
         color: #fff;
         margin: 15vw 4vw 0;
-        background: #000000;
+        background: #333;
         border-radius: 1vw;
     }
 }

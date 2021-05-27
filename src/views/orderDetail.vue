@@ -248,7 +248,7 @@ export default {
 <style lang="less" scoped>
 .orderDetail {
     padding: 0 4vw;
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     overflow: auto;
     .header {
         width: 92vw;
@@ -267,7 +267,7 @@ export default {
         left: 0;
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #000000, #fff);
+        background-image: linear-gradient(180deg, #000000, #333);
     }
     .top {
         position: relative;

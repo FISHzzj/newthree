@@ -1,7 +1,7 @@
 <template>
     <div class="orderSubmit">
         <div class="header">
-            <van-icon @click="$router.go(-1)" name="arrow-left" color="#000" size="20" />
+            <van-icon @click="$router.go(-1)" name="arrow-left" color="#fff" size="20" />
             <p>{{type}}资产</p>
         </div>
         <div style="height:12vw;"></div>
@@ -57,14 +57,14 @@
             </van-list>
             
         </div>
-        <div class="footer flex ali_center flex_between">
+        <!-- <div class="footer flex ali_center flex_between">
             <div v-if="type != 'USDT' && type != 'CNY'" class="exchange flex ali_center"  @click="duihuan">
                 <van-icon name="exchange" color="blue" />
                 <span>兑换</span>
-            </div>
+            </div> -->
             <!-- <div class="cash" :class="{on:type == 'USDT' || type == 'CNY'}" @click="$router.push('/cash')">提现</div>
             <div class="recharge" :class="{on:type == 'USDT' || type == 'CNY'}" @click="gorecharge">充值</div> -->
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 <script>
@@ -188,6 +188,7 @@ export default {
     box-sizing: border-box;
 }
 .orderSubmit {
+  
     .header {
         width: 100%;
         height: 12vw;
@@ -195,8 +196,8 @@ export default {
         left: 0;
         position: fixed;
         z-index: 100;
-        color: #000;
-        background: #f7f7f7;
+        color: #fff;
+        background: #000000;
         .van-icon {
             position: absolute;
             top: 0;
@@ -225,14 +226,14 @@ export default {
     .top {
         width: 100%;
         padding: 0 4vw;
-        background: #f7f7f7;
+        background: #333;
         .title {
             .type {
                 color: #444;
                 font-size: 3.2vw;
             }
             .num {
-                color: #333;
+                color: #444;
                 font-size: 7vw;
                 font-weight: 600;
             }
@@ -246,7 +247,7 @@ export default {
                     margin-bottom: 2vw;
                 }
                 .num {
-                    color: #333;
+                    color: #999;
                     font-size: 4.2vw;
                 }
             }
@@ -266,6 +267,7 @@ export default {
     }
     .list {
         padding: 0 4vw;
+        color: #fff;
         .title {
             line-height: 15vw;
             font-size: 4.5vw;
@@ -298,7 +300,7 @@ export default {
         height: 20vw;
         padding: 0 4vw;
         flex-wrap: nowrap;
-        background: #fff;
+        background: #000;
         div {
             width: 29vw;
             text-align: center;
@@ -321,7 +323,7 @@ export default {
         .recharge {
             color: #fff;
             line-height: 12vw;
-            background: #000000;
+            background: #333;
             &.on {
                 width: 44vw;
             }

@@ -311,7 +311,7 @@ export default {
 <style lang="less" scoped>
 .orderSubmit {
     padding: 0 4vw;
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;

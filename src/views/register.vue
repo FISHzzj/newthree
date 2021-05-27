@@ -1,12 +1,12 @@
 <template>
     <div class="login">
         <div class="header flex ali_center">
-            <van-icon @click="goback" name="cross" size="20" />
+            <van-icon @click="goback" name="cross" size="20" color="#fff" />
         </div>
         <div class="title">
             <div class="first">注册</div>
             <div class="second flex ali_center">
-                <van-icon name="warning-o" color="#999" size="16" />
+                <van-icon name="warning-o" color="#fff" size="16" />
                 <span>国家和地区注册后不可更改</span>
             </div>
         </div>
@@ -112,10 +112,11 @@ export default {
         margin-top: 10vw;
         .phone {
             width: 100%;
-            background: #f7f6fc;
+            background: #333;
             border-radius: 6vw;
             position: relative;
             height: 12vw;
+            color: #fff;
             section {
                 .area {
                     width: 15vw;
@@ -150,13 +151,13 @@ export default {
             width: 52vw;
             text-align: center;
             height: 12vw;
-            background: #f7f6fc;
+            background: #999;
             line-height: 12vw;
             color: #fff;
             border-radius: 6vw;
             margin: 20vw auto 0;
             &.on {
-                background: #000000!important;
+                background: #333!important;
             }
         }
     }
@@ -167,12 +168,12 @@ export default {
         width: 100%;
         .top {
             width: 100%;
-            color: #000000;
+            color: #fff;
             height: 12vw;
             font-size: 3.2vw;
             justify-content: center;
             p {
-                border-right: 1px solid #000000;
+                border-right: 1px solid #fff;
                 height: 4vw;
                 margin: 0 4vw;
             }
@@ -180,8 +181,9 @@ export default {
         .tips {
             justify-content: center;
             font-size: 3.2vw;
+            color: #fff;
             span {
-                color: #000000;
+                color: #fff;
             }
         }
     }

@@ -52,7 +52,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .changename {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -62,7 +62,8 @@ export default {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #fff;
+        // background: #fff;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -90,10 +91,11 @@ export default {
     }
     .nickname {
         width: 100%;
-        background: #fff;
+        background: #333;
         position: relative;
         margin-top: 3vw;
         height: 12vw;
+        color: #fff;
         input {
             width: 100%;
             height: 12vw;

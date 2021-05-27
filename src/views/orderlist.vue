@@ -158,12 +158,13 @@ export default {
     box-sizing: border-box;
 }
 .orderlist {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #fff;
+        background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -181,28 +182,29 @@ export default {
     }
     .top {
         text-align: center;
-        background: #fff;
+        background: #000;
         padding: 6vw 0;
+        color: #fff;
         .num {
             font-size: 7vw;
             font-weight: 600;
             
         }
         .type {
-            color: #666;
+            // color: #666;
             font-size: 3.2vw;
         }
     }
     .nav {
         height: 12vw;
         text-align: center;
-        background: #fff;
+        background: #333;
         .item {
             width: 30vw;
             color: #ccc;
             font-weight: 600;
             &.on {
-                color: #333;
+                color: #fff;
                 position: relative;
                 &::after {
                     position: absolute;
@@ -213,7 +215,7 @@ export default {
                     width: 8vw;
                     content: "";
                     height: 0.75vw;
-                    background: #000000;
+                    background: #fff;
                 }
             }
         }

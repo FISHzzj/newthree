@@ -70,12 +70,13 @@ export default {
     box-sizing: border-box;
 }
 .feedback {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #fff;
+        background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -92,9 +93,10 @@ export default {
         }
     }
     .title {
-        background: #fff;
+        // background: #fff;
         padding: 0 4vw;
         height: 12vw;
+        color: #fff;
     }
     #content {
         width: 92vw;
@@ -104,8 +106,12 @@ export default {
     }
     .uploader {
         width: 100vw;
-        background: #fff;
+        background: #333;
         padding: 2vw 4vw;
+        textarea{
+            background: #333;
+            color: #fff;
+        }
     }
     .img{
         position: relative;
@@ -117,10 +123,10 @@ export default {
     .touch {
         width: 100%;
         padding: 0 4vw 2vw;
-        background: #fff;
+        background: #333;
         margin: 3vw 0 8vw;
         .title1 {
-            color: #333;
+            color: #fff;
             font-size: 4vw;
             font-weight: 600;
             line-height: 12vw;
@@ -128,10 +134,11 @@ export default {
         input {
             width: 100%;
             line-height: 12vw;
+            color: #fff;
         }
     }
     .submit {
-        background: #000000;
+        background: #333;
         color: #fff;
         height: 12vw;
         line-height: 12vw;

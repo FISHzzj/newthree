@@ -125,12 +125,13 @@ export default {
     box-sizing: border-box;
 }
 .record {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;
-        background: #fff;
+        background: #000000;
         position: relative;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -149,7 +150,7 @@ export default {
     .nav {
         flex-wrap: nowrap;
         height: 12vw;
-        background: #fff;
+        background: #000;
         .item {
             width: 50%;
             text-align: center;
@@ -157,7 +158,7 @@ export default {
             font-size: 4vw;
             &.on {
                 position: relative;
-                color: #000;
+                color: #fff;
                 font-size: 4.2vw;
                 &::after {
                     position: absolute;
@@ -168,7 +169,7 @@ export default {
                     margin: 0 auto;
                     width: 8vw;
                     height: 0.75vw;
-                    background: #000000;
+                    background: #fff;
                 }
             }
         }
@@ -176,13 +177,13 @@ export default {
     .list {
         padding: 4vw;
         .item {
-            background: #fff;
+            background: #333;
             border-radius: 2vw;
             padding: 0 2vw;
             margin-bottom: 2.4vw;
             .top {
                 height: 12vw;
-                border-bottom: 1px solid #f7f7f7;
+                border-bottom: 1px solid #999;
                 .time {
                     color: #999;
                     font-size: 3.2vw;
@@ -194,6 +195,7 @@ export default {
             }
             .bottom {
                 padding: 6vw 0;
+                color: #fff;
                 .left {
                     width: 60%;
                     .type {
@@ -211,10 +213,10 @@ export default {
                         margin-bottom: 2vw;
                     }
                     span {
-                        color: #666;
+                        color: #fff;
                     }
                     p {
-                        color: #333;
+                        color: #fff;
                     }
                     .num{
                         text-align: end;

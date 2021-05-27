@@ -243,7 +243,7 @@ export default {
     box-sizing: border-box;
 }
 .orderSubmit {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;
@@ -278,18 +278,19 @@ export default {
     .top_1 {
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #000000, #fff);
+        background-image: linear-gradient(180deg, #000000, #333);
     }
     .top {
         width: 92vw;
         margin: -17vw 4vw 0;
-        background: #fff;
+        background: #333;
         border-radius: 3vw;
         padding: 4vw 3vw;
         .header_top {
             .first {
+                color: #fff;
                 .type {
-                    color: #999;
+                    color: #fff;
                     margin-bottom: 2vw;
                     font-size: 3.2vw;
                 }
@@ -306,8 +307,9 @@ export default {
                 }
             }
             .second {
+                color: #fff;
                 .type {
-                    color: #999;
+                    color: #fff;
                     margin-bottom: 2vw;
                     text-align: right;
                     font-size: 3.2vw;
@@ -358,6 +360,7 @@ export default {
             }
         }
         .changenum {
+            color: #fff;
             border-bottom: 1px solid #f7f7f7;
             height: 12vw;
             line-height: 12vw;
@@ -365,6 +368,7 @@ export default {
         .tips {
             font-size: 3.2vw;
             line-height: 10vw;
+            color: #fff;
             .left {
                 color: #fc4142;
                 span {
@@ -388,9 +392,10 @@ export default {
     .tip {
         margin-top: 4vw;
         padding: 0 4vw;
+        color: #fff;
         .title {
             line-height: 12vw;
-            color: #333;
+            // color: #333;
             font-size: 4vw;
         }
         .grey {
@@ -406,7 +411,7 @@ export default {
         left: 4vw;
         text-align: center;
         color: #fff;
-        background: #000000;
+        background: #333;
         border-radius: 2vw;
         width: 92vw;
     }

@@ -1,7 +1,7 @@
 <template>
     <div class="changepwd">
         <div class="header ">
-            <van-icon @click="goback" name="cross" size="20" />
+            <van-icon @click="goback" name="cross" size="20" color="#fff" />
             <p>修改{{settext}}密码</p>
         </div>
         <!-- <div class="title">
@@ -167,6 +167,7 @@ export default {
         height: 12vw;
         position: relative;
         // background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -176,7 +177,7 @@ export default {
             margin: auto 0;
         }
         p {
-            color: #000;
+            color: #fff;
             width: 100%;
             line-height: 12vw;
             font-size: 4vw;
@@ -199,7 +200,7 @@ export default {
         margin-top: 10vw;
         .phone {
             width: 100%;
-            background: #f7f6fc;
+            background: #333;
             border-radius: 6vw;
             position: relative;
             height: 12vw;
@@ -208,6 +209,7 @@ export default {
                 height: 12vw;
                 border: 0;
                 text-indent: 3vw;
+                color: #fff;
             }
             .van-icon {
                 top: 0;
@@ -227,7 +229,7 @@ export default {
             width: 100%;
             height: 12vw;
             border-radius: 6vw;
-            background: #f7f6fc;
+            background: #333;
             .iconfont {
                 top: 0;
                 bottom: 0;
@@ -236,6 +238,7 @@ export default {
                 height: 4vw;
                 position: absolute;
                 border-radius: 50%;
+                color: #fff;
             }
             .van-icon {
                 top: 0;
@@ -252,6 +255,7 @@ export default {
                 text-indent: 3vw;
                 height: 12vw;
                 font-size: 4vw;
+                color: #fff;
             }
         }
     }
@@ -262,14 +266,15 @@ export default {
         border: 1px solid #000000;
         border-radius: 6vw;
         position: relative;
+        background: #333;
         .van-icon {
             position: absolute;
             width: 8vw;
             height: 8vw;
             border-radius: 50%;
-            background: #000000;
+            background: #fff;
             margin: auto 0;
-            color: #000000;
+            color: #fff;
             top: 0;
             bottom: 0;
             left: 13px;
@@ -277,16 +282,16 @@ export default {
         div {
             width: 100%;
             text-align: center;
-            color: #000000;
+            color: #fff;
             line-height: 12vw;
         }
         &.on {
-            border: 1px solid #000000;
+            border: 1px solid #fff;
             .van-icon {
-                background: #000000;
+                background: #fff;
             }
             div {
-                color: #000000;
+                color: #fff;
             }
         }
     }

@@ -312,7 +312,7 @@ export default {
                     height: 100%;
                     top: 0;
                     left: 0;
-                    background: #1989fa;
+                    background: #9322F7;
                     border-radius: 3vw;
                 }
             }
@@ -372,14 +372,14 @@ export default {
                     top: 0;
                     left: 0;
                     height: 100%;
-                    background: #1989fa;
+                    background: #9322F7;
                 }
             }
             .num {
                 font-size: 3.2vw;
                 color: #fff;
                 span {
-                    color: #1989fa;
+                    color: #9322F7;
                 }
             }
         }
@@ -389,7 +389,7 @@ export default {
             font-weight: 600;
         }
         .price_free {
-            color: #1989fa;
+            color: #9322F7;
             height: 10vw;
             .price {
                 font-size: 5vw;
@@ -417,7 +417,7 @@ export default {
                 border-radius: 2.5vw 0;
             }
             .type_2 {
-                color: #1989fa;
+                color: #9322F7;
                 background: #c7defd;
                 padding: 1vw 3vw;
                 border-radius: 1vw;
@@ -439,7 +439,7 @@ export default {
                     width: 0.8vw;
                     height: 4vw;
                     margin: auto 0;
-                    background: #1989fa;
+                    background: #9322F7;
                 }
             }
             > .flex {
@@ -487,7 +487,7 @@ export default {
                         height: 1vw;
                         color: #fff;
                         position: relative;
-                        background: #1989fa;
+                        background: #9322F7;
                         &:after {
                             position: absolute;
                             left: 0;
@@ -509,7 +509,7 @@ export default {
                     }
                 }
                 .item_3 {
-                    color: #1989fa;
+                    color: #9322F7;
                     .time {
                         font-size: 3vw;
                         line-height: 8vw;
@@ -523,7 +523,7 @@ export default {
                         height: 1vw;
                         color: #fff;
                         position: relative;
-                        background: #1989fa;
+                        background: #9322F7;
                         &:after {
                             position: absolute;
                             right: 0;
@@ -554,7 +554,7 @@ export default {
                 text-align: center;
                 font-weight: 600;
                 &.on {
-                    color: #1989fa;
+                    color: #9322F7;
                     position: relative;
                     &:after {
                         position: absolute;
@@ -565,7 +565,7 @@ export default {
                         width: 5vw;
                         height: 0.8vw;
                         margin: 0 auto;
-                        background: #1989fa;
+                        background: #9322F7;
                     }
                 }
             }

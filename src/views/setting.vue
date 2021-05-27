@@ -149,12 +149,13 @@ export default {
 </script>
 <style lang="less" scoped>
 .setting {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #fff;
+        background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -171,18 +172,19 @@ export default {
         }
     }
     .content {
-        background: #fff;
+        background: #333;
         padding: 0 4vw;
         .item {
             height: 12vw;
             .label {
-                color: #333;
+                color: #fff;
                 font-size: 3.73vw;
                 font-weight: 600;
             }
             .right {
                 .van-icon {
                     margin-left: 2.4vw;
+                    color: #fff;
                 }
                 .pic_wrapper {
                     width: 12vw;
@@ -208,12 +210,12 @@ export default {
                 }
                 .phone {
                     padding-right: 6vw;
-                    color: #666;
+                    color: #fff;
                 }
                 .realname_1 {
                     color: #fff;
                     font-size: 3.2vw;
-                    border: 1px solid #000000;
+                    border: 1px solid #fff;
                     padding: 0.5vw 1vw;
                     border-radius: 0.5vw;
                     background: #000000;
@@ -229,14 +231,14 @@ export default {
         .item {
             height: 15vw;
             padding: 0 4vw;
-            background: #fff;
+            background: #333;
             .label {
-                color: #333;
+                color: #fff;
                 font-size: 3.73vw;
                 font-weight: 600;
             }
             .van-icon {
-                color: #666;
+                color: #fff;
             }
         }
         .item-1 {
@@ -248,10 +250,11 @@ export default {
         line-height: 15vw;
         text-align: center;
         margin-top: 3vw;
-        background: #fff;
+        background: #333;
         color: #000000;
         font-weight: 600;
         font-size: 3.2vw;
+        color: #fff;
         
     }
 }

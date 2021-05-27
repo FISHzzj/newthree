@@ -184,13 +184,14 @@ export default {
     box-sizing: border-box;
 }
 .agent {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     overflow: auto;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #fff;
+        background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -269,7 +270,7 @@ export default {
     .teaminfo {
         width: 92vw;
         margin: -6vw 4vw 4vw;
-        background: #fff;
+        background: #333;
         border-radius: 2vw;
         text-align: center;
         .infos {
@@ -279,10 +280,10 @@ export default {
                 font-size: 3.73vw;
             }
             .num {
-                color: #999;
+                color: #fff;
                 font-size: 3.2vw;
                 span {
-                    color: #333;
+                    color: #fff;
                     font-size: 6vw;
                     font-weight: 600;
                 }
@@ -296,7 +297,7 @@ export default {
                 margin-bottom: 1.5vw;
             }
             .num {
-                color: #333;
+                color: #fff;
                 font-size: 3.5vw;
             }
         }
@@ -305,15 +306,16 @@ export default {
         padding: 0 4vw 4vw;
         width: 92vw;
         margin: 0 4vw;
-        background: #fff;
+        background: #333;
         border-radius: 2vw;
+        color: #fff;
         .title {
             line-height: 12vw;
             font-size: 4.2vw;
         }
         .title1 {
             height: 12vw;
-            color: #999;
+            color: #fff;
             font-size: 3.2vw;
             > div {
                 width: 33%;
@@ -327,7 +329,7 @@ export default {
         }
         .item {
             height: 10vw;
-            color: #333;
+            color: #fff;
             font-size: 3.2vw;
             > div {
                 width: 33%;

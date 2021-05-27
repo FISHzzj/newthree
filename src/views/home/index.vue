@@ -29,11 +29,11 @@
         <section class="wrapper">
             <div class="title flex ali_center">
                 <!-- <img src="@/assets/images/home/laba2.jpg" alt=""> -->
-                <p>矿池运营数据</p>
+                <p>矿场运营数据</p>
             </div>
             <div class="item" >
                 <!-- <div class="title_1 flex ali_center">
-                    <p>BTC矿池</p>
+                    <p>BTC矿场</p>
                     <van-icon name="warning-o" color="#999" />
                 </div> -->
                 <div class="somenum flex ali_center">
@@ -65,7 +65,7 @@
             </div>
              <!-- <div class="item" >
                 <div class="title_1 flex ali_center">
-                    <p>ETH矿池</p>
+                    <p>ETH矿场</p>
                     <van-icon name="warning-o" color="#999" />
                 </div>
                 <div class="somenum flex ali_center">
@@ -97,7 +97,7 @@
             </div> -->
              <!-- <div class="item" >
                 <div class="title_1 flex ali_center">
-                    <p>USDT矿池</p>
+                    <p>USDT矿场</p>
                     <van-icon name="warning-o" color="#999" />
                 </div>
                 <div class="somenum flex ali_center">
@@ -132,7 +132,7 @@
             </div> -->
             <!-- <div class="item" >
                 <div class="title_1 flex ali_center">
-                    <p>XCH矿池</p>
+                    <p>XCH矿场</p>
                     <van-icon name="warning-o" color="#999" />
                 </div>
                 <div class="somenum flex ali_center">
@@ -166,22 +166,22 @@
 
         <!-- 底部轮播 -->
          <div class="activeCenter">
-            <div>XCH矿池</div>
+            <div>XCH矿场</div>
             <a  @click="$router.push('/products')" href="javascript:;"><img src="@/assets/images/bg_xch.png" alt="" class="img1"></a>
             
         </div>
         <div class="activeCenter">
-            <div>BTC矿池</div>
+            <div>BTC矿场</div>
             <a href="javascript:;"><img src="@/assets/images/bg_btc.png" alt="" class="img1"></a>
             
         </div>
         <div class="activeCenter">
-            <div>ETH矿池</div>
+            <div>ETH矿场</div>
             <a  href="javascript:;"><img src="@/assets/images/bg_eth.png" alt="" class="img1"></a>
             
         </div>
         <div class="activeCenter">
-            <div>FIL矿池</div>
+            <div>FIL矿场</div>
             <a href="javascript:;"><img src="@/assets/images/bg_fil.png" alt="" class="img1"></a>
             
         </div>

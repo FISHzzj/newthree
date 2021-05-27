@@ -47,6 +47,9 @@ export default {
     },
     methods: {
         goitem(e) {
+            if(e.url == '/server'){
+                return Toast('开发中')
+            }
             this.$router.push({
                 path: e.url
             });

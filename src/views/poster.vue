@@ -92,14 +92,15 @@ export default {
     box-sizing: border-box;
 }
 .poster {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: fixed;
         top: 0;
         left: 0;
-        background: #fff;
+        background: #000000;
+        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -124,14 +125,14 @@ export default {
         .yqcode{
             padding: 10px;
             text-align: center;
-            background: #fff;
+            background: #333;
         }
     }
     .list {
         width: 92vw;
         margin: 4vw;
         padding: 1vw 0.5vw 3vw;
-        background: #fff;
+        background: #333;
         border-radius: 2vw;
         .title {
             height: 12vw;
@@ -142,7 +143,7 @@ export default {
                 color: #000000;
                 margin: 0 1vw;
             }
-            background: #fff;
+            background: #333;
         }
         .title1 {
             height: 12vw;
@@ -167,7 +168,7 @@ export default {
         }
     }
     .save {
-        background: #000000;
+        background: #333;
         width: 92vw;
         position: fixed;
         bottom: 2vw;

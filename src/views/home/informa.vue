@@ -88,7 +88,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .informa{
-    background-color: #F4F4F4!important;
+    background-color: #000000!important;
     .mySwiper {
         .swiper-container {
             background: #ccc;
@@ -120,8 +120,8 @@ export default {
             }
         }
         .item{
-            background: #FEFEFE;
-            border-bottom: 1px solid #eee;
+            background: #333;
+            border-bottom: 1px solid #999;
             margin-bottom: 10px;
             .content{
                 margin-right: 10px;
@@ -129,7 +129,7 @@ export default {
                 p:nth-child(1){
                     font-weight: 500;
                     font-size: 14px;
-                    color: #000;
+                    color: #fff;
                     margin-bottom: 10px;
                 }
                 p:nth-child(2){

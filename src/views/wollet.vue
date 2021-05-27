@@ -351,7 +351,7 @@ export default {
         .title {
             padding: 0 4vw;
             font-size: 3.2vw;
-            color: #000000;
+            color: #fff;
             height: 10vw;
             background: rgba(0,0,255,0.1);
             .left {
@@ -377,6 +377,7 @@ export default {
             border-bottom: 1px solid #f7f7f7;
             .left {
                 width: 50%;
+                color: #fff;
                 img {
                     width: 10vw;
                     height: 10vw;

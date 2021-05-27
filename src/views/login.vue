@@ -17,7 +17,7 @@
                 <input v-else type="password" v-model="inputMsg.pwd" placeholder="请输入密码">
                 <i @click="iconeyeclose = !iconeyeclose" v-if="iconeyeclose" class="iconfont iconeyeopen"></i>
                 <i @click="iconeyeclose = !iconeyeclose" v-else class="iconfont iconeyeclose"></i>
-                <van-icon v-if="inputMsg.pwd" @click="inputMsg.mobile = ''" name="cross" color="#fff" size="10" />
+                <van-icon v-if="inputMsg.pwd" @click="inputMsg.pwd = ''" name="cross" color="#fff" size="10" />
             </div>
         </div>
         <div class="btn submit" @click="login">
@@ -151,6 +151,7 @@ export default {
         height: 10vw;
     }
     .title {
+        color: #fff;
         .first {
             font-weight: 600;
             font-size: 5vw;
@@ -166,10 +167,11 @@ export default {
         margin-top: 10vw;
         .phone {
             width: 100%;
-            background: #f7f6fc;
+            background: #333;
             border-radius: 6vw;
             position: relative;
             height: 12vw;
+            color: #fff;
             input {
                 width: 100%;
                 height: 12vw;
@@ -194,7 +196,8 @@ export default {
             width: 100%;
             height: 12vw;
             border-radius: 6vw;
-            background: #f7f6fc;
+            background: #333;
+            color: #fff;
             .iconfont {
                 top: 0;
                 bottom: 0;
@@ -229,14 +232,15 @@ export default {
         border: 1px solid #000000;
         border-radius: 6vw;
         position: relative;
+        background: #333;
         .van-icon {
             position: absolute;
             width: 8vw;
             height: 8vw;
             border-radius: 50%;
-            background: #000000;
+            background: #333;
             margin: auto 0;
-            color: #000000;
+            color: #fff;
             top: 0;
             bottom: 0;
             left: 13px;
@@ -244,7 +248,7 @@ export default {
         div {
             width: 100%;
             text-align: center;
-            color: #000000;
+            color: #fff;
             line-height: 12vw;
         }
         &.on {
@@ -262,14 +266,15 @@ export default {
         bottom: 0;
         left: 0;
         width: 100%;
+        color: red;
         .top {
             width: 100%;
-            color: #000000;
+            color: #fff;
             height: 12vw;
             font-size: 3.2vw;
             justify-content: center;
             p {
-                border-right: 1px solid #000000;
+                border-right: 1px solid #fff;
                 height: 4vw;
                 margin: 0 4vw;
             }
@@ -279,7 +284,7 @@ export default {
             font-size: 3.2vw;
             padding-bottom: 3vw;
             span {
-                color: #000000;
+                color: #fff;
             }
         }
     }
