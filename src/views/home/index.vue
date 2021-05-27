@@ -318,10 +318,10 @@ export default {
 </script>
 <style lang="less" scope>
 .van-grid-item__content{
-    background-color: #000000;
+    background-color: #000000!important;
 }
 .van-grid-item__text{
-    color: #fff;
+    color: #fff!important;
 }
 .index {
     
