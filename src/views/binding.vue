@@ -1,7 +1,7 @@
 <template>
     <div class="binding">
         <div class="header">
-            <van-icon @click="$router.go(-1)" name="arrow-left" color="#fff" size="20" />
+            <van-icon @click="$router.go(-1)" name="arrow-left" color="#000" size="20" />
             <p>绑定{{typeName}}</p>
             <span @click="cancle" v-if="id != 0">解绑</span>
         </div>
@@ -204,16 +204,16 @@ export default {
 <style lang="less" scoped>
 .binding {
     padding: 0 4vw;
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     .header {
         width: 100%;
         height: 12vw;
         top: 0;
         left: 0;
         position: fixed;
-        background: #000000;
+        background: #f7f7f7;
         z-index: 100;
-        color: #fff;
+        color: #000;
         .van-icon {
             position: absolute;
             top: 0;
@@ -248,7 +248,7 @@ export default {
             margin-bottom: 5vw;
             .title {
                 height: 12vw;
-                color: #999;
+                color: #333;
                 p {
                     font-size: 3.73vw;
                     span {
@@ -260,8 +260,7 @@ export default {
                 height: 12vw;
                 width: 100%;
                 line-height: 12vw;
-                border-bottom: 1px solid #333;
-                color: #fff;
+                border-bottom: 1px solid #da428d;
             }
         }
         .usdt {
@@ -273,8 +272,8 @@ export default {
             .nav {
                 height: 15vw;
                 .item {
-                    color: #fff;
-                    background: #333;
+                    color: #999;
+                    background: #eee;
                     width: 20vw;
                     height: 10vw;
                     line-height: 10vw;
@@ -282,8 +281,8 @@ export default {
                     text-align: center;
                     margin-right: 3vw;
                     &.on {
-                        color: #fff;
-                        border: 1px solid #eee;
+                        color: #da428d;
+                        border: 1px solid #da428d;
                         background: transparent;
                     }
                 }
@@ -329,7 +328,7 @@ export default {
     .submit {
         width: 92vw;
         color: #fff;
-        background: #333;
+        background: #da428d;
         font-size: 4.2vw;
         line-height: 12vw;
         height: 12vw;

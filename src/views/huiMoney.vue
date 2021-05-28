@@ -74,7 +74,7 @@
         <div class="tip">
             <div class="title">温馨提示:</div>
             <div class="red">1.(请勿备注含矿机、数字货币、比特币、以太坊或者英文BTC、ETH等字眼),如有敏感字眼的备注将不做充值处理，七天后所转账的金额按原路返还</div>
-            <div class="grey">2.如有任何疑问请联系中科动地云官方客服(请在工作日9：00-18：00之间完成充值)</div>
+            <div class="grey">2.如有任何疑问请联系哈希矿场官方客服(请在工作日9：00-18：00之间完成充值)</div>
             <div class="grey">3.仅支持储蓄卡充值</div>
         </div>
         <div class="submit" :class="{on: money}" @click="submit">我已付款成功</div>
@@ -267,7 +267,7 @@ export default {
         .tips {
             margin-top: -4vw;
             line-height: 12vw;
-            color: #000000;
+            color: #da428d;
             font-size: 3.2vw;
         }
     }
@@ -328,7 +328,7 @@ export default {
                 }
                 .copy {
                     margin-left: 3vw;
-                    color: #000000;
+                    color: #da428d;
                 }
             }
         }
@@ -380,7 +380,7 @@ export default {
         background: #ccc;
         border-radius: 1vw;
         &.on {
-            background: #000000;
+            background: #da428d;
         }
     }
 }

@@ -50,17 +50,17 @@
                 </div>
                 <div class="nav flex ali_center flex_between">
                     <div class="item">
-                        <div class="type">团队总人数</div>
+                        <div class="type">团队人数</div>
                         <div class="num">{{cnyinfo}}</div>
                     </div>
+                    <!-- <div class="item">
+                        <div class="type">USDT总投资</div>
+                        <div class="num">{{usdtinfo}}</div>
+                    </div> -->
                     <div class="item">
                         <div class="type">团队总业绩</div>
-                        <div class="num">{{usdtinfo}}</div>
-                    </div>
-                    <!-- <div class="item">
-                        <div class="type">BTC总投资</div>
                         <div class="num">{{btcinfo}}</div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="list">
@@ -184,14 +184,13 @@ export default {
     box-sizing: border-box;
 }
 .agent {
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     overflow: auto;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #000000;
-        color: #fff;
+        background: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -212,7 +211,7 @@ export default {
         width: 92vw;
         bottom: 4vw;
         left: 4vw;
-        background: #000000;
+        background: #da428d;
         height: 12vw;
         text-align: center;
         color: #fff;
@@ -224,7 +223,7 @@ export default {
             background: #999!important;
         }
     .top {
-        background: #000000;
+        background: #da428d;
         background-size: 100% 100%;
         padding: 0 4vw 8vw;
         .infos {
@@ -270,7 +269,7 @@ export default {
     .teaminfo {
         width: 92vw;
         margin: -6vw 4vw 4vw;
-        background: #333;
+        background: #fff;
         border-radius: 2vw;
         text-align: center;
         .infos {
@@ -280,10 +279,10 @@ export default {
                 font-size: 3.73vw;
             }
             .num {
-                color: #fff;
+                color: #999;
                 font-size: 3.2vw;
                 span {
-                    color: #fff;
+                    color: #333;
                     font-size: 6vw;
                     font-weight: 600;
                 }
@@ -297,7 +296,7 @@ export default {
                 margin-bottom: 1.5vw;
             }
             .num {
-                color: #fff;
+                color: #333;
                 font-size: 3.5vw;
             }
         }
@@ -306,16 +305,15 @@ export default {
         padding: 0 4vw 4vw;
         width: 92vw;
         margin: 0 4vw;
-        background: #333;
+        background: #fff;
         border-radius: 2vw;
-        color: #fff;
         .title {
             line-height: 12vw;
             font-size: 4.2vw;
         }
         .title1 {
             height: 12vw;
-            color: #fff;
+            color: #999;
             font-size: 3.2vw;
             > div {
                 width: 33%;
@@ -329,7 +327,7 @@ export default {
         }
         .item {
             height: 10vw;
-            color: #fff;
+            color: #333;
             font-size: 3.2vw;
             > div {
                 width: 33%;

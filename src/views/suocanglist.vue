@@ -296,7 +296,7 @@ export default {
         .recharge {
             color: #fff;
             line-height: 12vw;
-            background: #000000;
+            background: #da428d;
             &.on {
                 width: 44vw;
             }

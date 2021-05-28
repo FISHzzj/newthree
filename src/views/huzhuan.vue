@@ -300,8 +300,8 @@ export default {
                 margin-left: 3vw;
                 border-radius: 1vw;
                 &.on {
-                    color: #000000;
-                    border: 1px solid #000000;
+                    color: #da428d;
+                    border: 1px solid #da428d;
                 }
             }
         }
@@ -319,7 +319,7 @@ export default {
             width: 100%;
             padding: 0 10vw;
             text-align: center;
-            color: #000000;
+            color: #da428d;
             height: 12vw;
             div {
                 width: 50%;
@@ -372,7 +372,7 @@ export default {
         border-radius: 1vw;
         margin: 4vw;
         &.on{
-            background: #000000;
+            background: #da428d;
         }
     }
 }

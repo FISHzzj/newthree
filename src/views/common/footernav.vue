@@ -47,9 +47,7 @@ export default {
     },
     methods: {
         goitem(e) {
-            if(e.url == '/server'){
-                return Toast('开发中')
-            }
+            if(e.url == '/server') return Toast("在开发中")
             this.$router.push({
                 path: e.url
             });
@@ -61,7 +59,7 @@ export default {
 .footer {
     .nav_1 {
         position: fixed;
-        background: #000000;
+        background: #fff;
         bottom: 0;
         left: 0;
         width: 100%;
@@ -80,7 +78,7 @@ export default {
                 font-size: 3.2vw;
                 color: #999;
                 &.on {
-                    color: #fff;
+                    color: #333;
                 }
             }
         }

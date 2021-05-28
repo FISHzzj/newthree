@@ -317,20 +317,13 @@ export default {
 }
 </script>
 <style lang="less" scope>
-.van-grid-item__content{
-    background-color: #000000!important;
-}
-.van-grid-item__text{
-    color: #fff!important;
-}
 .index {
-    
     .mySwiper {
         .swiper-container {
             background: #ccc;
         }
         .pagination-bullet-active {
-            color: #000000!important;
+            color: #da428d!important;
         }
         .swiper-slide {
             height: 50vw;
@@ -342,7 +335,6 @@ export default {
     }
     .notice {
         padding: 0 4vw;
-        color: #fff;
         img {
             width: 5.33vw;
             height: 5.33vw;
@@ -357,13 +349,12 @@ export default {
             }
         }
         .more {
-            color: #fff;
+            color: #999;
             font-size: 3.2vw;
         }
     }
     .wrapper {
         padding: 0 4vw;
-        color: #fff;
         .title {
             height: 12vw;
             img {
@@ -378,7 +369,7 @@ export default {
             }
         }
         .item {
-            box-shadow: 2px 2px 2px 1px #161817;
+            box-shadow: 2px 2px 2px 1px #e4e0e0;
              border-radius: 5px;
              margin-bottom: 15px;
             .title_1 {
@@ -394,27 +385,26 @@ export default {
                         height: 4vw;
                         top: 0;
                         left: 0;
-                        background: #161817;
+                        background: #da428d;
                         bottom: 0;
                         margin: auto 0;
                     }
                 }
             }
             .somenum {
-                height: 15vw;
+                height: 28vw;
                 flex-wrap: wrap;
-                background-color: #161817;
                 .item_1 {
                     width: 32%;
                     text-align: center;
                     margin-bottom: 10px;
                     .type {
-                        color: #fff;
-                        font-size: 4.47vw;
+                        color: #666;
+                        font-size: 2.47vw;
                     }
                     .num {
-                        color: #fff;
-                        font-size: 4.5vw;
+                        color: #333;
+                        font-size: 2.5vw;
                         font-weight: 600;
                     }
                 }
@@ -422,20 +412,20 @@ export default {
         }
     }
     .activeCenter{
-        background-color: #000000;
+        
         div{
-            color: #fff;
+            color: #000;
             // padding: 10px ;
-            // height: 12vw;
+            height: 12vw;
             padding-left: 15px;
-            font-size: 4.2vw;
+            font-size: 20px;
             font-weight: 600;
         }
         a{
             img{
                 width: 100vw;
-                height: 30vw;
-                border-radius: 5px;
+                height: 25vw;
+                border-radius: 30px;
                 padding: 5px 10px;
                 box-sizing: border-box;
             }
@@ -443,8 +433,7 @@ export default {
     }
     .bgbottom{
         flex-direction: column;
-        background: #000;
-
+        background: #eee;
         img{
             width: 50px;
             height: 50px;
@@ -452,7 +441,7 @@ export default {
         div{
             padding: 10px 10px;
             font-size: 12px;
-            color: #fff;
+            color: #484646;
         }
     }
 }

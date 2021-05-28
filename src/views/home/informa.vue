@@ -88,13 +88,13 @@ export default {
 </script>
 <style lang="less" scoped>
 .informa{
-    background-color: #000000!important;
+    background-color: #f7f7f7!important;
     .mySwiper {
         .swiper-container {
             background: #ccc;
         }
         .pagination-bullet-active {
-            color: #000000!important;
+            color: #f7f7f7!important;
         }
         .swiper-slide {
             height: 50vw;
@@ -112,7 +112,7 @@ export default {
                 width: 5.33vw;
                 height: 5.33vw;
                 margin-right: 2.4vw;
-                background: #000;
+                background: #f7f7f7;
             }
             p {
                 font-size: 4.2vw;
@@ -120,8 +120,9 @@ export default {
             }
         }
         .item{
-            background: #333;
-            border-bottom: 1px solid #999;
+             box-shadow: 2px 2px 2px 1px #e4e0e0;
+            background: #eee;
+            border-bottom: 1px solid #eee;
             margin-bottom: 10px;
             border-radius: 10px;
             .content{
@@ -130,11 +131,11 @@ export default {
                 p:nth-child(1){
                     font-weight: 500;
                     font-size: 14px;
-                    color: #fff;
+                    color: #000;
                     margin-bottom: 10px;
                 }
                 p:nth-child(2){
-                    color: #ccc;
+                    color: #333;
                     font-size: 12px;
                 }
             }

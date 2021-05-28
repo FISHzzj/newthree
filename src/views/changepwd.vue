@@ -1,12 +1,12 @@
 <template>
     <div class="changepwd">
         <div class="header ">
-            <van-icon @click="goback" name="cross" size="20" color="#fff" />
+            <van-icon @click="goback" name="cross" size="20" />
             <p>修改{{settext}}密码</p>
         </div>
         <!-- <div class="title">
             <div class="first">嗨!矿友们好</div>
-            <div class="second">欢迎使用中科动地云</div>
+            <div class="second">欢迎使用哈希矿场</div>
         </div> -->
         <div class="content">
             <!-- <div class="phone">
@@ -42,7 +42,7 @@
             </div>
             <div class="tips flex ali_center">
                 <p>继续登录即代表同意</p>
-                <span @click="news_detail">《中科动地云用户协议》</span>
+                <span @click="news_detail">《哈希矿场用户协议》</span>
             </div>
         </div> -->
     </div>
@@ -166,8 +166,7 @@ export default {
         width: 100%;
         height: 12vw;
         position: relative;
-        // background: #000000;
-        color: #fff;
+        // background: #da428d;
         .van-icon {
             position: absolute;
             top: 0;
@@ -177,7 +176,7 @@ export default {
             margin: auto 0;
         }
         p {
-            color: #fff;
+            color: #000;
             width: 100%;
             line-height: 12vw;
             font-size: 4vw;
@@ -200,7 +199,7 @@ export default {
         margin-top: 10vw;
         .phone {
             width: 100%;
-            background: #333;
+            background: #f7f6fc;
             border-radius: 6vw;
             position: relative;
             height: 12vw;
@@ -209,7 +208,6 @@ export default {
                 height: 12vw;
                 border: 0;
                 text-indent: 3vw;
-                color: #fff;
             }
             .van-icon {
                 top: 0;
@@ -229,7 +227,7 @@ export default {
             width: 100%;
             height: 12vw;
             border-radius: 6vw;
-            background: #333;
+            background: #f7f6fc;
             .iconfont {
                 top: 0;
                 bottom: 0;
@@ -238,7 +236,6 @@ export default {
                 height: 4vw;
                 position: absolute;
                 border-radius: 50%;
-                color: #fff;
             }
             .van-icon {
                 top: 0;
@@ -255,7 +252,6 @@ export default {
                 text-indent: 3vw;
                 height: 12vw;
                 font-size: 4vw;
-                color: #fff;
             }
         }
     }
@@ -263,18 +259,17 @@ export default {
         width: 50vw;
         height: 12vw;
         margin: 10vw auto;
-        border: 1px solid #000000;
+        border: 1px solid #da428d;
         border-radius: 6vw;
         position: relative;
-        background: #333;
         .van-icon {
             position: absolute;
             width: 8vw;
             height: 8vw;
             border-radius: 50%;
-            background: #fff;
+            background: #da428d;
             margin: auto 0;
-            color: #fff;
+            color: #da428d;
             top: 0;
             bottom: 0;
             left: 13px;
@@ -282,16 +277,16 @@ export default {
         div {
             width: 100%;
             text-align: center;
-            color: #fff;
+            color: #da428d;
             line-height: 12vw;
         }
         &.on {
-            border: 1px solid #fff;
+            border: 1px solid #da428d;
             .van-icon {
-                background: #fff;
+                background: #da428d;
             }
             div {
-                color: #fff;
+                color: #da428d;
             }
         }
     }
@@ -302,12 +297,12 @@ export default {
         width: 100%;
         .top {
             width: 100%;
-            color: #000000;
+            color: #da428d;
             height: 12vw;
             font-size: 3.2vw;
             justify-content: center;
             p {
-                border-right: 1px solid #000000;
+                border-right: 1px solid #da428d;
                 height: 4vw;
                 margin: 0 4vw;
             }
@@ -317,7 +312,7 @@ export default {
             font-size: 3.2vw;
             padding-bottom: 3vw;
             span {
-                color: #000000;
+                color: #da428d;
             }
         }
     }

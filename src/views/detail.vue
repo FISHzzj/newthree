@@ -258,7 +258,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .detail {
-    // background: #f6f6f8 !important;
+    background: #f6f6f8 !important;
     .header {
         width: 100%;
         height: 12vw;
@@ -266,8 +266,7 @@ export default {
         top: 0;
         left: 0;
         z-index: 1000;
-        background: #000;
-        color: #fff;
+        background: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -294,7 +293,7 @@ export default {
                 width: 40vw;
                 height: 48vw;
                 .type {
-                    color: #fff;
+                    color: #aa9d8a;
                     font-size: 3.2vw;
                     text-align: center;
                     line-height: 6vw;
@@ -312,7 +311,7 @@ export default {
                     height: 100%;
                     top: 0;
                     left: 0;
-                    background: #9322F7;
+                    background: #da428d;
                     border-radius: 3vw;
                 }
             }
@@ -323,29 +322,29 @@ export default {
                 .first {
                     .item_1 {
                         .type {
-                            color: #fff;
+                            color: #999;
                             font-size: 3.47vw;
                             line-height: 6vw;
                             padding-bottom: 3vw;
                         }
                         .num {
-                            color: #fff;
+                            color: #333;
                             font-size: 4.2vw;
                         }
                     }
                 }
                 .second {
                     .type {
-                        color: #fff;
+                        color: #999;
                         font-size: 3.47vw;
                         line-height: 6vw;
                     }
                     .num {
-                        color: #fff;
+                        color: #333;
                         font-size: 4.2vw;
                     }
                     .num1 {
-                        color: #fff;
+                        color: #999;
                         font-size: 4.8vw;
                     }
                 }
@@ -354,7 +353,7 @@ export default {
     }
     .pro_wrapper {
         padding: 0 4vw;
-        background: #000;
+        background: #fff;
         margin-top: -19vw;
         .progress {
             justify-content: flex-end;
@@ -372,24 +371,23 @@ export default {
                     top: 0;
                     left: 0;
                     height: 100%;
-                    background: #9322F7;
+                    background: #da428d;
                 }
             }
             .num {
                 font-size: 3.2vw;
-                color: #fff;
                 span {
-                    color: #9322F7;
+                    color: #da428d;
                 }
             }
         }
         .pro_name {
-            color: #fff;
+            color: #333;
             font-size: 4.8vw;
             font-weight: 600;
         }
         .price_free {
-            color: #9322F7;
+            color: #da428d;
             height: 10vw;
             .price {
                 font-size: 5vw;
@@ -400,10 +398,10 @@ export default {
                 }
             }
             .right {
-                color: #fff;
+                color: #333;
                 font-size: 3.47vw;
                 span {
-                    color: #fff;
+                    color: #96959d;
                 }
             }
         }
@@ -417,7 +415,7 @@ export default {
                 border-radius: 2.5vw 0;
             }
             .type_2 {
-                color: #9322F7;
+                color: #da428d;
                 background: #c7defd;
                 padding: 1vw 3vw;
                 border-radius: 1vw;
@@ -427,7 +425,7 @@ export default {
             padding: 6vw 4vw;
             .r_title {
                 line-height: 10vw;
-                color: #fff;
+                color: #333;
                 font-weight: 600;
                 position: relative;
                 &:after {
@@ -439,7 +437,7 @@ export default {
                     width: 0.8vw;
                     height: 4vw;
                     margin: auto 0;
-                    background: #9322F7;
+                    background: #da428d;
                 }
             }
             > .flex {
@@ -447,7 +445,7 @@ export default {
                 .item_1,
                 .item_2 {
                     .time {
-                        color: #fff;
+                        color: #999;
                         font-size: 3vw;
                         line-height: 8vw;
                     }
@@ -460,7 +458,7 @@ export default {
                         height: 1vw;
                         margin-top: 8vw;
                         background: #d2e0ff;
-                        color: #fff;
+                        color: #d2e0ff;
                         position: relative;
                         &:after {
                             position: absolute;
@@ -485,9 +483,9 @@ export default {
                         width: 100%;
                         margin-top: 8vw;
                         height: 1vw;
-                        color: #fff;
+                        color: #d2e0ff;
                         position: relative;
-                        background: #9322F7;
+                        background: #da428d;
                         &:after {
                             position: absolute;
                             left: 0;
@@ -509,7 +507,7 @@ export default {
                     }
                 }
                 .item_3 {
-                    color: #9322F7;
+                    color: #da428d;
                     .time {
                         font-size: 3vw;
                         line-height: 8vw;
@@ -521,9 +519,9 @@ export default {
                         margin-top: 8vw;
                         width: 20vw;
                         height: 1vw;
-                        color: #fff;
+                        color: #d2e0ff;
                         position: relative;
-                        background: #9322F7;
+                        background: #da428d;
                         &:after {
                             position: absolute;
                             right: 0;
@@ -549,12 +547,12 @@ export default {
         .nav {
             height: 12vw;
             .item {
-                color: #fff;
+                color: #d6d6d6;
                 width: 25vw;
                 text-align: center;
                 font-weight: 600;
                 &.on {
-                    color: #9322F7;
+                    color: #da428d;
                     position: relative;
                     &:after {
                         position: absolute;
@@ -565,18 +563,16 @@ export default {
                         width: 5vw;
                         height: 0.8vw;
                         margin: 0 auto;
-                        background: #9322F7;
+                        background: #da428d;
                     }
                 }
             }
         }
         .pro_guige{
             height: 80vw;
-
             table{
                 width: 100%;
                 height: 54vw;
-                color: #fff;
                 td{
                     border:1px solid rgb(184, 181, 181);
                     text-align: center;
@@ -584,10 +580,10 @@ export default {
                     width: 10vw;
                 }
                 td:nth-child(1){
-                    background: #323233;
+                    background: #d6d8da;
                 }
                 td:nth-child(3){
-                    background: #323233;
+                    background: #d6d8da;
                 }
             }
         }
@@ -596,7 +592,7 @@ export default {
             width: 100%;
             height: 12vw;
             color: #fff;
-            background: #323233;
+            background: #da428d;
             text-align: center;
             bottom: 0;
             left: 0;

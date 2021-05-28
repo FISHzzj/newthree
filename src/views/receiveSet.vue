@@ -1,7 +1,7 @@
 <template>
     <div class="orderDetail">
         <div class="header flex flex_between ali_center">
-            <van-icon @click="$router.go(-1)" name="arrow-left" color="#fff" size="20" />
+            <van-icon @click="$router.go(-1)" name="arrow-left" color="#000" size="20" />
             <p>收/付款设置</p>
             <van-icon name="plus" @click="showList = true" color="blue" />
         </div>
@@ -64,14 +64,14 @@
                 <span>添加收款方式</span>
                 <van-icon name="cross" @click="showList = false"></van-icon>
             </div>
-            <!-- <div class="item" @click="goedit('bank')">银行卡</div> -->
+            <div class="item" @click="goedit('bank')">银行卡</div>
             <!-- <div class="item" @click="goedit('weixin')">微信</div> -->
             <!-- <div class="item" @click="goedit('ali')">支付宝</div> -->
             <div class="item" @click="goedit('USDT')">USDT地址</div>
-            <!-- <div class="item" @click="goedit('BTC')">BTC地址</div>
+            <div class="item" @click="goedit('BTC')">BTC地址</div>
             <div class="item" @click="goedit('ETH')">ETH地址</div>
             <div class="item" @click="goedit('FIL')">FIL地址</div>
-             <div class="item" @click="goedit('XCH')">XCH地址</div> -->
+             <div class="item" @click="goedit('XCH')">XCH地址</div>
         </div>
     </div>
 </template>
@@ -145,7 +145,7 @@ export default {
 }
 .orderDetail {
     padding: 0 4vw;
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     overflow: auto;
     .header {
         width: 100vw;
@@ -154,16 +154,16 @@ export default {
         top: 0;
         left: 0;
         position: fixed;
-        background: #000000;
+        background: #fff;
         z-index: 100;
-        color: #fff;
+        color: #000;
     }
     .list {
         .item {
             margin-bottom: 2.4vw;
             width: 100%;
             height: 25vw;
-            // background: #000000;
+            // background: #da428d;
             border-radius: 2vw;
             position: relative;
             // padding-top: 4vw;

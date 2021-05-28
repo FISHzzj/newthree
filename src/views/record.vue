@@ -183,7 +183,7 @@ export default {
                     margin: 0 auto;
                     width: 8vw;
                     height: 0.75vw;
-                    background: #000000;
+                    background: #da428d;
                 }
             }
         }

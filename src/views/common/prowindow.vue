@@ -111,7 +111,7 @@ export default {
             let num = this.num
             let price = this.all_money
             let pid = this.status
-            // if(!this.status) return Toast('请先选择规格')
+            if(!this.status) return Toast('请先选择规格')
             this.$router.push({name: 'orderSubmit', query: {
                 id,
                 num,
@@ -157,7 +157,7 @@ export default {
             p {
                 padding: 0 2vw;
                 font-size: 4vw;
-                color: #000000;
+                color: #da428d;
                 font-weight: 600;
                 span {
                     font-weight: 400;
@@ -221,7 +221,7 @@ export default {
                 padding: 0 1.5vw;
             }
             &.on {
-                background: #000000;
+                background: #da428d;
                 .money,
                 .days {
                     color: #fff;
@@ -259,11 +259,11 @@ export default {
             line-height: 12vw;
             height: 12vw;
             color: #fff;
-            background: #000000;
+            background: #da428d;
             border-radius: 6vw;
             text-align: center;
             &.on {
-                background: #000000;
+                background: #da428d;
             }
         }
     }

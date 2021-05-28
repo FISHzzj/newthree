@@ -10,7 +10,6 @@
                 <img src="@/assets/images/icon/2.png" alt=""  v-if="item.name == 'ETH'" />
                 <img src="@/assets/images/icon/3.png" alt=""  v-if="item.name == 'FIL'"/>
                 <img src="@/assets/images/icon/6.png" alt=""  v-if="item.name == 'XCH'"/>
-                <img src="@/assets/images/icon/5.png" alt=""  v-if="item.name == 'USDT'"/>
                 <div class="right">
                     <div class="name">{{item.name}}</div>
                     <div class="flex ali_center">
@@ -67,13 +66,12 @@ export default {
     box-sizing: border-box;
 }
 .myOrder {
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #000000;
-        color: #fff;
+        background: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -95,7 +93,7 @@ export default {
             width: 100%;
             height: 25vw;
             margin-bottom: 2.4vw;
-            background: #333;
+            background: #fff;
             border-radius: 3vw;
             padding: 6vw 4vw;
             img {
@@ -107,7 +105,7 @@ export default {
                 .name {
                     font-size: 4vw;
                     font-weight: 600;
-                    color: #fff;
+                    color: #333;
                 }
                 .flex {
                     p {
@@ -116,7 +114,7 @@ export default {
                         font-size: 3.2vw;
                         margin-right: 4vw;
                         span {
-                            color: #fff;
+                            color: #333;
                             font-size: 3.47vw;
                             font-weight: 600;
                         }

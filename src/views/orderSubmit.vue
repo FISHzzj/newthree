@@ -19,10 +19,10 @@
                  <span class="copy" :data-clipboard-text="ordersn">复制</span>
                
             </div>
-            <div class="order_id flex ali_center flex_between" v-if="wallet">
+            <!-- <div class="order_id flex ali_center flex_between" v-if="wallet">
                 <div class="">钱包地址：<span>{{wallet}}</span></div>
                  <span class="copy" :data-clipboard-text="wallet">复制</span>
-            </div>
+            </div> -->
             
            
         </div>
@@ -311,14 +311,14 @@ export default {
 <style lang="less" scoped>
 .orderSubmit {
     padding: 0 4vw;
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     .header {
         width: 100%;
         height: 12vw;
         top: 0;
         left: 0;
         position: fixed;
-        background: #000000;
+        background: #da428d;
         z-index: 100;
         color: #fff;
         .van-icon {
@@ -352,7 +352,7 @@ export default {
         left: 0;
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #000000, #fff);
+        background-image: linear-gradient(180deg, #da428d, #fff);
     }
     .top {
         position: relative;
@@ -401,7 +401,7 @@ export default {
             }
             .copy {
                 color: #fff;
-                background: #000000;
+                background: #da428d;
                 line-height: 8vw;
                 border-radius: 4vw;
                 padding: 0 3vw;
@@ -519,7 +519,7 @@ export default {
             line-height: 12vw;
             width: 30vw;
             text-align: center;
-            background: #000000;
+            background: #da428d;
             border-radius: 1vw;
         }
     }

@@ -49,7 +49,7 @@
                             <div class="bottom flex ali_center flex_between">
                                 <div class="left">总价<span>{{item.realprice}}</span>{{item.paytype}}</div>
                                 <div class="right flex ali_center">
-                                    <span v-if="item.status == 2" style="border:1px solid #000000;color:#000000;">续缴电费</span>
+                                    <span v-if="item.status == 2" style="border:1px solid #da428d;color:#da428d;">续缴电费</span>
                                     <span v-else>终止产品</span>
 
                                 </div>
@@ -84,7 +84,7 @@
                                     <span>取消订单</span>
                                 </div>
                                 <div class="right flex ali_center" >
-                                    <span style="border:1px solid #000000;color:#000000;">确认支付</span>
+                                    <span style="border:1px solid #da428d;color:#da428d;">确认支付</span>
                                 </div>
                             </div>
                         </div>
@@ -158,13 +158,12 @@ export default {
     box-sizing: border-box;
 }
 .orderlist {
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #000000;
-        color: #fff;
+        background: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -182,29 +181,28 @@ export default {
     }
     .top {
         text-align: center;
-        background: #000;
+        background: #fff;
         padding: 6vw 0;
-        color: #fff;
         .num {
             font-size: 7vw;
             font-weight: 600;
             
         }
         .type {
-            // color: #666;
+            color: #666;
             font-size: 3.2vw;
         }
     }
     .nav {
         height: 12vw;
         text-align: center;
-        background: #333;
+        background: #fff;
         .item {
             width: 30vw;
             color: #ccc;
             font-weight: 600;
             &.on {
-                color: #fff;
+                color: #333;
                 position: relative;
                 &::after {
                     position: absolute;
@@ -215,7 +213,7 @@ export default {
                     width: 8vw;
                     content: "";
                     height: 0.75vw;
-                    background: #fff;
+                    background: #da428d;
                 }
             }
         }
@@ -237,7 +235,7 @@ export default {
                     color: #333;
                 }
                 .status {
-                    color: #000000;
+                    color: #da428d;
                 }
             }
             // .two{

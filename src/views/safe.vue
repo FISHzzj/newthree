@@ -42,7 +42,7 @@
             <div class="top1 flex ali_center">
                 <van-icon @click="showmask = false" name="arrow-down" />
             </div>
-            <div class="title">重置密码</div>
+            <div class="title">交易密码</div>
             <div class="flex input ali_center flex_between">
                 <input v-model="code" type="text" placeholder="输入短信验证码" />
                 <span @click="senVerifyCode()">{{timeAndTextOfSendcode}}</span>
@@ -140,7 +140,7 @@ export default {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #000000;
+        background: #da428d;
         .van-icon {
             position: absolute;
             top: 0;
@@ -158,7 +158,7 @@ export default {
         }
     }
     .top {
-        background: #000000;
+        background: #da428d;
         color: #fff;
         width: 100%;
         font-size: 3.47vw;
@@ -172,17 +172,16 @@ export default {
         }
     }
     .content {
-        background: #333;
+        background: #fff;
         border-radius: 2vw 2vw 0 0;
         padding: 0 4vw;
         margin-top: -2vw;
-        color: #fff;
         .item {
             height: 20vw;
             .right {
-                color: #fff;
+                color: #999;
                 .success {
-                    color: #fff;
+                    color: #da428d;
                 }
             }
         }
@@ -225,7 +224,7 @@ export default {
                 }
             }
             span {
-                color: #000000;
+                color: #da428d;
                 font-size: 3.47vw;
             }
             .btn {
@@ -235,7 +234,7 @@ export default {
                 color: #fff;
                 border-radius: 4vw;
                 text-align: center;
-                background: #000000;
+                background: #da428d;
             }
         }
     }

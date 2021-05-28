@@ -101,11 +101,11 @@ export default {
                 color: #fff;
                 border-radius: 4vw;
                 text-align: center;
-                background: #000000;
+                background: #da428d;
             }
         }
         .forget {
-            color: #000000;
+            color: #da428d;
             font-size: 3.47vw;
             line-height: 12vw;
         }

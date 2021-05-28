@@ -51,7 +51,7 @@ export default {
         return {
             title: '',
             status: 0,
-            navlist: ['转入','转出','兑换'],
+            navlist: ['转入','转出','兑换','互转'],
             typenum: '1',
             accountType: '2',
             list: [],
@@ -125,13 +125,12 @@ export default {
     box-sizing: border-box;
 }
 .record {
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     .header {
         width: 100%;
         height: 12vw;
-        background: #000000;
+        background: #fff;
         position: relative;
-        color: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -150,7 +149,7 @@ export default {
     .nav {
         flex-wrap: nowrap;
         height: 12vw;
-        background: #000;
+        background: #fff;
         .item {
             width: 50%;
             text-align: center;
@@ -158,7 +157,7 @@ export default {
             font-size: 4vw;
             &.on {
                 position: relative;
-                color: #fff;
+                color: #000;
                 font-size: 4.2vw;
                 &::after {
                     position: absolute;
@@ -169,7 +168,7 @@ export default {
                     margin: 0 auto;
                     width: 8vw;
                     height: 0.75vw;
-                    background: #fff;
+                    background: #da428d;
                 }
             }
         }
@@ -177,13 +176,13 @@ export default {
     .list {
         padding: 4vw;
         .item {
-            background: #333;
+            background: #fff;
             border-radius: 2vw;
             padding: 0 2vw;
             margin-bottom: 2.4vw;
             .top {
                 height: 12vw;
-                border-bottom: 1px solid #999;
+                border-bottom: 1px solid #f7f7f7;
                 .time {
                     color: #999;
                     font-size: 3.2vw;
@@ -195,7 +194,6 @@ export default {
             }
             .bottom {
                 padding: 6vw 0;
-                color: #fff;
                 .left {
                     width: 60%;
                     .type {
@@ -213,10 +211,10 @@ export default {
                         margin-bottom: 2vw;
                     }
                     span {
-                        color: #fff;
+                        color: #666;
                     }
                     p {
-                        color: #fff;
+                        color: #333;
                     }
                     .num{
                         text-align: end;

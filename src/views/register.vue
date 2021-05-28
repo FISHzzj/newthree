@@ -1,12 +1,12 @@
 <template>
     <div class="login">
         <div class="header flex ali_center">
-            <van-icon @click="goback" name="cross" size="20" color="#fff" />
+            <van-icon @click="goback" name="cross" size="20" />
         </div>
         <div class="title">
             <div class="first">注册</div>
             <div class="second flex ali_center">
-                <van-icon name="warning-o" color="#fff" size="16" />
+                <van-icon name="warning-o" color="#999" size="16" />
                 <span>国家和地区注册后不可更改</span>
             </div>
         </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="tips flex ali_center">
                 <p>继续登录即代表同意</p>
-                <span @click="news_detail">《中科动地云用户协议》</span>
+                <span @click="news_detail">《哈希矿场用户协议》</span>
             </div>
         </div>
         <Area :showArea="showArea" @change="change"></Area>
@@ -112,11 +112,10 @@ export default {
         margin-top: 10vw;
         .phone {
             width: 100%;
-            background: #333;
+            background: #f7f6fc;
             border-radius: 6vw;
             position: relative;
             height: 12vw;
-            color: #fff;
             section {
                 .area {
                     width: 15vw;
@@ -151,13 +150,13 @@ export default {
             width: 52vw;
             text-align: center;
             height: 12vw;
-            background: #999;
+            background: #f7f6fc;
             line-height: 12vw;
             color: #fff;
             border-radius: 6vw;
             margin: 20vw auto 0;
             &.on {
-                background: #333!important;
+                background: #da428d!important;
             }
         }
     }
@@ -168,12 +167,12 @@ export default {
         width: 100%;
         .top {
             width: 100%;
-            color: #fff;
+            color: #da428d;
             height: 12vw;
             font-size: 3.2vw;
             justify-content: center;
             p {
-                border-right: 1px solid #fff;
+                border-right: 1px solid #da428d;
                 height: 4vw;
                 margin: 0 4vw;
             }
@@ -181,9 +180,8 @@ export default {
         .tips {
             justify-content: center;
             font-size: 3.2vw;
-            color: #fff;
             span {
-                color: #fff;
+                color: #da428d;
             }
         }
     }

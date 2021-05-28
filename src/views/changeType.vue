@@ -243,11 +243,11 @@ export default {
     box-sizing: border-box;
 }
 .orderSubmit {
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     .header {
         width: 100%;
         height: 12vw;
-        background: #000000;
+        background: #da428d;
         position: relative;
         color: #fff;
         .van-icon {
@@ -278,19 +278,18 @@ export default {
     .top_1 {
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #000000, #333);
+        background-image: linear-gradient(180deg, #da428d, #fff);
     }
     .top {
         width: 92vw;
         margin: -17vw 4vw 0;
-        background: #333;
+        background: #fff;
         border-radius: 3vw;
         padding: 4vw 3vw;
         .header_top {
             .first {
-                color: #fff;
                 .type {
-                    color: #fff;
+                    color: #999;
                     margin-bottom: 2vw;
                     font-size: 3.2vw;
                 }
@@ -307,9 +306,8 @@ export default {
                 }
             }
             .second {
-                color: #fff;
                 .type {
-                    color: #fff;
+                    color: #999;
                     margin-bottom: 2vw;
                     text-align: right;
                     font-size: 3.2vw;
@@ -360,7 +358,6 @@ export default {
             }
         }
         .changenum {
-            color: #fff;
             border-bottom: 1px solid #f7f7f7;
             height: 12vw;
             line-height: 12vw;
@@ -368,11 +365,10 @@ export default {
         .tips {
             font-size: 3.2vw;
             line-height: 10vw;
-            color: #fff;
             .left {
                 color: #fc4142;
                 span {
-                    color: #000000;
+                    color: #da428d;
                 }
             }
         }
@@ -385,17 +381,16 @@ export default {
                 line-height: 6.5vw;
             }
             .right {
-                color: #000000;
+                color: #da428d;
             }
         }
     }
     .tip {
         margin-top: 4vw;
         padding: 0 4vw;
-        color: #fff;
         .title {
             line-height: 12vw;
-            // color: #333;
+            color: #333;
             font-size: 4vw;
         }
         .grey {
@@ -411,7 +406,7 @@ export default {
         left: 4vw;
         text-align: center;
         color: #fff;
-        background: #333;
+        background: #da428d;
         border-radius: 2vw;
         width: 92vw;
     }

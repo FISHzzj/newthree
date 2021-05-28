@@ -5,7 +5,7 @@
         </div>
         <div class="title">
             <div class="first">嗨!矿友们好</div>
-            <div class="second">欢迎使用中科动地云</div>
+            <div class="second">欢迎使用哈希矿场</div>
         </div>
         <div class="content">
             <div class="phone">
@@ -17,7 +17,7 @@
                 <input v-else type="password" v-model="inputMsg.pwd" placeholder="请输入密码">
                 <i @click="iconeyeclose = !iconeyeclose" v-if="iconeyeclose" class="iconfont iconeyeopen"></i>
                 <i @click="iconeyeclose = !iconeyeclose" v-else class="iconfont iconeyeclose"></i>
-                <van-icon v-if="inputMsg.pwd" @click="inputMsg.pwd = ''" name="cross" color="#fff" size="10" />
+                <van-icon v-if="inputMsg.pwd" @click="inputMsg.mobile = ''" name="cross" color="#fff" size="10" />
             </div>
         </div>
         <div class="btn submit" @click="login">
@@ -34,7 +34,7 @@
             </div>
             <div class="tips flex ali_center">
                 <p>继续登录即代表同意</p>
-                <span @click="news_detail">《中科动地云用户协议》</span>
+                <span @click="news_detail">《哈希矿场用户协议》</span>
             </div>
         </div>
     </div>
@@ -151,7 +151,6 @@ export default {
         height: 10vw;
     }
     .title {
-        color: #fff;
         .first {
             font-weight: 600;
             font-size: 5vw;
@@ -167,11 +166,10 @@ export default {
         margin-top: 10vw;
         .phone {
             width: 100%;
-            background: #333;
+            background: #f7f6fc;
             border-radius: 6vw;
             position: relative;
             height: 12vw;
-            color: #fff;
             input {
                 width: 100%;
                 height: 12vw;
@@ -196,8 +194,7 @@ export default {
             width: 100%;
             height: 12vw;
             border-radius: 6vw;
-            background: #333;
-            color: #fff;
+            background: #f7f6fc;
             .iconfont {
                 top: 0;
                 bottom: 0;
@@ -229,18 +226,17 @@ export default {
         width: 50vw;
         height: 12vw;
         margin: 10vw auto;
-        border: 1px solid #000000;
+        border: 1px solid #da428d;
         border-radius: 6vw;
         position: relative;
-        background: #333;
         .van-icon {
             position: absolute;
             width: 8vw;
             height: 8vw;
             border-radius: 50%;
-            background: #333;
+            background: #da428d;
             margin: auto 0;
-            color: #fff;
+            color: #da428d;
             top: 0;
             bottom: 0;
             left: 13px;
@@ -248,16 +244,16 @@ export default {
         div {
             width: 100%;
             text-align: center;
-            color: #fff;
+            color: #da428d;
             line-height: 12vw;
         }
         &.on {
-            border: 1px solid #000000;
+            border: 1px solid #da428d;
             .van-icon {
-                background: #000000;
+                background: #da428d;
             }
             div {
-                color: #000000;
+                color: #da428d;
             }
         }
     }
@@ -266,15 +262,14 @@ export default {
         bottom: 0;
         left: 0;
         width: 100%;
-        color: red;
         .top {
             width: 100%;
-            color: #fff;
+            color: #da428d;
             height: 12vw;
             font-size: 3.2vw;
             justify-content: center;
             p {
-                border-right: 1px solid #fff;
+                border-right: 1px solid #da428d;
                 height: 4vw;
                 margin: 0 4vw;
             }
@@ -284,7 +279,7 @@ export default {
             font-size: 3.2vw;
             padding-bottom: 3vw;
             span {
-                color: #fff;
+                color: #da428d;
             }
         }
     }

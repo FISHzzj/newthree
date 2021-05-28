@@ -3,8 +3,8 @@
         <div class="header flex flex_between ali_center">
             <div class="title">我的</div>
             <div class="right">
-                <!-- <van-icon @click="showService = true" name="service-o" size="20" /> -->
-                <van-icon @click="$router.push('/setting')" name="setting-o" size="20" color="#fff" />
+                <van-icon @click="showService = true" name="service-o" size="20" />
+                <van-icon @click="$router.push('/setting')" name="setting-o" size="20" />
             </div>
         </div>
         <div class="userInfo flex ali_center">
@@ -24,7 +24,7 @@
                 <p class="type">我的钱包</p>
             </div>
             <div class="item" @click="$router.push('/poster')">
-                <img src="@/assets/images/icon/yaoqinghaoyou1.png" alt="" />
+                <img src="@/assets/images/icon/jia.png" alt="" />
                 <p class="type">邀请好友</p>
             </div>
         </div>
@@ -71,15 +71,14 @@
                 </div>
             </div>
         </div> -->
-        <div class="all_money flex ali_center flex_between">
-            <!-- <div class="left">资产预估(CNY) <span>≈ {{credit2}}</span></div> -->
-            <div class="left"></div>
+        <!-- <div class="all_money flex ali_center flex_between">
+            <div class="left">资产预估(CNY) <span>≈ {{credit2}}</span></div>
             <div class="right flex ali_center" >
-                <!-- <div class="cash" @click="$router.push('/cash')">提现</div>
-                <p></p> -->
-                <!-- <div class="recharge" @click="$router.push('/exchange/USDT/转入')">充值</div> -->
+                <div class="cash" @click="$router.push('/cash')">提现</div>
+                <p></p>
+                <div class="recharge" @click="$router.push('/recharge/CNY')">充值</div>
             </div>
-        </div>
+        </div> -->
         <div class="list">
             <!-- <div class="item flex ali_center flex_between">
                 <div class="left flex ali_center">
@@ -112,17 +111,17 @@
             <div @click="$router.push('/feedback')" class="item flex ali_center flex_between">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/fankui.png" alt="" />
-                    <span>帮助中心</span>
+                    <span>意见反馈</span>
                 </div>
                 <van-icon name="arrow" color="#ccc" />
             </div>
-            <!-- <div @click="$router.push('/about')" class="item flex ali_center flex_between">
+            <div @click="$router.push('/about')" class="item flex ali_center flex_between">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/about.png" alt="" />
                     <span>关于我们</span>
                 </div>
                 <van-icon name="arrow" color="#ccc" />
-            </div> -->
+            </div>
         </div>
         <bottom-nav></bottom-nav>
         <service
@@ -190,17 +189,16 @@ export default {
     box-sizing: border-box;
 }
 .user {
-    // background: #f7f7f7 !important;
+    background: #f7f7f7 !important;
     .header {
         height: 12vw;
         padding: 0 4vw;
         .title {
             font-size: 4.8vw;
             font-weight: 600;
-            color: #fff;
+            color: #333;
         }
         .right {
-            color: #fff;
             .van-icon {
                 margin-left: 4vw;
             }
@@ -219,10 +217,10 @@ export default {
             .nickname {
                 font-size: 4.2vw;
                 font-weight: 600;
-                color: #fff;
+                color: #333;
             }
             .mobile {
-                color: #fff;
+                color: #999;
                 font-size: 3.2vw;
                 margin-top: 1.5vw;
             }
@@ -232,20 +230,19 @@ export default {
         padding: 0 4vw;
         .item {
             width: 28vw;
-            background: #333;
+            background: #fff;
             border-radius: 2vw;
             padding: 2vw;
-            height: 26vw;
-            text-align: center;
+            height: 17vw;
             img {
-                width: 12.33vw;
-                height: 12.33vw;
+                width: 5.33vw;
+                height: 5.33vw;
                 // background: #000;
                 margin-bottom: 1vw;
             }
             p {
-                color: #fff;
-                font-size: 4.2vw;
+                color: #333;
+                font-size: 3.2vw;
                 font-weight: 600;
             }
         }
@@ -287,7 +284,7 @@ export default {
         .bottom {
             width: 92vw;
             border-radius: 3vw;
-            background: #000000;
+            background: #da428d;
             flex-wrap: wrap;
             .item {
                 width: 50%;
@@ -334,7 +331,7 @@ export default {
                 color: #afafb1;
             }
             .recharge {
-                color: #fff;
+                color: #da428d;
             }
             p {
                 width: 1px;
@@ -344,12 +341,11 @@ export default {
         }
     }
     .list {
-        background: #000;
-        color: #fff;
+        background: #fff;
         .item {
             padding: 0 4vw;
             height: 14vw;
-            // border-bottom: 0.5px solid #999;
+            border-bottom: 0.5px solid #eee;
             .left {
                 img {
                     width: 5.33vw;

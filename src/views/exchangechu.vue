@@ -191,13 +191,12 @@ export default {
     box-sizing: border-box;
 }
 .exchangechu {
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #000000;
-        color: #fff;
+        background: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -225,13 +224,12 @@ export default {
     }
     .content {
         width: 92vw;
-        background: #333;
+        background: #fff;
         border-radius: 3vw;
         height: 20vw;
         margin: 0 4vw;
         flex-direction: column;
         padding: 0 4vw;
-        color: #fff;
         .icon {
             width: 12vw;
             height: 12vw;
@@ -260,8 +258,8 @@ export default {
                 margin-left: 3vw;
                 border-radius: 1vw;
                 &.on {
-                    color: #000000;
-                    border: 1px solid #000000;
+                    color: #da428d;
+                    border: 1px solid #da428d;
                 }
             }
         }
@@ -279,7 +277,7 @@ export default {
             width: 100%;
             padding: 0 10vw;
             text-align: center;
-            color: #000000;
+            color: #da428d;
             height: 12vw;
             div {
                 width: 50%;
@@ -287,7 +285,7 @@ export default {
         }
     }
     .pays {
-        background: #333;
+        background: #fff;
         width: 92vw;
         margin: 4vw;
         padding: 20px 4vw;
@@ -300,15 +298,13 @@ export default {
                 height: 12vw;
                 line-height: 12vw;
                 width: 100%;
-                color: #fff;
             }
             input {
                 text-align: left;
                 width: 100%;
-                background: #999;
+                background: #eee;
                 padding: 10px 10px;
                 border-radius: 8px;
-                color: #fff;
             }
         }
         .img{
@@ -334,7 +330,7 @@ export default {
         border-radius: 1vw;
         margin: 4vw;
         &.on{
-            background: #333;
+            background: #da428d;
         }
     }
 }

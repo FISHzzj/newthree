@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <div class="header flex ali_center">
-            <van-icon @click="goback" name="cross" size="20" color="#fff" />
+            <van-icon @click="goback" name="cross" size="20" />
         </div>
         <div class="title">
             <div class="first">找回密码</div>
@@ -152,7 +152,7 @@ export default {
             width: 100%;
             height: 12vw;
             border-radius: 6vw;
-            background: #333;
+            background: #f7f6fc;
             .iconfont {
                 top: 0;
                 bottom: 0;
@@ -183,12 +183,11 @@ export default {
             width: 100%;
             height: 12vw;
             border-radius: 6vw;
-            background: #333;
+            background: #f7f6fc;
             input {
                 text-indent: 3vw;
                 height: 12vw;
                 font-size: 4vw;
-                color: #fff;
             }
             span {
                 padding-right: 3vw;
@@ -210,9 +209,9 @@ export default {
             width: 52vw;
             text-align: center;
             height: 12vw;
-            background: #333;
+            background: #f7f6fc;
             line-height: 12vw;
-            color: #999;
+            color: #fff;
             border-radius: 6vw;
             margin: 20vw auto 0;
             &.on {

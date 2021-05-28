@@ -2,7 +2,7 @@
     <div class="feedback">
         <div class="header">
             <van-icon @click="$router.go(-1)" name="arrow-left" size="20" />
-            <p>帮助中心</p>
+            <p>意见反馈</p>
         </div>
         <div class="title flex ali_center flex_between">
             <div class="left">反馈建议</div>
@@ -70,13 +70,12 @@ export default {
     box-sizing: border-box;
 }
 .feedback {
-    background: #000000 !important;
+    background: #f7f7f7 !important;
     .header {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #000000;
-        color: #fff;
+        background: #fff;
         .van-icon {
             position: absolute;
             top: 0;
@@ -93,10 +92,9 @@ export default {
         }
     }
     .title {
-        // background: #fff;
+        background: #fff;
         padding: 0 4vw;
         height: 12vw;
-        color: #fff;
     }
     #content {
         width: 92vw;
@@ -106,12 +104,8 @@ export default {
     }
     .uploader {
         width: 100vw;
-        background: #333;
+        background: #fff;
         padding: 2vw 4vw;
-        textarea{
-            background: #333;
-            color: #fff;
-        }
     }
     .img{
         position: relative;
@@ -123,10 +117,10 @@ export default {
     .touch {
         width: 100%;
         padding: 0 4vw 2vw;
-        background: #333;
+        background: #fff;
         margin: 3vw 0 8vw;
         .title1 {
-            color: #fff;
+            color: #333;
             font-size: 4vw;
             font-weight: 600;
             line-height: 12vw;
@@ -134,11 +128,10 @@ export default {
         input {
             width: 100%;
             line-height: 12vw;
-            color: #fff;
         }
     }
     .submit {
-        background: #333;
+        background: #da428d;
         color: #fff;
         height: 12vw;
         line-height: 12vw;
