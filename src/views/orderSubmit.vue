@@ -19,10 +19,10 @@
                  <span class="copy" :data-clipboard-text="ordersn">复制</span>
                
             </div>
-            <!-- <div class="order_id flex ali_center flex_between" v-if="wallet">
-                <div class="">钱包地址：<span>{{wallet}}</span></div>
-                 <span class="copy" :data-clipboard-text="wallet">复制</span>
-            </div> -->
+            <div class="order_id flex ali_center flex_between" v-if="payAddress">
+                <div class="">钱包地址：<span>{{payAddress}}</span></div>
+                 <span class="copy" :data-clipboard-text="payAddress">复制</span>
+            </div>
             
            
         </div>
@@ -34,9 +34,9 @@
             </div>
             <div class="item num flex ali_center flex_between">
                 <p>矿机总价</p>
-                <span>{{price/rates}}{{paytype}}</span>
+                <span>{{price}}{{paytype}}</span>
             </div>
-            <div class="item num flex ali_center flex_between">
+            <!-- <div class="item num flex ali_center flex_between">
                 <p>预缴电费</p>
                 <span>{{shopday}}天</span>
             </div>
@@ -51,14 +51,25 @@
             <div class="item num flex ali_center flex_between" v-if="puprice">
                 <p>GAS手续费</p>
                 <span>{{derate}}FIL</span>
-            </div>
+            </div> -->
             <!-- <div class="item num flex ali_center flex_between" v-if="puprice">
                 <p>质押总价</p>
                 <span>{{puprice}}FIL</span>
             </div> -->
             <div class="money">
-                <p>总价 <span>{{realprice/rates}}</span> {{paytype}}</p>
+                <p>总价 <span>{{realprice}}</span> {{paytype}}</p>
                  <p v-if="puprice">质押总价 <span>{{puprice}}</span> FIL</p>
+            </div>
+        </div>
+         <div class="pays">
+            <!-- <div class="num flex flex_between ali_center">
+                <div class="title">{{typetype}}数量</div>
+                <input v-model="num" type="text" placeholder="输入转入数量" />
+            </div> -->
+            <div class="img flex flex_between ali_center">
+                <div class="title">转账截图</div>
+                <van-uploader :after-read="afterRead" v-if="!baseimg" />
+                <img :src="baseimg" alt="" v-if="baseimg" >
             </div>
         </div>
         <div class="tips">确定支付后不支持退款,请仔细确定订单信息</div>
@@ -73,7 +84,7 @@
                 <img v-if="paytype == 'usdt'" src="@/assets/images/dui.png" alt="" />
                 <img v-else src="@/assets/images/yuan.png" alt="" />
             </div>
-            <div class="item flex ali_center flex_between" @click="change('btc')" v-if="paystatus == 1">
+            <!-- <div class="item flex ali_center flex_between" @click="change('btc')" v-if="paystatus == 1">
                 <div class="flex ali_center">
                     <img src="" class="icon" alt="" />
                     <span>BTC支付</span>
@@ -112,8 +123,9 @@
                 </div>
                 <img v-if="paytype == 'xch'" src="@/assets/images/dui.png" alt="" />
                 <img v-else src="@/assets/images/yuan.png" alt="" />
-            </div>
+            </div> -->
         </div>
+        
         <div class="safe_tips flex ali_center">
             <img src="@/assets/images/dui.png" alt="" />同意
             <router-link to="/content/1">服务协议及风险提示</router-link>
@@ -121,7 +133,7 @@
         <div class="tips1">投资有风险,入市需谨慎</div>
         <div style="height:15vw"></div>
         <div class="footer flex flex_between ali_center">
-            <div class="left">总价 <span>{{realprice/rates}}</span>{{paytype}}</div>
+            <div class="left">总价 <span>{{realprice}}</span>{{paytype}}</div>
             <div class="right" @click="openPwd">确定支付</div>
         </div>
         <pay-pwd
@@ -161,6 +173,8 @@ export default {
             puprice: "",
             deposit: "",
             derate: "",
+            payAddress: "",
+            baseimg: "",
         };
     },
     
@@ -171,24 +185,24 @@ export default {
     },
     methods: {
         async getData() {
-            let {id, num, price, pid, orderid} = this.$route.query
+            let {id, num, price} = this.$route.query
             if(!id) return Toast('id 不能为空')
             if(!num) return Toast('num 不能为空')
             if(!price) return Toast('price 不能为空')
-            if(!pid) return Toast('pid 不能为空')
+            // if(!pid) return Toast('pid 不能为空')
             let res = await $ajax('kuangorder', {
                 goodsid: id,
                 total: num,
                 price,
-                pid,
-                orderid
+                // pid,
+                // orderid
             })
             if (!res) return false
             let order = res.order
             Object.keys(order).forEach((key) => {
                 this[key] = order[key]
             }) 
-            this.paystatus = res.paystatus
+            this.payAddress = res.payAddress
             
         },
         async currenhulv(current, value){
@@ -202,26 +216,38 @@ export default {
             console.log(this.rates)
         },
         async noticePwd(e) {
-            let {id, num, price, pid} = this.$route.query
-            if(!this.paytype) return Toast("请选择支付方式")
+            let {id, num, price} = this.$route.query
+            // if(!this.paytype) return Toast("请选择支付方式")
+            if(!this.baseimg) return Toast("请上传转账截图！")
+
             let status = e.status
             if(status != 1) return false
             let res = await $ajax('kuangorderpay', {
                 goodsid: id,
                 total: num,
-                price: this.price / this.rates, // 矿机单价
-                realprice: price / this.rates, //总价
-                pid,
-                fees: this.fees,
-                payType: this.paytype,
+                // price: this.price / this.rates, // 矿机单价
+                realprice: price, //总价
+                // pid,
+                // fees: this.fees,
+                // payType: this.paytype,
                 ordersn: this.ordersn,
-                sysprice: this.puprice
+                // sysprice: this.puprice
+                image:this.baseimg
             })
             if (!res) return false
             Toast(res.msg)
             this.$router.push({
                 name: "myOrder"
             })
+
+        },
+        async afterRead(s) {
+            console.log(s);
+            let img = s.content
+            let res = await $ajax('userrechargeimages', {image: img})
+            if(!res) return false
+            console.log(res)
+            this.baseimg = res.img
 
         },
         closePwd(e) {
@@ -254,6 +280,7 @@ export default {
             // }
 
         },
+        
         //取消
         async kuangorderdontPay() {
             let {id, num, price, pid} = this.$route.query
@@ -438,6 +465,31 @@ export default {
             span {
                 font-size: 5.5vw;
                 font-weight: 600;
+            }
+        }
+    }
+    .pays {
+        background: #fff;
+        width: 92vw;
+        margin: 2vw 0;
+        padding: 0 2vw;
+        box-sizing: border-box;
+        .num {
+            .title {
+                font-size: 4.8vw;
+                font-weight: 600;
+                height: 12vw;
+                line-height: 12vw;
+            }
+            input {
+                text-align: right;
+            }
+        }
+        .img{
+            position: relative;
+            img{
+                width: 80px;
+                height: 80px;
             }
         }
     }

@@ -10,7 +10,7 @@
             <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
         <!-- 导航控件 -->
-        <van-grid :border="false" :column-num="4" icon-size="40" style="background:#000000;">
+        <van-grid :border="false" :column-num="4" icon-size="40" >
              <van-grid-item v-for="(item, index) in gridlist" :key="index" :icon="item.img" :text="item.text"  :to="item.url" />
         </van-grid>
         <!-- 公告 -->
@@ -40,7 +40,7 @@
                 <div class="somenum flex ali_center">
                     <div class="item_1" style="width: 100%;">
                         <div class="type" style="font-size: 3.47vw;">官方算力(T/天)</div>
-                        <div class="num" style="font-size: 7.5vw;">531245.55</div>
+                        <div class="num" style="font-size: 4.5vw;">531245.55</div>
                     </div>
                     <!-- <div class="item_1">
                         <div class="type">今日新增</div>
@@ -168,23 +168,14 @@
         <!-- 底部轮播 -->
          <div class="activeCenter">
             <div>矿场</div>
-            <a  @click="$router.push('/products')" href="javascript:;"><img src="@/assets/images/bg_xch.png" alt="" class="img1"></a>
+            <!-- <a  @click="$router.push('/products')" href="javascript:;"><img src="@/assets/images/bg_xch.png" alt="" class="img1"></a> -->
         </div>
-        <div class="activeCenter">
+        <div class="activeCenter" v-for="(item, index) in category" :key="index">
             <!-- <div>BTC矿场</div> -->
-            <a href="javascript:;"><img src="@/assets/images/bg_btc.png" alt="" class="img1"></a>
+            <a href="javascript:;" @click="toproducts(item.id)" ><img :src="item.thumb" alt="" class="img1"></a>
             
         </div>
-        <div class="activeCenter">
-            <!-- <div>ETH矿场</div> -->
-            <a  href="javascript:;"><img src="@/assets/images/bg_eth.png" alt="" class="img1"></a>
-            
-        </div>
-        <div class="activeCenter">
-            <!-- <div>FIL矿场</div> -->
-            <a href="javascript:;"><img src="@/assets/images/bg_fil.png" alt="" class="img1"></a>
-            
-        </div>
+       
         <div class="bgbottom flex ali_center">
             <!-- <img src="@/assets/images/home/laba_bai.png" alt=""> -->
              <div>专业的矿机租赁 算力交易平台</div>
@@ -254,20 +245,21 @@ export default {
                 {img:require("@/assets/images/icon/tibi1.png"), text:"提币", url:'/exchangechu/USDT/转出'},
                 {img:require("@/assets/images/icon/shouyi1.png"), text:"收益", url: '/moneyDetail/USDT/0.00000000'},
                 {img:require("@/assets/images/icon/yaoqinghaoyou1.png"), text:"邀请好友", url: '/poster'}
-            ]
+            ],
+            category:[],
         };
     },
     mounted(){
         this.getlist()
         // console.log(22222)
-          this.usercurrenbtchandle()
-            this.usercurrenfil()
-            this.usercurrenxch()
-        this.timer = setInterval(()=>{
-            this.usercurrenbtchandle()
-            this.usercurrenfil()
-            this.usercurrenxch()
-        },60000)
+        //   this.usercurrenbtchandle()
+            // this.usercurrenfil()
+            // this.usercurrenxch()
+        // this.timer = setInterval(()=>{
+        //     this.usercurrenbtchandle()
+        //     this.usercurrenfil()
+        //     this.usercurrenxch()
+        // },60000)
         
     },
     methods: {
@@ -276,16 +268,25 @@ export default {
             if (!res) return false
             this.banner = res.banner
             this.bannerTxt = res.bannerTxt
-            this.btc = res.btc
-            this.eth = res.eth
-            this.fil = res.fil
-            this.xch = res.xch
+            // this.btc = res.btc
+            // this.eth = res.eth
+            // this.fil = res.fil
+            // this.xch = res.xch
             this.footer = res.footer
-            this.btc_url = res.btc_url
-            this.eth_url = res.eth_url
-            this.fil_url = res.fil_url
-            this.xch_url = res.xch_url
+            this.category = res.category
+            // this.btc_url = res.btc_url
+            // this.eth_url = res.eth_url
+            // this.fil_url = res.fil_url
+            // this.xch_url = res.xch_url
             
+        },
+        toproducts(id){
+            this.$router.push({
+                name: 'products',
+                query:{
+                    id
+                }
+            })
         },
         async usercurrenbtchandle(){
             let res = await $ajax('usercurrenbtc', {})
@@ -392,7 +393,7 @@ export default {
                 }
             }
             .somenum {
-                height: 28vw;
+                height: 10vw;
                 flex-wrap: wrap;
                 .item_1 {
                     width: 32%;

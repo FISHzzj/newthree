@@ -63,7 +63,7 @@ export default {
     },
     kuang (data){
         if ( mistake(data) ) return false
-        let { banner, bannerTxt, btc, eth, fil, footer, xch } = data.result
+        let { banner, bannerTxt, btc, eth, fil, footer, xch, category } = data.result
         let {btc_url, eth_url, xch_url} = data.result.hrefUrl
         let fil_url = data.result.hrefUrl.fil
         return {
@@ -77,7 +77,8 @@ export default {
             btc_url,
             eth_url,
             fil_url,
-            xch_url
+            xch_url,
+            category,
 
         }
     },
@@ -189,10 +190,10 @@ export default {
     },
     kuangorder(data) {
         if ( mistake(data) ) return false
-        let {order, paystatus} = data.result
+        let {order, payAddress} = data.result
         return {
             order,
-            paystatus,
+            payAddress,
         }
     },
     useruserInfopwd2(data) {

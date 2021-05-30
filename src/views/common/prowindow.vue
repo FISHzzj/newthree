@@ -32,7 +32,7 @@
                 <div class="flex ali_center flex_between"><span>GAS手续费</span><span>{{productInfo.productprice*num}}FIL</span></div>
             </div>
             <div class="sub_btn flex ali_center flex_between">
-                <div class="left">总价<span>{{all_money}}</span>CNY</div>
+                <div class="left">总价<span>{{all_money}}</span>USDT</div>
                 <div class="right" :class="{on: status}" @click="submit">提交订单</div>
             </div>
         </div>
@@ -59,17 +59,17 @@ export default {
         };
     },
     created(){
-        // this.gettotal()
+        this.gettotal()
     },
     methods: {
         async gettotal( ) {
             let id = this.$route.query.id
-            if(!this.status) return Toast('请先选择规格')
+            // if(!this.status) return Toast('请先选择规格')
             if(!this.num || this.num == "" || this.num < 0) return Toast("购买数量不能低于1台!")
              let res = await $ajax('goodstotals', {
                 totalNum: this.num,
                 goodsid: id,
-                pid: this.status
+                // pid: this.status
             })
             if (!res) return false
             this.all_money = res.money
@@ -110,13 +110,13 @@ export default {
             let id = this.$route.query.id
             let num = this.num
             let price = this.all_money
-            let pid = this.status
-            if(!this.status) return Toast('请先选择规格')
+            // let pid = this.status
+            // if(!this.status) return Toast('请先选择规格')
             this.$router.push({name: 'orderSubmit', query: {
                 id,
                 num,
                 price,
-                pid
+                // pid
              }})
             // this.$router.push({
             //     path: `"/order/submit/${id}/${num}/${price}/${pid}"`

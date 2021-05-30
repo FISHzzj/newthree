@@ -46,7 +46,7 @@
                             <div class="name line">{{item.title}}</div>
                             <div class="first second"> <!-- 算力:110TH/s  | --> 功耗:{{item.power}}kw/h</div> 
                             <div class="first">预计日产出:{{item.today_bi}} {{item.cunit}}/{{item.unit}}</div>
-                            <div class="first">≈{{item.cny}} CNY/{{item.unit}}</div>
+                            <!-- <div class="first">≈{{item.cny}} CNY/{{item.unit}}</div> -->
                             <div class="bottom">
                                 <div class="price">{{item.marketprice}}<span>CNY</span></div>
                                 <div class="price1">≈{{item.usdt}}USDT</div>
@@ -112,10 +112,15 @@ export default {
             e: require("@/assets/images/e.jpg"),
             f: require("@/assets/images/f.jpg"),
             banner: [],
+            
         };
     },
     mounted() {
-        this.getnav()
+        this.status = this.$route.query.id
+        // this.getnav()
+        this.onLoad()
+        console.log(this.status)
+
     },
     methods: {
         async getnav(){
@@ -127,6 +132,7 @@ export default {
             this.b = require("@/assets/images/b_1.jpg")
         },
         async onLoad() {
+            console.log(333333333)
             let res = await $ajax('goods',{
                 page: this.page,
                 cateid: this.status
@@ -204,8 +210,8 @@ export default {
         top: 0;
         left: 0;
         z-index: 1000;
-        background: #000;
-        color: #fff;
+        // background: #000;
+        color: #333;
         .van-icon {
             position: absolute;
             top: 0;

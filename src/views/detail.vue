@@ -26,7 +26,7 @@
                     <div class="second">
                         <div class="type">预计日收益</div>
                         <div class="num">{{today_bi}} {{catetype}}/{{unit}}</div>
-                        <div class="num1">≈{{cny}}CNY/{{unit}}</div>
+                        <!-- <div class="num1">≈{{cny}}CNY/{{unit}}</div> -->
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@
             </div>
             <div class="pro_name">{{title}}</div>
             <div class="price_free flex ali_center flex_between">
-                <div class="price">{{marketprice}}<span>CNY/{{unit}}</span></div>
-                <div class="right">电费: <span> {{fees}}CNY/度</span></div>
+                <!-- <div class="price">{{marketprice}}<span>CNY/{{unit}}</span></div> -->
+                <!-- <div class="right">电费: <span> {{fees}}CNY/度</span></div> -->
             </div>  
             <div class="types flex ali_center">
                 <div class="type_1">联合挖矿</div>
@@ -210,7 +210,7 @@ export default {
                 this[key] = goods[key]
             })
             this.productinfo = {
-                shopdays: goods.shopdays,
+                // shopdays: goods.shopdays,
                 title: this.title,
                 suanli: this.t_num,
                 zupin: this.day > 0 ? this.day : '永久',

@@ -71,14 +71,14 @@
                 </div>
             </div>
         </div> -->
-        <!-- <div class="all_money flex ali_center flex_between">
-            <div class="left">资产预估(CNY) <span>≈ {{credit2}}</span></div>
+        <div class="all_money flex ali_center flex_between">
+            <!-- <div class="left">资产预估(CNY) <span>≈ {{credit2}}</span></div>
             <div class="right flex ali_center" >
                 <div class="cash" @click="$router.push('/cash')">提现</div>
                 <p></p>
                 <div class="recharge" @click="$router.push('/recharge/CNY')">充值</div>
-            </div>
-        </div> -->
+            </div> -->
+        </div>
         <div class="list">
             <!-- <div class="item flex ali_center flex_between">
                 <div class="left flex ali_center">

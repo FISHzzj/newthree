@@ -64,14 +64,14 @@
                 <span>添加收款方式</span>
                 <van-icon name="cross" @click="showList = false"></van-icon>
             </div>
-            <div class="item" @click="goedit('bank')">银行卡</div>
+            <!-- <div class="item" @click="goedit('bank')">银行卡</div> -->
             <!-- <div class="item" @click="goedit('weixin')">微信</div> -->
             <!-- <div class="item" @click="goedit('ali')">支付宝</div> -->
             <div class="item" @click="goedit('USDT')">USDT地址</div>
-            <div class="item" @click="goedit('BTC')">BTC地址</div>
+            <!-- <div class="item" @click="goedit('BTC')">BTC地址</div>
             <div class="item" @click="goedit('ETH')">ETH地址</div>
             <div class="item" @click="goedit('FIL')">FIL地址</div>
-             <div class="item" @click="goedit('XCH')">XCH地址</div>
+             <div class="item" @click="goedit('XCH')">XCH地址</div> -->
         </div>
     </div>
 </template>

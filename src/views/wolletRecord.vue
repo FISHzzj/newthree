@@ -51,7 +51,7 @@ export default {
         return {
             title: '',
             status: 0,
-            navlist: ['转入','转出','兑换','互转'],
+            navlist: ['转入','转出','兑换'],
             typenum: '1',
             accountType: '2',
             list: [],
