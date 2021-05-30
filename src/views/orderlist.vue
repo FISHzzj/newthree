@@ -49,8 +49,8 @@
                             <div class="bottom flex ali_center flex_between">
                                 <div class="left">总价<span>{{item.realprice}}</span>{{item.paytype}}</div>
                                 <div class="right flex ali_center">
-                                    <span v-if="item.status == 2" style="border:1px solid #da428d;color:#da428d;">续缴电费</span>
-                                    <span v-else>终止产品</span>
+                                    <span v-if="item.status == 2" style="border:1px solid #da428d;color:#da428d;">订单详情</span>
+                                    <span >终止产品</span>
 
                                 </div>
                             </div>

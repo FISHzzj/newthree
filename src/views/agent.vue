@@ -19,7 +19,7 @@
                         <img class="avatar" :src="avatar" alt="">
                         <div class="">
                             <div class="nickname">矿友{{nickname}}</div>
-                            <div class="num">直推人数：{{team}}人</div>
+                            <div class="num">直推人数：{{pushTotal}}人</div>
                         </div>
                     </div>
                     <div class="right">
@@ -51,7 +51,7 @@
                 <div class="nav flex ali_center flex_between">
                     <div class="item">
                         <div class="type">团队人数</div>
-                        <div class="num">{{cnyinfo}}</div>
+                        <div class="num">{{team}}</div>
                     </div>
                     <!-- <div class="item">
                         <div class="type">USDT总投资</div>
@@ -59,7 +59,7 @@
                     </div> -->
                     <div class="item">
                         <div class="type">团队总业绩</div>
-                        <div class="num">{{btcinfo}}</div>
+                        <div class="num">{{teamMoney}}</div>
                     </div>
                 </div>
             </div>
@@ -118,6 +118,8 @@ export default {
             usdtinfo: "",
             cnyinfo: "",
             nickname: "",
+            pushTotal: "",
+            teamMoney: "",
         }
     },
     mounted() {
@@ -157,6 +159,8 @@ export default {
             this.usdtinfo = usdt
             this.cnyinfo = cny
             this.nickname = res.nickname
+            this.pushTotal = res.pushTotal
+            this.teamMoney = res.teamMoney
         },
         async userapplylevellogs() {
             let res = await $ajax('userapplylevellogs', {page: this.page})

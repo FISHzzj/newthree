@@ -343,7 +343,7 @@ export default {
     },
     userapplylevelind(data) {
         if ( mistake(data) ) return false
-        let {team, levelname, btc, eth, fil, teamInfo, avatar, nickname} = data.result.list
+        let {team, levelname, btc, eth, fil, teamInfo, avatar, nickname, pushTotal, teamMoney} = data.result.list
         return{
             team, 
             levelname,
@@ -353,6 +353,8 @@ export default {
             teamInfo, 
             avatar,
             nickname,
+            pushTotal,
+            teamMoney,
         }
     },
     userapplylevellogs(data) {
