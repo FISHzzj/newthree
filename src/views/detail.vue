@@ -48,7 +48,7 @@
             </div>  
             <div class="types flex ali_center">
                 <div class="type_1">联合挖矿</div>
-                <div class="type_2">优先回本</div>
+                <!-- <div class="type_2">优先回本</div> -->
             </div>
             <div class="rules">
                 <div class="r_title">产出规则</div>
@@ -146,14 +146,14 @@ export default {
                     name: '产品规格',
                     index: 0
                 },
-                {
-                    name: '产品详情',
-                    index: 1
-                },
-                {
-                    name: '风险提醒',
-                    index: 2
-                }
+                // {
+                //     name: '产品详情',
+                //     index: 1
+                // },
+                // {
+                //     name: '风险提醒',
+                //     index: 2
+                // }
             ],
             marketprice:"",
             total:"",

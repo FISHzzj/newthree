@@ -483,6 +483,16 @@ export default [
         }
     },
     {
+        path: '/getnice', // 收益
+        name: 'getnice',
+        component: () => import("@/views/getnice.vue"),
+        props: false,//1111,
+        meta:{
+            index: 1,
+            mustLogin: true,//
+        }
+    },
+    {
         path: "/login", //登录
         name: "login",
         component: () => import("@/views/login.vue"),

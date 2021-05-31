@@ -176,10 +176,10 @@
             
         </div>
        
-        <div class="bgbottom flex ali_center">
-            <!-- <img src="@/assets/images/home/laba_bai.png" alt=""> -->
+        <!-- <div class="bgbottom flex ali_center">
+            <img src="@/assets/images/home/laba_bai.png" alt="">
              <div>专业的矿机租赁 算力交易平台</div>
-        </div>
+        </div> -->
         <bottom-nav></bottom-nav>
     </div>
 </template>
@@ -243,7 +243,7 @@ export default {
             gridlist:[
                 {img:require("@/assets/images/icon/chongbi1.png"), text:"充币", url:'/exchange/USDT/转入'},
                 {img:require("@/assets/images/icon/tibi1.png"), text:"提币", url:'/exchangechu/USDT/转出'},
-                {img:require("@/assets/images/icon/shouyi1.png"), text:"收益", url: '/moneyDetail/USDT/0.00000000'},
+                {img:require("@/assets/images/icon/shouyi1.png"), text:"收益", url: '/getnice'},
                 {img:require("@/assets/images/icon/yaoqinghaoyou1.png"), text:"邀请好友", url: '/poster'}
             ],
             category:[],

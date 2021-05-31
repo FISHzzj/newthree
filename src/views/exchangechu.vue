@@ -88,7 +88,7 @@ export default {
                 // {name: "BTC", img: require('@/assets/images/icon/4.png')},
                 // {name: "ETH", img: require('@/assets/images/icon/2.png')},
                 // {name: "FIL", img: require('@/assets/images/icon/3.png')},
-                // {name: "XCH", img: require('@/assets/images/icon/6.png')}
+                {name: "XCH", img: require('@/assets/images/icon/6.png')}
             ],
             code: "",
             wallet: "",

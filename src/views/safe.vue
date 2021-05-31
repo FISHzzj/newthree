@@ -9,12 +9,12 @@
             <div class="type">时刻保护您的安全</div>
         </div>
         <div class="content">
-            <div @click="renzheng" class="item flex flex_between ali_center">
+            <!-- <div @click="renzheng" class="item flex flex_between ali_center">
                 <div class="left">身份认证</div>
                 <div class="right flex ali_center">
                     <span class="success" >{{sf_type == 1 ? '认证成功' : '未认证'}}</span>
                 </div>
-            </div>
+            </div> -->
             <div @click="resetpwd(1)" class="item flex flex_between ali_center" >
                 <div class="left">重置登录密码</div>
                 <div class="right flex ali_center">
@@ -42,7 +42,7 @@
             <div class="top1 flex ali_center">
                 <van-icon @click="showmask = false" name="arrow-down" />
             </div>
-            <div class="title">交易密码</div>
+            <div class="title">{{settitle}}</div>
             <div class="flex input ali_center flex_between">
                 <input v-model="code" type="text" placeholder="输入短信验证码" />
                 <span @click="senVerifyCode()">{{timeAndTextOfSendcode}}</span>
@@ -63,6 +63,7 @@ export default {
             nickname: '',
             mobile: '',
             timeAndTextOfSendcode: "发送验证码",
+            settitle:"",
         }
     },
     mounted() {
@@ -117,6 +118,12 @@ export default {
         resetpwd(setType){
             this.showmask = true;
             this.setType = setType
+            if(this.setType == 1){
+                this.settitle = '重置登录密码'
+            }else {
+                this.settitle = '重置交易密码'
+
+            }
         },
         submit() {
             if(!this.code) return Toast('请先输入验证码')

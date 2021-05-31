@@ -23,14 +23,14 @@
                 <div class="on" @click="changenav('ERC')">TRC20</div>
                 <div @click="changenav('TRC')">ERC20</div>
             </div>
-            <img class="code" :src="code" alt="" />
+            <!-- <img class="code" :src="code" alt="" /> -->
             <div class="address">{{wallet}}</div>
-            <div class="btns flex ali_center flex_between">
+            <div class="btns flex ali_center">
                 <div class="copy" :data-clipboard-text="wallet">复制地址</div>
-                <div class="save" @click="toDownLoad">保存图片</div>
+                <!-- <div class="save" @click="toDownLoad">保存图片</div> -->
             </div>
         </div>
-        <div class="pays">
+        <!-- <div class="pays">
             <div class="num flex flex_between ali_center">
                 <div class="title">{{typetype}}数量</div>
                 <input v-model="num" type="text" placeholder="输入转入数量" />
@@ -40,12 +40,12 @@
                 <van-uploader :after-read="afterRead" v-if="!baseimg" />
                 <img :src="baseimg" alt="" v-if="baseimg" >
             </div>
-        </div>
+        </div> -->
         <div class="tips">
             <p>温馨提示：</p>
             <div>转账前请务必确认地址信息无误，已经转出则不可撤销，USDT充值链名称主要分为TRC20和ERC20，充值前请确认公链的名称，一旦充值错误资产不可找回，损失自担。</div>
         </div>
-        <div class="submit" :class="{on: num}" @click="submit">确认{{typetype}}</div>
+        <!-- <div class="submit" :class="{on: num}" @click="submit">确认{{typetype}}</div> -->
         <van-action-sheet
             v-model="show"
             :actions="actions"
@@ -232,7 +232,7 @@ export default {
         width: 92vw;
         background: #fff;
         border-radius: 3vw;
-        height: 120vw;
+        height: 80vw;
         margin: 0 4vw;
         flex-direction: column;
         padding: 0 4vw;
@@ -278,6 +278,7 @@ export default {
             word-break: break-all;
             text-align: center;
             font-weight: 600;
+            margin-top: 10vw;
         }
         .btns {
             width: 100%;
@@ -286,7 +287,7 @@ export default {
             color: #6200A5;
             height: 12vw;
             div {
-                width: 50%;
+                width: 100%;
             }
         }
     }

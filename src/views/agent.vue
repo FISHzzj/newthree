@@ -3,7 +3,7 @@
         <div class="header">
             <van-icon @click="$router.go(-1)" name="arrow-left" size="20" />
             <p>我的团队</p>
-             <span @click="$router.push('/teamlist')">团队成员</span>
+             <!-- <span @click="$router.push('/teamlist')">团队成员</span> -->
         </div>
         <!-- 不是代理 -->
         <!-- <div v-if="levelType != 2">
@@ -20,7 +20,7 @@
                         <img class="avatar" :src="avatar" alt="">
                         <div class="">
                             <div class="nickname">矿友{{nickname}}</div>
-                            <div class="num">直推人数：{{pushTotal}}人</div>
+                            <!-- <div class="num">直推人数：{{pushTotal}}人</div> -->
                         </div>
                     </div>
                     <div class="right">
@@ -47,40 +47,46 @@
                 <div class="infos">
                     <!-- <div class="title">团队总人数</div>
                     <div class="num"><span>{{team}}</span>人</div> -->
-                    <div class="title">团队总投资</div>
+                    <!-- <div class="title">团队伞下总人数</div> -->
                 </div>
                 <div class="nav flex ali_center flex_between">
                     <div class="item">
-                        <div class="type">团队人数</div>
+                        <div class="type">我的团队(人)</div>
                         <div class="num">{{team}}</div>
                     </div>
-                    <!-- <div class="item">
-                        <div class="type">USDT总投资</div>
-                        <div class="num">{{usdtinfo}}</div>
-                    </div> -->
                     <div class="item">
-                        <div class="type">团队总业绩</div>
+                        <div class="type">我的直推(人)</div>
+                        <div class="num">{{pushTotal}}</div>
+                    </div>
+                </div>
+                <div class="nav flex ali_center flex_between">
+                    <div class="item">
+                        <div class="type">总业绩(T)</div>
+                        <div class="num">{{teamMoney}}</div>
+                    </div>
+                    <div class="item">
+                        <div class="type">当日新增(T)</div>
                         <div class="num">{{teamMoney}}</div>
                     </div>
                 </div>
             </div>
             <div class="list">
-                <div class="title">佣金记录</div>
-                <div class="title1 flex flex_between ali_center">
+                <div class="title">直推人员</div>
+                <!-- <div class="title1 flex flex_between ali_center">
                     <div class="time">时间</div>
                     <div class="uid">用户ID</div>
                     <div class="money">佣金</div>
-                </div>
+                </div> -->
                  <van-list
                     v-model="loading"
                     :finished="finished"
                     :finished-text="'我是有底线的'"
-                    @load="userapplylevellogs"
+                    @load="logs"
                 >
                     <div class="item flex flex_between ali_center" v-for="(item,index) in list" :key="index">
                         <div class="time">{{item.createtime}}</div>
-                        <div class="uid">矿友{{item.mobile}}</div>
-                        <div class="money">+{{item.money}}</div>
+                        <div class="uid">{{item.mobile}}</div>
+                        <div class="money">+{{item.yeji}}</div>
                     </div>
                 </van-list>
                 
@@ -91,7 +97,7 @@
                     force-ellipses
                 /> -->
             </div>
-            <div class="touchservice">联系客服</div>
+            <!-- <div class="touchservice">联系客服</div> -->
         </div>
     </div>
 </template>
@@ -121,6 +127,7 @@ export default {
             nickname: "",
             pushTotal: "",
             teamMoney: "",
+            pushTotal:"",
         }
     },
     mounted() {
@@ -151,17 +158,18 @@ export default {
             if(!res) return false
             this.team = res.team
             this.levelname = res.levelname
-            this.btc = res.btc
-            this.eth = res.eth
-            this.fil = res.fil
+            // this.btc = res.btc
+            // this.eth = res.eth
+            // this.fil = res.fil
             this.avatar = res.avatar
-            let {btc, usdt, cny} = res.teamInfo
-            this.btcinfo = btc
-            this.usdtinfo = usdt
-            this.cnyinfo = cny
+            // let {btc, usdt, cny} = res.teamInfo
+            // this.btcinfo = btc
+            // this.usdtinfo = usdt
+            // this.cnyinfo = cny
             this.nickname = res.nickname
             this.pushTotal = res.pushTotal
             this.teamMoney = res.teamMoney
+
         },
         async userapplylevellogs() {
             let res = await $ajax('userapplylevellogs', {page: this.page})
@@ -170,6 +178,22 @@ export default {
             console.log(res)
             let list = res.list
             this.list.push(...list)
+            // // 加载状态结束
+            this.loading = false
+            if (res.list.length === 0) {
+                this.finished = true //加载完成
+            } 
+        },
+        async logs() {
+   
+            let res = await $ajax('userapplylevelteamList', {levelType : 1, page: this.page})  //充值
+            if(!res) return false
+            console.log(res)
+            // this.money = res.money
+           
+            this.page++
+            console.log(res.list)
+            this.list.push(...res.list)
             // // 加载状态结束
             this.loading = false
             if (res.list.length === 0) {
@@ -304,7 +328,8 @@ export default {
             }
         }
         .nav {
-            padding: 0 4vw 6vw;
+            padding: 4vw 4vw 6vw;
+            
             .type {
                 color: #999;
                 font-size: 3.2vw;

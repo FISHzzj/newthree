@@ -300,6 +300,7 @@ export default {
                         // justify-content: space-between;
                         height: 20vw;
                         font-size: 15px;
+                        margin-left: 10px;
                     }
                 }
       

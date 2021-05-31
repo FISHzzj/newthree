@@ -499,11 +499,13 @@ export default {
     },
     userlog(data){
         if ( mistake(data) ) return false
-        let {list, yueMoney, sysmoney} = data.result
+        let {list, yueMoney, sysmoney, countMoney, noDayMoney} = data.result
         return{
             list,
             yueMoney,
             sysmoney,
+            countMoney,
+            noDayMoney,
         }
     },
     kuangfooterText(data){
