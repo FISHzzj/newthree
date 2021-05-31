@@ -48,8 +48,8 @@
                             <div class="first">预计日产出:{{item.today_bi}} {{item.cunit}}/{{item.unit}}</div>
                             <!-- <div class="first">≈{{item.cny}} CNY/{{item.unit}}</div> -->
                             <div class="bottom">
-                                <div class="price">{{item.marketprice}}<span>CNY</span></div>
-                                <div class="price1">≈{{item.usdt}}USDT</div>
+                                <div class="price">{{item.marketprice}}<span>USDT</span></div>
+                                <!-- <div class="price1">≈{{item.usdt}}USDT</div> -->
                             </div>
                         </div>
                     </router-link>
@@ -118,8 +118,8 @@ export default {
     mounted() {
         this.status = this.$route.query.id
         // this.getnav()
-        this.onLoad()
-        console.log(this.status)
+        // this.onLoad()
+        // console.log(this.status)
 
     },
     methods: {
@@ -210,7 +210,7 @@ export default {
         top: 0;
         left: 0;
         z-index: 1000;
-        // background: #000;
+        background: #FFF;
         color: #333;
         .van-icon {
             position: absolute;
@@ -278,7 +278,7 @@ export default {
             .left {
                 position: relative;
                 width: 35vw;
-                height: 48vw;
+                height: 35vw;
                 .type {
                     color: #aa9d8a;
                     font-size: 3.2vw;
@@ -339,7 +339,7 @@ export default {
                     right: 0;
                     text-align: right;
                     .price {
-                        color: #fff;
+                        color: #333;
                         font-size: 6vw;
                         font-weight: 600;
                         span {

@@ -65,7 +65,7 @@
                 <van-icon name="cross" @click="showList = false"></van-icon>
             </div>
             <!-- <div class="item" @click="goedit('bank')">银行卡</div> -->
-            <!-- <div class="item" @click="goedit('weixin')">微信</div> -->
+            <!-- <div class="item" @click="goedit('weixin')">QQ</div> -->
             <!-- <div class="item" @click="goedit('ali')">支付宝</div> -->
             <div class="item" @click="goedit('USDT')">USDT地址</div>
             <!-- <div class="item" @click="goedit('BTC')">BTC地址</div>
@@ -163,7 +163,7 @@ export default {
             margin-bottom: 2.4vw;
             width: 100%;
             height: 25vw;
-            // background: #da428d;
+            // background: #6200A5;
             border-radius: 2vw;
             position: relative;
             // padding-top: 4vw;

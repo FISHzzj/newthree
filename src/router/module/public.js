@@ -463,6 +463,26 @@ export default [
         }
     },
     {
+        path: '/teamlist', // 伞下成员
+        name: 'teamlist',
+        component: () => import("@/views/teamlist.vue"),
+        props: false,//1111,
+        meta:{
+            index: 1,
+            mustLogin: true,//
+        }
+    },
+    {
+        path: '/informalog', // 新闻内容
+        name: 'informalog',
+        component: () => import("@/views/informalog.vue"),
+        props: false,//1111,
+        meta:{
+            index: 1,
+            mustLogin: true,//
+        }
+    },
+    {
         path: "/login", //登录
         name: "login",
         component: () => import("@/views/login.vue"),

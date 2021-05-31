@@ -226,7 +226,7 @@ export default {
         width: 50vw;
         height: 12vw;
         margin: 10vw auto;
-        border: 1px solid #da428d;
+        border: 1px solid #6200A5;
         border-radius: 6vw;
         position: relative;
         .van-icon {
@@ -234,9 +234,9 @@ export default {
             width: 8vw;
             height: 8vw;
             border-radius: 50%;
-            background: #da428d;
+            background: #6200A5;
             margin: auto 0;
-            color: #da428d;
+            color: #6200A5;
             top: 0;
             bottom: 0;
             left: 13px;
@@ -244,16 +244,16 @@ export default {
         div {
             width: 100%;
             text-align: center;
-            color: #da428d;
+            color: #6200A5;
             line-height: 12vw;
         }
         &.on {
-            border: 1px solid #da428d;
+            border: 1px solid #6200A5;
             .van-icon {
-                background: #da428d;
+                background: #6200A5;
             }
             div {
-                color: #da428d;
+                color: #6200A5;
             }
         }
     }
@@ -264,12 +264,12 @@ export default {
         width: 100%;
         .top {
             width: 100%;
-            color: #da428d;
+            color: #6200A5;
             height: 12vw;
             font-size: 3.2vw;
             justify-content: center;
             p {
-                border-right: 1px solid #da428d;
+                border-right: 1px solid #6200A5;
                 height: 4vw;
                 margin: 0 4vw;
             }
@@ -279,7 +279,7 @@ export default {
             font-size: 3.2vw;
             padding-bottom: 3vw;
             span {
-                color: #da428d;
+                color: #6200A5;
             }
         }
     }

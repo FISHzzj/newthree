@@ -3,6 +3,7 @@
         <div class="header">
             <van-icon @click="$router.go(-1)" name="arrow-left" size="20" />
             <p>我的团队</p>
+             <span @click="$router.push('/teamlist')">团队成员</span>
         </div>
         <!-- 不是代理 -->
         <!-- <div v-if="levelType != 2">
@@ -209,13 +210,23 @@ export default {
             font-size: 4vw;
             text-align: center;
         }
+        span {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 4vw;
+            font-size: 3.47vw;
+            margin: auto 0;
+            color: #999;
+            line-height: 12vw;
+        }
     }
     .submit {
         position: fixed;
         width: 92vw;
         bottom: 4vw;
         left: 4vw;
-        background: #da428d;
+        background: #6200A5;
         height: 12vw;
         text-align: center;
         color: #fff;
@@ -227,7 +238,7 @@ export default {
             background: #999!important;
         }
     .top {
-        background: #da428d;
+        background: #6200A5;
         background-size: 100% 100%;
         padding: 0 4vw 8vw;
         .infos {

@@ -7,13 +7,23 @@
                 <p :class="{on: $route.path == item.url}">{{item.name}}</p>
             </div>
         </div>
+        <service
+            :showService="showService"
+            @close="closeservice"
+        ></service>
     </div>
+    
 </template>
 <script>
+import service from "../common/service";
 export default {
     name: "footernav",
+    components:{
+        service
+    },
     data() {
         return {
+            showService: false,
             list: [
                 {
                     name: "首页",
@@ -46,11 +56,18 @@ export default {
         console.log(this.$route.path);
     },
     methods: {
+        closeservice(e) {
+            this.showService = false;
+        },
         goitem(e) {
-            if(e.url == '/server') return Toast("在开发中")
-            this.$router.push({
-                path: e.url
-            });
+            if(e.url == '/server') {
+                this.showService = true;
+            }else{
+                this.$router.push({
+                    path: e.url
+                });
+            }
+            
         }
     }
 }

@@ -267,7 +267,7 @@ export default {
         .tips {
             margin-top: -4vw;
             line-height: 12vw;
-            color: #da428d;
+            color: #6200A5;
             font-size: 3.2vw;
         }
     }
@@ -328,7 +328,7 @@ export default {
                 }
                 .copy {
                     margin-left: 3vw;
-                    color: #da428d;
+                    color: #6200A5;
                 }
             }
         }
@@ -380,7 +380,7 @@ export default {
         background: #ccc;
         border-radius: 1vw;
         &.on {
-            background: #da428d;
+            background: #6200A5;
         }
     }
 }

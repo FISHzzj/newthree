@@ -17,14 +17,14 @@
                 </div>
             </div>
             <!-- <div class="copy item flex flex_between ali_center" data-clipboard-text="0000000">
-                <div class="left">微信公众号</div>
+                <div class="left">QQ公众号</div>
                 <div class="right flex ali_center">
                     <span>110</span>
                     <van-icon name="arrow" color="#999" />
                 </div>
             </div> -->
             <div @click="showService = true" class="item flex flex_between ali_center">
-                <div class="left">添加客服微信号</div>
+                <div class="left">添加客服QQ号</div>
                 <van-icon name="arrow" color="#999" />
             </div>
             <div class="item flex flex_between ali_center" @click="tocontent">

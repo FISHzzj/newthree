@@ -14,8 +14,8 @@
                 <van-field :required="true" input-align="right" v-model="bank.bankAddress" label="开户支行" placeholder="请输入开户支行" />
             </div>
             <!-- <div class="content" v-if="type == 'weixin'">
-                <van-field :required="true" input-align="right" v-model="bank.realname" label="微信昵称" placeholder="请输入微信昵称" />
-                <van-field :required="true" input-align="right" v-model="bank.realname" label="微信号" placeholder="请输入微信号" />
+                <van-field :required="true" input-align="right" v-model="bank.realname" label="QQ昵称" placeholder="请输入QQ昵称" />
+                <van-field :required="true" input-align="right" v-model="bank.realname" label="QQ号" placeholder="请输入QQ号" />
             </div> -->
             <!-- <div class="content" v-if="type == 'ali'">
                 <van-field :required="true" input-align="right" v-model="bank.realname" label="真实姓名" placeholder="请输入真实姓名" />
@@ -58,7 +58,7 @@
                 </template>
             </van-field>
             <div class="code" v-if="type == 'weixin' || type == 'ali'">
-                <div class="left" v-if="type == 'weixin'"><span>*</span>微信收款吗</div>
+                <div class="left" v-if="type == 'weixin'"><span>*</span>QQ收款吗</div>
                 <div class="left" v-if="type == 'ali'"><span>*</span>支付宝收款吗</div>
                 <div class="img flex">
                     <van-uploader preview-size="192" after-read="afterread"></van-uploader>
@@ -103,7 +103,7 @@ export default {
         if (this.type == "bank") {
             this.typeName = "银行卡";
         } else if (this.type == "weixin") {
-            this.typeName = "微信";
+            this.typeName = "QQ";
         } else if (this.type == "ali") {
             this.typeName = "支付宝";
         } else if (this.type == "USDT") {
@@ -260,7 +260,7 @@ export default {
                 height: 12vw;
                 width: 100%;
                 line-height: 12vw;
-                border-bottom: 1px solid #da428d;
+                border-bottom: 1px solid #6200A5;
             }
         }
         .usdt {
@@ -281,8 +281,8 @@ export default {
                     text-align: center;
                     margin-right: 3vw;
                     &.on {
-                        color: #da428d;
-                        border: 1px solid #da428d;
+                        color: #6200A5;
+                        border: 1px solid #6200A5;
                         background: transparent;
                     }
                 }
@@ -328,7 +328,7 @@ export default {
     .submit {
         width: 92vw;
         color: #fff;
-        background: #da428d;
+        background: #6200A5;
         font-size: 4.2vw;
         line-height: 12vw;
         height: 12vw;

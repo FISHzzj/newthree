@@ -15,20 +15,20 @@
                 <!-- <img src="@/assets/images/home/laba2.jpg" alt=""> -->
                 <p>最新资讯</p>
             </div>
-            <div class="item flex ali_center">
+            <div class="item flex ali_center" v-for="(item, index) in foooter" :key="index" @click="gonext(item.id)" >
+                <div class="content">
+                    <p>{{item.title}}</p>
+                    <p>{{item.createtime}}</p>
+                </div>
+                <div class="img"><img :src="item.thumb" alt=""></div>
+            </div>
+            <!-- <div class="item flex ali_center">
                 <div class="content">
                     <p>【精彩实录】FIce官方哈色第六届had盛放假熬枯受淡</p>
                     <p>2020-10-10 22:24:20</p>
                 </div>
                 <div class="img"><img src="http://193.112.106.104:902/attachment/images/1/2021/04/eXlLwZf2X2R2MMdf2HnzMNDqY5gYFd.png" alt=""></div>
-            </div>
-            <div class="item flex ali_center">
-                <div class="content">
-                    <p>【精彩实录】FIce官方哈色第六届had盛放假熬枯受淡</p>
-                    <p>2020-10-10 22:24:20</p>
-                </div>
-                <div class="img"><img src="http://193.112.106.104:902/attachment/images/1/2021/04/eXlLwZf2X2R2MMdf2HnzMNDqY5gYFd.png" alt=""></div>
-            </div>
+            </div> -->
         </section>
         <bottom-nav></bottom-nav>
     </div>
@@ -61,10 +61,12 @@ export default {
                     clickable: true, //允许分页点击跳转
                 },
             },
+            foooter:[]
         }
     },
     mounted() {
         this.getlist()
+        this.getfooter()
     },
     methods:{
         async getlist(){
@@ -83,6 +85,20 @@ export default {
             // this.xch_url = res.xch_url
             
         },
+        async getfooter(data){
+            let res = await $ajax('kuangfooter', {})
+            if (!res) return false
+            this.foooter = res.foooter
+        },
+        gonext(id){
+            console.log(id)
+            this.$router.push({
+                name: 'informalog',
+                query:{
+                    id
+                }
+            })
+        }
     }
 }
 </script>
@@ -128,6 +144,7 @@ export default {
             .content{
                 margin-right: 10px;
                 padding: 0 5px;
+                width: 155px;
                 p:nth-child(1){
                     font-weight: 500;
                     font-size: 14px;

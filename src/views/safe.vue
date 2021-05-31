@@ -140,7 +140,7 @@ export default {
         width: 100%;
         height: 12vw;
         position: relative;
-        background: #da428d;
+        background: #6200A5;
         .van-icon {
             position: absolute;
             top: 0;
@@ -158,7 +158,7 @@ export default {
         }
     }
     .top {
-        background: #da428d;
+        background: #6200A5;
         color: #fff;
         width: 100%;
         font-size: 3.47vw;
@@ -181,7 +181,7 @@ export default {
             .right {
                 color: #999;
                 .success {
-                    color: #da428d;
+                    color: #6200A5;
                 }
             }
         }
@@ -224,7 +224,7 @@ export default {
                 }
             }
             span {
-                color: #da428d;
+                color: #6200A5;
                 font-size: 3.47vw;
             }
             .btn {
@@ -234,7 +234,7 @@ export default {
                 color: #fff;
                 border-radius: 4vw;
                 text-align: center;
-                background: #da428d;
+                background: #6200A5;
             }
         }
     }

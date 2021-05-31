@@ -93,7 +93,7 @@ export default {
             right: 4vw;
             font-size: 3.47vw;
             margin: auto 0;
-            color: #da428d;
+            color: #6200A5;
             line-height: 12vw;
         }
         p {
@@ -112,7 +112,7 @@ export default {
             height: 20vw;
         }
         .success {
-            color: #da428d;
+            color: #6200A5;
             font-size: 4.5vw;
             line-height: 8vw;
             font-weight: 600;
@@ -142,7 +142,7 @@ export default {
                 font-weight: 600;
                 font-size: 3.47vw;
                 &.num {
-                    color: #da428d;
+                    color: #6200A5;
                 }
             }
         }

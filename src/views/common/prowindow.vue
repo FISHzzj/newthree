@@ -157,7 +157,7 @@ export default {
             p {
                 padding: 0 2vw;
                 font-size: 4vw;
-                color: #da428d;
+                color: #6200A5;
                 font-weight: 600;
                 span {
                     font-weight: 400;
@@ -221,7 +221,7 @@ export default {
                 padding: 0 1.5vw;
             }
             &.on {
-                background: #da428d;
+                background: #6200A5;
                 .money,
                 .days {
                     color: #fff;
@@ -259,11 +259,11 @@ export default {
             line-height: 12vw;
             height: 12vw;
             color: #fff;
-            background: #da428d;
+            background: #6200A5;
             border-radius: 6vw;
             text-align: center;
             &.on {
-                background: #da428d;
+                background: #6200A5;
             }
         }
     }

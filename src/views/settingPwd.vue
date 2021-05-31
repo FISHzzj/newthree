@@ -264,7 +264,7 @@ export default {
             border-radius: 6vw;
             margin: 20vw auto 0;
             &.on {
-                background: #da428d;
+                background: #6200A5;
             }
         }
     }

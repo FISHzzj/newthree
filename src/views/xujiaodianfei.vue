@@ -333,7 +333,7 @@ export default {
         top: 0;
         left: 0;
         position: fixed;
-        background: #da428d;
+        background: #6200A5;
         z-index: 100;
         color: #fff;
         .van-icon {
@@ -367,7 +367,7 @@ export default {
         left: 0;
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #da428d, #fff);
+        background-image: linear-gradient(180deg, #6200A5, #fff);
     }
     .top {
         position: relative;
@@ -416,7 +416,7 @@ export default {
             }
             .copy {
                 color: #fff;
-                background: #da428d;
+                background: #6200A5;
                 line-height: 8vw;
                 border-radius: 4vw;
                 padding: 0 3vw;
@@ -559,7 +559,7 @@ export default {
                     padding: 0 1.5vw;
                 }
                 &.on {
-                    background: #da428d;
+                    background: #6200A5;
                     .money,
                     .days {
                         color: #fff;
@@ -588,14 +588,14 @@ export default {
             line-height: 12vw;
             width: 30vw;
             text-align: center;
-            background: #da428d;
+            background: #6200A5;
             border-radius: 1vw;
         }
     }
 
 }
 .on {
-    background: #da428d;
+    background: #6200A5;
     .money,
     .days {
         color: #fff;

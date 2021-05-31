@@ -284,7 +284,7 @@ export default {
         .bottom {
             width: 92vw;
             border-radius: 3vw;
-            background: #da428d;
+            background: #6200A5;
             flex-wrap: wrap;
             .item {
                 width: 50%;
@@ -331,7 +331,7 @@ export default {
                 color: #afafb1;
             }
             .recharge {
-                color: #da428d;
+                color: #6200A5;
             }
             p {
                 width: 1px;

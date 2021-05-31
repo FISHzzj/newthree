@@ -190,10 +190,11 @@ export default {
     },
     kuangorder(data) {
         if ( mistake(data) ) return false
-        let {order, payAddress} = data.result
+        let {order, payAddress, orderid} = data.result
         return {
             order,
             payAddress,
+            orderid,
         }
     },
     useruserInfopwd2(data) {
@@ -547,6 +548,30 @@ export default {
         let {message} = data.result
         return {
             msg: message
+        }
+    },
+    userapplylevelteamList(data){
+        if ( mistake(data) ) return false
+        let {list} = data.result
+        return{
+            list
+        }
+    },
+    kuangfooter(data){
+        if ( mistake(data) ) return false
+        let {foooter} = data.result
+        return{
+            foooter
+        }
+    },
+    kuangfooterlog(data){
+        if ( mistake(data) ) return false
+        let {title, thumb, detail, createtime} = data.result.foooter
+        return{
+            title,
+            thumb,
+            detail,
+            createtime
         }
     },
 

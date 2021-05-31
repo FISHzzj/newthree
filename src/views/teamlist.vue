@@ -2,7 +2,7 @@
     <div class="record">
         <div class="header">
             <van-icon @click="$router.go(-1)" name="arrow-left" size="20" />
-            <p>{{title}}</p>
+            <p>团队成员</p>
         </div>
         <div class="nav flex ali_center">
             <div class="item" @click="changenav(index)" :class="{on:index == status}" v-for="(item, index) in navlist" :key="index">
@@ -19,12 +19,13 @@
                 <div
                 class="item" 
                
-                v-for="(item,index) in list" :key="index" @click="gonext(item.id, item.statusText)">
+                v-for="(item,index) in list" :key="index">
                     <div class="top flex ali_center flex_between">
+                        <div class="status">{{item.nickname}}</div>
                         <div class="time">{{item.createtime}}</div>
-                        <div class="status">{{item.statusText}}</div>
+                        
                     </div>
-                    <div class="bottom flex ali_center">
+                    <!-- <div class="bottom flex ali_center">
                         <div class="left">
                             <div class="type">{{item.rechargeText}}</div>
                             <div class="num">￥{{item.money}}</div>
@@ -39,7 +40,7 @@
                                 <p>{{item.money}}</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div >
               
             </van-list>
@@ -54,57 +55,50 @@ export default {
         return {
             title: '',
             status: 0,
-            navlist: ['全部','处理中','已完成','已取消'],
+            navlist: ['直推', '团队'],
             typenum: 1,
             list: [],
             page: 1,
             limit: 10,
             finished: false,
             loading: false,
+            levelType: 1,
 
         };
     },
     mounted() {
-        this.type = this.$route.params.type;
-        if (this.type =='recharge') {
-            this.title = "充值记录"
-            this.typenum = 1
-            // this.logs()
-        } else if (this.type == "cash") {
-            this.title = "提现记录"
-            this.typenum = 2
-        }else if (this.type == "duihuan"){
-            this.typenum = 3
-        }
+        // this.type = this.$route.params.type;
+        // if (this.type =='recharge') {
+        //     this.title = "充值记录"
+        //     this.typenum = 1
+        //     // this.logs()
+        // } else if (this.type == "cash") {
+        //     this.title = "提现记录"
+        //     this.typenum = 2
+        // }else if (this.type == "duihuan"){
+        //     this.typenum = 3
+        // }
     },
     methods: {
         changenav(index) {
             this.status = index;
-            if(index == 0 ){ //全部
+            if(index == 0 ){ //直推
                 this.status = ""
                 this.page = 1
                 this.list = []
+                this.levelType = 1
                 this.logs()
-            }else if(index == 1) { //处理中
+            }else if(index == 1) { //团队
                 this.status == index
                 this.page = 1
                 this.list = []
-                this.logs()
-            }else if(index == 2) { //已完成
-                this.status = index
-                this.page = 1
-                this.list = []
-                this.logs()
-            }else if(index == 3) { //已取消
-                this.status = "-1"
-                this.page = 1
-                this.list = []
+                this.levelType = 2
                 this.logs()
             }
         },
         async logs() {
    
-            let res = await $ajax('userrechargelogs', {getType: this.typenum, page: this.page, accountType: 1, status: this.status})  //充值
+            let res = await $ajax('userapplylevelteamList', {levelType : this.levelType})  //充值
             if(!res) return false
             console.log(res)
             // this.money = res.money

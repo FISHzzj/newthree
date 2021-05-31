@@ -29,10 +29,10 @@
                     <div class="type">可用</div>
                     <div class="num">{{money}}</div>
                 </div>
-                <div class="right" v-if="type != 'CNY'">
+                <!-- <div class="right" v-if="type != 'CNY'">
                     <div class="type">折合(CNY)</div>
                     <div class="num">{{tocny}}</div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="list">
@@ -321,7 +321,7 @@ export default {
         .recharge {
             color: #fff;
             line-height: 12vw;
-            background: #da428d;
+            background: #6200A5;
             &.on {
                 width: 44vw;
             }

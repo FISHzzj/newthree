@@ -311,7 +311,7 @@ export default {
                     height: 100%;
                     top: 0;
                     left: 0;
-                    background: #da428d;
+                    background: #6200A5;
                     border-radius: 3vw;
                 }
             }
@@ -371,13 +371,13 @@ export default {
                     top: 0;
                     left: 0;
                     height: 100%;
-                    background: #da428d;
+                    background: #6200A5;
                 }
             }
             .num {
                 font-size: 3.2vw;
                 span {
-                    color: #da428d;
+                    color: #6200A5;
                 }
             }
         }
@@ -387,7 +387,7 @@ export default {
             font-weight: 600;
         }
         .price_free {
-            color: #da428d;
+            color: #6200A5;
             height: 10vw;
             .price {
                 font-size: 5vw;
@@ -415,7 +415,7 @@ export default {
                 border-radius: 2.5vw 0;
             }
             .type_2 {
-                color: #da428d;
+                color: #6200A5;
                 background: #c7defd;
                 padding: 1vw 3vw;
                 border-radius: 1vw;
@@ -437,7 +437,7 @@ export default {
                     width: 0.8vw;
                     height: 4vw;
                     margin: auto 0;
-                    background: #da428d;
+                    background: #6200A5;
                 }
             }
             > .flex {
@@ -485,7 +485,7 @@ export default {
                         height: 1vw;
                         color: #d2e0ff;
                         position: relative;
-                        background: #da428d;
+                        background: #6200A5;
                         &:after {
                             position: absolute;
                             left: 0;
@@ -507,7 +507,7 @@ export default {
                     }
                 }
                 .item_3 {
-                    color: #da428d;
+                    color: #6200A5;
                     .time {
                         font-size: 3vw;
                         line-height: 8vw;
@@ -521,7 +521,7 @@ export default {
                         height: 1vw;
                         color: #d2e0ff;
                         position: relative;
-                        background: #da428d;
+                        background: #6200A5;
                         &:after {
                             position: absolute;
                             right: 0;
@@ -552,7 +552,7 @@ export default {
                 text-align: center;
                 font-weight: 600;
                 &.on {
-                    color: #da428d;
+                    color: #6200A5;
                     position: relative;
                     &:after {
                         position: absolute;
@@ -563,7 +563,7 @@ export default {
                         width: 5vw;
                         height: 0.8vw;
                         margin: 0 auto;
-                        background: #da428d;
+                        background: #6200A5;
                     }
                 }
             }
@@ -592,7 +592,7 @@ export default {
             width: 100%;
             height: 12vw;
             color: #fff;
-            background: #da428d;
+            background: #6200A5;
             text-align: center;
             bottom: 0;
             left: 0;

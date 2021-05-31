@@ -42,7 +42,7 @@
             <!-- <div class="item flex ali_center flex_between" @click="change('wechat')">
                 <div class="flex ali_center">
                     <img src="@/assets/images/icon/wx.png" class="icon" alt="" />
-                    <span>微信支付</span>
+                    <span>QQ支付</span>
                 </div>
                 <img v-if="paytype == 'wechat'" src="@/assets/images/dui.png" alt="" />
                 <img v-else src="@/assets/images/yuan.png" alt="" />
@@ -90,7 +90,7 @@ export default {
             this.$router.push(url);
         },
         change(type) {
-            if (type == "wechat") return Toast("暂不支持微信充值");
+            if (type == "wechat") return Toast("暂不支持QQ充值");
             this.paytype = type;
         },
         async recharge() {
@@ -196,7 +196,7 @@ export default {
             height: 12vw;
         }
         .tips {
-            color: #da428d;
+            color: #6200A5;
             font-size: 3.2vw;
             line-height: 10vw;
         }
@@ -251,7 +251,7 @@ export default {
         line-height: 12vw;
         text-align: center;
         color: #fff;
-        background: #da428d;
+        background: #6200A5;
         border-radius: 1vw;
     }
 }

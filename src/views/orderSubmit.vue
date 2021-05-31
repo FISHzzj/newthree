@@ -128,7 +128,7 @@
         
         <div class="safe_tips flex ali_center">
             <img src="@/assets/images/dui.png" alt="" />同意
-            <router-link to="/content/1">服务协议及风险提示</router-link>
+            <router-link to="/content">服务协议及风险提示</router-link>
         </div>
         <div class="tips1">投资有风险,入市需谨慎</div>
         <div style="height:15vw"></div>
@@ -175,6 +175,7 @@ export default {
             derate: "",
             payAddress: "",
             baseimg: "",
+            orderid: "",
         };
     },
     
@@ -203,6 +204,7 @@ export default {
                 this[key] = order[key]
             }) 
             this.payAddress = res.payAddress
+            this.orderid = res.orderid
             
         },
         async currenhulv(current, value){
@@ -283,9 +285,14 @@ export default {
         
         //取消
         async kuangorderdontPay() {
-            let {id, num, price, pid} = this.$route.query
+        
+            let {id, num, price, pid, orderid} = this.$route.query
+            if(orderid){
+                this.orderid = orderid
+            }
+            
             let res = await $ajax('kuangorderdontPay', {
-                orderid:  id,
+                orderid:  this.orderid,
             })
             if (!res) return false
             Toast(res.msg)
@@ -345,7 +352,7 @@ export default {
         top: 0;
         left: 0;
         position: fixed;
-        background: #da428d;
+        background: #6200A5;
         z-index: 100;
         color: #fff;
         .van-icon {
@@ -379,7 +386,7 @@ export default {
         left: 0;
         width:100%;
         height: 20vw;
-        background-image: linear-gradient(180deg, #da428d, #fff);
+        background-image: linear-gradient(180deg, #6200A5, #fff);
     }
     .top {
         position: relative;
@@ -424,11 +431,14 @@ export default {
                 span {
                     font-size: 3.47vw;
                     color: #333;
+                    width: 250px;
+                    overflow: hidden;
+                    display: block;
                 }
             }
             .copy {
                 color: #fff;
-                background: #da428d;
+                background: #6200A5;
                 line-height: 8vw;
                 border-radius: 4vw;
                 padding: 0 3vw;
@@ -571,7 +581,7 @@ export default {
             line-height: 12vw;
             width: 30vw;
             text-align: center;
-            background: #da428d;
+            background: #6200A5;
             border-radius: 1vw;
         }
     }

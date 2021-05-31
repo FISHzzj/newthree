@@ -48,8 +48,8 @@
                 <div class="right">
                     <div class="num" v-if="iconeyeclose">{{usdt}}</div>
                     <div class="num" v-else>* * * *</div>
-                    <span class="num1" v-if="iconeyeclose">≈ {{usdttocny}}CNY</span>
-                    <div class="num1" v-else>* * * *</div>
+                    <!-- <span class="num1" v-if="iconeyeclose">≈ {{usdttocny}}CNY</span>
+                    <div class="num1" v-else>* * * *</div> -->
                 </div>
             </div>
             <!-- <div @click="godetail(`BTC/${btc}`)" class="item flex ali_center">
@@ -88,7 +88,7 @@
                     <div class="num1" v-else>* * * *</div>
                 </div>
             </div> -->
-            <!-- <div @click="godetail(`XCH/${xch}`)" class="item flex ali_center">
+            <div @click="godetail(`XCH/${xch}`)" class="item flex ali_center">
                 <div class="left flex ali_center">
                     <img src="@/assets/images/icon/6.png" alt="" />
                     <span>XCH</span>
@@ -96,10 +96,10 @@
                 <div class="right">
                     <div class="num" v-if="iconeyeclose">{{xch}}</div>
                     <div class="num" v-else>* * * *</div>
-                    <span class="num1" v-if="iconeyeclose">≈ {{xchtocny}}CNY</span>
-                    <div class="num1" v-else>* * * *</div>
+                    <!-- <span class="num1" v-if="iconeyeclose">≈ {{xchtocny}}CNY</span>
+                    <div class="num1" v-else>* * * *</div> -->
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="mask" v-if="showmask" @click="showmask = false"></div>
         <div class="change_mask" v-if="showmask">
@@ -142,7 +142,7 @@
                     <div class="type">余额：{{fil}}FIL</div>
                 </div>
             </div> -->
-            <div v-if="type == 3" class="item flex ali_center" @click="gonext('XCH')">
+            <div v-if="type != 1"  class="item flex ali_center" @click="gonext('XCH')">
                 <img src="@/assets/images/icon/6.png" alt="">
                 <div class="info">
                     <div class="num">XCH</div>
@@ -290,7 +290,7 @@ export default {
         top: 0;
         left: 0;
         position: fixed;
-        background: #da428d;
+        background: #6200A5;
         z-index: 100;
         color: #fff;
         .van-icon {
@@ -320,7 +320,7 @@ export default {
     }
     .money {
         width: 100%;
-        background: #da428d;
+        background: #6200A5;
         color: #fff;
         padding: 3vw 4vw;
         .top {
@@ -351,7 +351,7 @@ export default {
         .title {
             padding: 0 4vw;
             font-size: 3.2vw;
-            color: #da428d;
+            color: #6200A5;
             height: 10vw;
             background: rgba(0,0,255,0.1);
             .left {

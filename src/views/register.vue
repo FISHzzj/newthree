@@ -156,7 +156,7 @@ export default {
             border-radius: 6vw;
             margin: 20vw auto 0;
             &.on {
-                background: #da428d!important;
+                background: #6200A5!important;
             }
         }
     }
@@ -167,12 +167,12 @@ export default {
         width: 100%;
         .top {
             width: 100%;
-            color: #da428d;
+            color: #6200A5;
             height: 12vw;
             font-size: 3.2vw;
             justify-content: center;
             p {
-                border-right: 1px solid #da428d;
+                border-right: 1px solid #6200A5;
                 height: 4vw;
                 margin: 0 4vw;
             }
@@ -181,7 +181,7 @@ export default {
             justify-content: center;
             font-size: 3.2vw;
             span {
-                color: #da428d;
+                color: #6200A5;
             }
         }
     }

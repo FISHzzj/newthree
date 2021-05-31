@@ -40,7 +40,7 @@
                 <div class="somenum flex ali_center">
                     <div class="item_1" style="width: 100%;">
                         <div class="type" style="font-size: 3.47vw;">官方算力(T/天)</div>
-                        <div class="num" style="font-size: 4.5vw;">531245.55</div>
+                        <div class="num" style="font-size: 3.5vw;">531245.55</div>
                     </div>
                     <!-- <div class="item_1">
                         <div class="type">今日新增</div>
@@ -281,6 +281,7 @@ export default {
             
         },
         toproducts(id){
+            if(id != 12) return Toast("暂未开放")
             this.$router.push({
                 name: 'products',
                 query:{
@@ -324,7 +325,7 @@ export default {
             background: #ccc;
         }
         .pagination-bullet-active {
-            color: #da428d!important;
+            color: #6200A5!important;
         }
         .swiper-slide {
             height: 50vw;
@@ -386,7 +387,7 @@ export default {
                         height: 4vw;
                         top: 0;
                         left: 0;
-                        background: #da428d;
+                        background: #6200A5;
                         bottom: 0;
                         margin: auto 0;
                     }
@@ -400,13 +401,14 @@ export default {
                     text-align: center;
                     margin-bottom: 10px;
                     .type {
-                        color: #666;
+                        color: #333;
                         font-size: 2.47vw;
+                         font-weight: 600;
                     }
                     .num {
                         color: #333;
                         font-size: 2.5vw;
-                        font-weight: 600;
+                       
                     }
                 }
             }
