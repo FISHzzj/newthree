@@ -7,7 +7,8 @@
         <div style="height:12vw"></div>
         <div class="code">
             <img :src="img" alt="" />
-            <p class="yqcode">邀请码：{{yqCode}}</p>
+            <p class="yqcode">邀请码：<span >{{yqCode}}</span></p>
+            <van-button color="#7232dd"  size="small"  class="copy" :data-clipboard-text="yqCode">复制</van-button>
         </div>
         <div class="list">
             <div class="title">已累计邀请<span>{{total}}</span>人，今日新增<span>{{today_user}}</span>人</div>
@@ -24,6 +25,7 @@
     </div>
 </template>
 <script>
+import {copy} from '../func/copy'
 export default {
     name: "poster",
     data(){
@@ -42,6 +44,7 @@ export default {
     },
     methods:{
         async getData() {
+            this.clipboard = copy('.copy')
             let res = await $ajax('useryqCode', {})
             if(!res) return false
             this.img = res.img

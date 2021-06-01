@@ -209,14 +209,17 @@ export default {
             Object.keys(goods).forEach( key => {
                 this[key] = goods[key]
             })
+            console.log(this.fees)
             this.productinfo = {
                 // shopdays: goods.shopdays,
                 title: this.title,
                 suanli: this.t_num,
                 zupin: this.day > 0 ? this.day : '永久',
-                catetype: this.catetype, 
-                deposit: this.deposit, //质押
-                productprice: this.productprice, //手续费
+                fees: this.fees, //TOU价格
+                // catetype: this.catetype, 
+                // deposit: this.deposit, //质押
+                // productprice: this.productprice, //手续费
+                
 
             }
             if(this.catetype == 'BTC'){
@@ -514,6 +517,7 @@ export default {
                     }
                     .type {
                         font-size: 4vw;
+                        white-space: nowrap;
                     }
                     .type_3 {
                         margin-top: 8vw;

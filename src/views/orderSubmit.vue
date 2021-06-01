@@ -57,8 +57,9 @@
                 <span>{{puprice}}FIL</span>
             </div> -->
             <div class="money">
-                <p>总价 <span>{{realprice}}</span> {{paytype}}</p>
-                 <p v-if="puprice">质押总价 <span>{{puprice}}</span> FIL</p>
+                 <p>TOU总价 <span>{{tou}}</span> TOU </p>
+                <p>USDT总价 <span>{{realprice}}</span> {{paytype}}</p>
+                
             </div>
         </div>
          <div class="pays">
@@ -126,8 +127,11 @@
             </div> -->
         </div>
         
-        <div class="safe_tips flex ali_center">
-            <img src="@/assets/images/dui.png" alt="" />同意
+        <div class="safe_tips flex ali_center" >
+            <div @click="agreehandle">
+                <img v-if="agree" src="@/assets/images/dui.png" alt="" />
+                <img v-else src="@/assets/images/yuan.png" alt="" />同意
+            </div>
             <router-link to="/content">服务协议及风险提示</router-link>
         </div>
         <div class="tips1">投资有风险,入市需谨慎</div>
@@ -176,6 +180,8 @@ export default {
             payAddress: "",
             baseimg: "",
             orderid: "",
+            agree: false,
+            tou: "",
         };
     },
     
@@ -186,7 +192,8 @@ export default {
     },
     methods: {
         async getData() {
-            let {id, num, price} = this.$route.query
+            let {id, num, price, tou} = this.$route.query
+            this.tou = tou
             if(!id) return Toast('id 不能为空')
             if(!num) return Toast('num 不能为空')
             if(!price) return Toast('price 不能为空')
@@ -239,7 +246,7 @@ export default {
             if (!res) return false
             Toast(res.msg)
             this.$router.push({
-                name: "myOrder"
+                name: "index"
             })
 
         },
@@ -258,6 +265,15 @@ export default {
         openPwd(e) {
             if(!this.paytype) return Toast("请选择支付方式")
             this.showPwd = true;
+            
+        },
+        agreehandle(){
+            
+            if(this.agree) {
+                this.agree = false
+            }else{
+                 this.agree = true
+            }
             
         },
         change(type) {

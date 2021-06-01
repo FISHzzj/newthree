@@ -66,7 +66,7 @@
                     </div>
                     <div class="item">
                         <div class="type">当日新增(T)</div>
-                        <div class="num">{{teamMoney}}</div>
+                        <div class="num">{{todayMoney}}</div>
                     </div>
                 </div>
             </div>
@@ -84,9 +84,11 @@
                     @load="logs"
                 >
                     <div class="item flex flex_between ali_center" v-for="(item,index) in list" :key="index">
-                        <div class="time">{{item.createtime}}</div>
-                        <div class="uid">{{item.mobile}}</div>
-                        <div class="money">+{{item.yeji}}</div>
+                        <div class="left">
+                            <div class="type">{{item.nickname}}</div>
+                            <div class="time">{{item.createtime}}</div>
+                        </div>
+                        <div class="right">{{item.yeji}}</div>
                     </div>
                 </van-list>
                 
@@ -128,6 +130,7 @@ export default {
             pushTotal: "",
             teamMoney: "",
             pushTotal:"",
+            todayMoney: "",
         }
     },
     mounted() {
@@ -169,6 +172,7 @@ export default {
             this.nickname = res.nickname
             this.pushTotal = res.pushTotal
             this.teamMoney = res.teamMoney
+            this.todayMoney = res.todayMoney
 
         },
         async userapplylevellogs() {
@@ -365,19 +369,40 @@ export default {
                 text-align: right;
             }
         }
+        // .item {
+        //     height: 10vw;
+        //     color: #333;
+        //     font-size: 3.2vw;
+        //     > div {
+        //         width: 33%;
+        //     }
+        //     .uid {
+        //         text-align: center;
+        //     }
+        //     .money {
+        //         text-align: right;
+        //     }
+        // }
         .item {
-            height: 10vw;
-            color: #333;
-            font-size: 3.2vw;
-            > div {
-                width: 33%;
+            background: #fff;
+            border-radius: 2vw;
+            padding: 2vw 0vw;
+            margin-bottom: 2.4vw;
+           .left {
+                .type {
+                    font-size: 3.73vw;
+                    color: #333;
+                }
+                .time {
+                    margin-top: 1.5vw;
+                    color: #999;
+                    font-size: 3.2vw;
+                }
             }
-            .uid {
-                text-align: center;
+            .right {
+                color: #999;
             }
-            .money {
-                text-align: right;
-            }
+          
         }
     }
     .touchservice {

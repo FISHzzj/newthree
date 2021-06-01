@@ -12,11 +12,11 @@
         <div class="teaminfo">
             <div class="nav flex ali_center">
                 <div class="item">
-                    <div class="type">累计奖励({{unit}})</div>
+                    <div class="type">{{nameunit0}}</div>
                     <div class="num">{{countMoney}}</div>
                 </div>
                 <div class="item">
-                    <div class="type">昨日奖励({{unit}})</div>
+                    <div class="type">{{nameunit}}</div>
                     <div class="num">{{noDayMoney}}</div>
                 </div>
             </div>
@@ -62,7 +62,8 @@ export default {
             levelType: 1,
             countMoney: "",
             noDayMoney: "",
-            unit:'USDT',
+            nameunit0:"累积奖励（XCH）",
+            nameunit:"累积奖励（USDT）",
 
         };
     },
@@ -88,14 +89,20 @@ export default {
                 this.list = []
                 this.levelType = 'push'
                 this.logs()
-                this.unit = 'USDT'
+                // this.unit0 = ''
+                // this.unit = ''
+                this.nameunit0 = '累积奖励(XCH)'
+                this.nameunit = '累积奖励(USDT)'
             }else if(index == 1) { //挖矿奖励
                 this.status == index
                 this.page = 1
                 this.list = []
                 this.levelType = 'rate'
                 this.logs()
-                this.unit = 'XCH'
+                // this.unit0 = 'XCH'
+                // this.unit = 'XCH'
+                this.nameunit0 = '累积产币(XCH)'
+                this.nameunit = '昨日产币(XCH)'
             }
         },
         async logs() {

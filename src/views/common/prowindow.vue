@@ -28,11 +28,15 @@
                 </a>
             </div>
             <div class="zhiya flex ali_center flex_between" v-if="productInfo.catetype == 'FIL'" >
-                <div class="flex ali_center flex_between"><span>FIL质押</span><span>{{productInfo.deposit*num}}FIL</span></div>
-                <div class="flex ali_center flex_between"><span>GAS手续费</span><span>{{productInfo.productprice*num}}FIL</span></div>
+                <div class="flex ali_center flex_between"><span>TOU价格</span><span>{{productInfo.free}}USDT</span></div>
+                <!-- <div class="flex ali_center flex_between"><span>GAS手续费</span><span>{{productInfo.productprice*num}}FIL</span></div> -->
             </div>
             <div class="sub_btn flex ali_center flex_between">
-                <div class="left">总价<span>{{all_money}}</span>USDT</div>
+                <div class="left">
+                    <div>TOU价格<span>{{productInfo.fees * num}}</span>TOU</div> 
+                    <div>USDT总价<span>{{all_money}}</span>USDT</div> 
+                    
+                </div>
                 <div class="right" :class="{on: status}" @click="submit">提交订单</div>
             </div>
         </div>
@@ -61,6 +65,7 @@ export default {
     created(){
         this.gettotal()
     },
+
     methods: {
         async gettotal( ) {
             let id = this.$route.query.id
@@ -110,12 +115,14 @@ export default {
             let id = this.$route.query.id
             let num = this.num
             let price = this.all_money
+            let tou = this.productInfo.fees * this.num
             // let pid = this.status
             // if(!this.status) return Toast('请先选择规格')
             this.$router.push({name: 'orderSubmit', query: {
                 id,
                 num,
                 price,
+                tou,
                 // pid
              }})
             // this.$router.push({

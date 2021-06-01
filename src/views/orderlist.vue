@@ -56,10 +56,10 @@
                             </div>
                         </div>
                     </router-link>
-                    <router-link 
+                    <div
                     class="item" 
                     v-for="item in list" :key="item.id"
-                    :to="{name: 'orderSubmit', query:{id:`${item.goodsid}`, num: `${item.total}`, price: `${item.realprice}`, pid: `${item.pid}`, orderid: `${item.id}`}}" tag="div"
+                    
                     >
                         <div class="flex ali_center flex_between id_status" v-if="item.status == 0">
                             <span class="order_sn">订单号： {{item.ordersn}}</span>
@@ -80,15 +80,15 @@
                             </div>
                             <div class="bottom flex ali_center " style="justify-content:flex-end;">
                                 <!-- <div class="left">总价<span>0.000</span>CNY</div> -->
-                                <div class="right flex ali_center" style="margin-right:10px">
+                                <div class="right flex ali_center" style="margin-right:10px" @click="cancle(item.id)">
                                     <span>取消订单</span>
                                 </div>
-                                <div class="right flex ali_center" >
-                                    <span style="border:1px solid #6200A5;color:#6200A5;">确认支付</span>
-                                </div>
+                                <router-link  class="right flex ali_center" :to="{name: 'orderSubmit', query:{id:`${item.id}`, num: `${item.total}`, price: `${item.realprice}`, pid: `${item.pid}`}}" tag="div" >
+                                    <span style="border:1px solid #da428d;color:#da428d;">确认支付</span>
+                                </router-link >
                             </div>
                         </div>
-                    </router-link>
+                    </div>
             </van-list>
             
         </div>
@@ -143,6 +143,37 @@ export default {
             if (res.lists.length === 0) {
                 this.finished = true //加载完成
             } 
+        },
+        cancle(id) {
+            let that = this
+            function beforeClose(action, done) {
+                if (action === 'confirm') {
+                    setTimeout(done, 1000);
+                    that.kuangorderdontPay(id)
+                    that.$router.go(-1)
+                    
+                } else {
+                    done();
+                }
+            }
+            Dialog.confirm({
+                title: '是否取消订单？',    
+                message: '是否确认取消订单,订单取消后将无法付款,如对订单有疑问请及时咨询客服。',
+                confirmButtonText: "确定取消",
+                confirmButtonColor: "#3177f0",
+                cancelButtonText: "我再看看",
+                beforeClose,
+            });
+        },
+        //取消
+        async kuangorderdontPay(id) {
+            
+            let res = await $ajax('kuangorderdontPay', {
+                orderid:  id,
+            })
+            if (!res) return false
+            Toast(res.msg)
+            
         },
         changenav(index) {
             this.status = index;
