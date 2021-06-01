@@ -62,7 +62,7 @@
                                 <div class="left">总价<span>{{item.realprice}}</span></div>
                                 <div class="right flex ali_center">
                                     <span v-if="item.status == 2" style="border:1px solid #6200A5;color:#6200A5;margin-right:2vw;">订单详情</span>
-                                    <span >终止产品</span>
+                                    <!-- <span >终止产品</span> -->
 
                                 </div>
                             </div>

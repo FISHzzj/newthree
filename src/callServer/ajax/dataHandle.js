@@ -110,7 +110,7 @@ export default {
     },
     userInfowallet(data){
         if ( mistake(data) ) return false
-        let {usdt, cny, btc, eth, fil, xch, sysmoney, huilv, fil_frozen, fil_sys} = data.result.wallet
+        let {usdt, cny, btc, eth, fil, xch, sysmoney, huilv, fil_frozen, fil_sys, usdt_with} = data.result.wallet
         return {
             usdt,
             cny,
@@ -122,6 +122,8 @@ export default {
             huilv,
             fil_frozen,
             fil_sys,
+            usdt_with,
+            
         }
     },
     applylevel(data) {
