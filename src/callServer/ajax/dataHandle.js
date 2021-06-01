@@ -228,7 +228,7 @@ export default {
         let {list, listtotal} = data.result
         let lists = []
         list.forEach( item => {
-            let {ordersn, goodsName, createtime, endtime, status, realprice, total, goodsid, pid, thumb, id} = item
+            let {ordersn, goodsName, createtime, endtime, status, realprice, total, goodsid, pid, thumb, id, paytype} = item
             lists.push({
                 ordersn,
                 goodsName,
@@ -241,6 +241,7 @@ export default {
                 pid,
                 thumb,
                 id,
+                paytype,
             })
             
         })

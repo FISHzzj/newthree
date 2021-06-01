@@ -180,6 +180,7 @@ export default {
                 height: 25vw;
                 padding-top: 4vw;
                 background-repeat: no-repeat;
+                background-size: 100% 100%;
                 .left {
                     width: 15vw;
                     padding: 0 2vw;

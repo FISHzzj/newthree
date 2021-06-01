@@ -59,7 +59,7 @@ export default {
             limit: 10,
             finished: false,
             loading: false,
-            levelType: 1,
+            levelType: 'push',
             countMoney: "",
             noDayMoney: "",
             nameunit0:"累积奖励（XCH）",
@@ -107,7 +107,7 @@ export default {
         },
         async logs() {
    
-            let res = await $ajax('userlog', {rechargetype : this.levelType})  //充值
+            let res = await $ajax('userlog', {rechargetype : this.levelType, page: this.page})  //充值
             if(!res) return false
             console.log(res)
             // this.money = res.money
