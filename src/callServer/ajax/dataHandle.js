@@ -63,7 +63,7 @@ export default {
     },
     kuang (data){
         if ( mistake(data) ) return false
-        let { banner, bannerTxt, btc, eth, fil, footer, xch, category } = data.result
+        let { banner, bannerTxt, btc, eth, fil, footer, xch, category, count_suan } = data.result
         let {btc_url, eth_url, xch_url} = data.result.hrefUrl
         let fil_url = data.result.hrefUrl.fil
         return {
@@ -79,6 +79,7 @@ export default {
             fil_url,
             xch_url,
             category,
+            count_suan,
 
         }
     },

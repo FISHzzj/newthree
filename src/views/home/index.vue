@@ -40,7 +40,7 @@
                 <div class="somenum flex ali_center">
                     <div class="item_1" style="width: 100%;">
                         <div class="type" style="font-size: 3.47vw;">官方算力(T/天)</div>
-                        <div class="num" style="font-size: 3.5vw;">531245.55</div>
+                        <div class="num" style="font-size: 3.5vw;">{{count_suan}}</div>
                     </div>
                     <!-- <div class="item_1">
                         <div class="type">今日新增</div>
@@ -247,6 +247,7 @@ export default {
                 {img:require("@/assets/images/icon/yaoqinghaoyou1.png"), text:"邀请好友", url: '/poster'}
             ],
             category:[],
+            count_suan: [],
         };
     },
     mounted(){
@@ -274,6 +275,7 @@ export default {
             // this.xch = res.xch
             this.footer = res.footer
             this.category = res.category
+            this.count_suan = res.count_suan
             // this.btc_url = res.btc_url
             // this.eth_url = res.eth_url
             // this.fil_url = res.fil_url
