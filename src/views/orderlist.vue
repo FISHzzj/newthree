@@ -59,7 +59,6 @@
                     <div
                     class="item" 
                     v-for="item in list" :key="item.id"
-                    
                     >
                         <div class="flex ali_center flex_between id_status" v-if="item.status == 0">
                             <span class="order_sn">订单号： {{item.ordersn}}</span>
