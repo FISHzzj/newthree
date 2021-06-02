@@ -84,7 +84,7 @@ export default {
             console.log(e);
         },
         uploadApp(){
-             window.location.href = 'https://downloadpkg.app3c.cn/app/download?path=https://A6163977333456.qiniucdn.apicloud-system.com/31caecf2c21c7b3f9bba5698824a8dc0_d&ver=0.0.6&size=3.08M'
+             window.location.href = 'https://downloadpkg.app3c.cn/app/download?path=https://A6177180949236.qiniucdn.apicloud-system.com/a409431e2b84645a732a4e8be7b306e1_d'
         },
     }
 }
