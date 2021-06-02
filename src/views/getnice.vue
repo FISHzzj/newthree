@@ -228,7 +228,7 @@ export default {
                     font-size: 4vw;
                 }
                 .num{
-                    font-size: 6vw;
+                    font-size: 4.5vw;
                 }
                 // &.on {
                 //     position: relative;

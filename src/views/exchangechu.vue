@@ -2,7 +2,7 @@
     <div class="exchangechu">
         <div class="header">
             <van-icon @click="$router.go(-1)" name="arrow-left" size="20" />
-            <p>{{typetype}}</p>
+            <p>提币</p>
             <!-- <span @click="showService = true">联系客服</span> -->
         </div>
         <div style="height:8vw"></div>
@@ -14,9 +14,9 @@
             <img class="icon" src="@/assets/images/icon/6.png" alt=""  v-if="type == 'XCH'"/>
            
 
-            <div class="name">{{typetype}}{{type}}</div>
+            <div class="name">{{type}}</div>
             <div class="change flex ali_center" @click="show = true">
-                <span>{{typetype}}</span>
+                <span>提币</span>
                 <van-icon name="arrow"></van-icon>
             </div>
             <!-- <div v-if="type == 'USDT'" class="types flex ali_center">
@@ -33,12 +33,13 @@
         </div>
         <div class="pays">
             <div class="num flex flex_between ali_center">
-                <div class="title">{{typetype}}数量</div>
-                <input v-model="num" type="text" placeholder="可提现金额" />
+                <div class="title">数量</div>
+                <input v-model="num" type="text" placeholder="输入提币数量" />
+                <div class="tishi">可用{{usdt_with}}USDT跟可提现XXUSDT</div>
             </div>
              <div class="num flex flex_between ali_center">
-                <div class="title">转账地址</div>
-                <input v-model="wallet" type="text" placeholder="输入转账地址" />
+                <div class="title">提币地址</div>
+                <input v-model="wallet" type="text" placeholder="输入提币地址" />
             </div>
             <!-- <div class="img flex flex_between ali_center">
                 <div class="title">转账地址</div>
@@ -54,7 +55,7 @@
             <div>4.提币审核会在24小时内完成，具体到账时间会受网络影响，可能有所延迟；</div>
             <div>5.如长时间未到账，请及时联系客服</div>
         </div>
-        <div class="submit" :class="{on: num}" @click="submit">确认{{typetype}}</div>
+        <div class="submit" :class="{on: num}" @click="submit">确认提币</div>
         <van-action-sheet
             v-model="show"
             :actions="actions"
@@ -95,6 +96,7 @@ export default {
             typetype: "",
             baseimg: "",
             payId: "",
+            usdt_with: "",
 
         }
     },
@@ -104,6 +106,7 @@ export default {
         //傳遞複製按鈕選擇器, 接受複製插件的 clipboard 實例
         // this.clipboard = copy('.copy')
         this.getData()
+        this.getsoucang()
     },
     methods: {
         async getData() {
@@ -138,6 +141,16 @@ export default {
             console.log(res)
             this.baseimg = res.img
 
+        },
+        async getsoucang(){
+            let res = await $ajax('userInfowallet', {requstType: "wallet"})
+            if(!res) return false
+            console.log(res)
+            Object.keys(res).forEach((key)=>{
+                this[key] = res[key]
+                
+            })
+           
         },
         changenav(type) {
             if (type == 'TRC') return Toast("即将开放");
@@ -305,6 +318,11 @@ export default {
                 background: #eee;
                 padding: 10px 10px;
                 border-radius: 8px;
+            }
+            .tishi{
+                font-size: 2vw;
+                padding: 1vw;
+                color: #999;
             }
         }
         .img{
