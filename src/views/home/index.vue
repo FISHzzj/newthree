@@ -39,7 +39,7 @@
                 </div> -->
                 <div class="somenum flex ali_center">
                     <div class="item_1" style="width: 100%;">
-                        <div class="type" style="font-size: 3.47vw;">官方算力(T/天)</div>
+                        <div class="type" style="font-size: 3.47vw;">CHIA矿池算力（T/天）</div>
                         <div class="num" style="font-size: 3.5vw;">{{count_suan}}</div>
                     </div>
                     <!-- <div class="item_1">

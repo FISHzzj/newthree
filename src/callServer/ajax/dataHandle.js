@@ -110,7 +110,7 @@ export default {
     },
     userInfowallet(data){
         if ( mistake(data) ) return false
-        let {usdt, cny, btc, eth, fil, xch, sysmoney, huilv, fil_frozen, fil_sys} = data.result.wallet
+        let {usdt, cny, btc, eth, fil, xch, sysmoney, huilv, fil_frozen, fil_sys, usdt_with} = data.result.wallet
         return {
             usdt,
             cny,
@@ -122,6 +122,8 @@ export default {
             huilv,
             fil_frozen,
             fil_sys,
+            usdt_with,
+            
         }
     },
     applylevel(data) {
@@ -228,7 +230,7 @@ export default {
         let {list, listtotal} = data.result
         let lists = []
         list.forEach( item => {
-            let {ordersn, goodsName, createtime, endtime, status, realprice, total, goodsid, pid, thumb, id} = item
+            let {ordersn, goodsName, createtime, endtime, status, realprice, total, goodsid, pid, thumb, id, paytype} = item
             lists.push({
                 ordersn,
                 goodsName,
@@ -241,6 +243,7 @@ export default {
                 pid,
                 thumb,
                 id,
+                paytype,
             })
             
         })
