@@ -23,11 +23,11 @@
                 <div class="on" @click="changenav('ERC')">TRC20</div>
                 <div @click="changenav('TRC')">ERC20</div>
             </div>
-            <!-- <img class="code" :src="code" alt="" /> -->
+            <img class="code" :src="code" alt="" />
             <div class="address">{{wallet}}</div>
             <div class="btns flex ali_center">
                 <div class="copy" :data-clipboard-text="wallet">复制地址</div>
-                <!-- <div class="save" @click="toDownLoad">保存图片</div> -->
+                <div class="save" @click="toDownLoad">保存图片</div>
             </div>
         </div>
         <!-- <div class="pays">
@@ -232,7 +232,7 @@ export default {
         width: 92vw;
         background: #fff;
         border-radius: 3vw;
-        height: 80vw;
+        height: 130vw;
         margin: 0 4vw;
         flex-direction: column;
         padding: 0 4vw;
@@ -270,8 +270,8 @@ export default {
             }
         }
         .code {
-            width: 50vw;
-            height: 50vw;
+            width: 60vw;
+            height: 60vw;
             margin: 6vw 0;
         }
         .address {

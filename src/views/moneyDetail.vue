@@ -11,13 +11,13 @@
                 <div class="num">{{money}}</div>
             </div> -->
             <div class="bottom flex flex_between ali_center">
-                <div class="left" v-if="type !== 'FIL'">
-                    <div class="type">{{type}}总资产</div>
+                <div class="left" v-if="type == 'USDT'">
+                    <div class="type">{{type}}可用</div>
                     <div class="num">{{money}}</div>
                 </div>
                 <div class="left" v-else>
                     <div class="type">{{type}}总资产</div>
-                    <div class="num">{{fil_sys}}</div>
+                    <div class="num">{{money}}</div>
                 </div>
                 <div class="right" v-if="type == 'FIL'" @click="suocanglist">
                     <div class="type">{{type}}锁仓资金</div>
@@ -25,8 +25,8 @@
                 </div>
             </div>
             <div class="bottom flex flex_between ali_center">
-                <div class="left">
-                    <div class="type">可用</div>
+                <div class="left" v-if="type == 'USDT'">
+                    <div class="type">{{type}}可提</div>
                     <div class="num">{{usdt_with}}</div>
                 </div>
                 <!-- <div class="right" v-if="type != 'CNY'">

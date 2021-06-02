@@ -35,7 +35,7 @@
             <div class="num flex flex_between ali_center">
                 <div class="title">数量</div>
                 <input v-model="num" type="text" placeholder="输入提币数量" />
-                <div class="tishi">可用{{usdt_with}}USDT跟可提现XXUSDT</div>
+                <div class="tishi">可用 {{usdt_with}} USDT;可提现 {{'111'}} USDT</div>
             </div>
              <div class="num flex flex_between ali_center">
                 <div class="title">提币地址</div>
@@ -306,7 +306,7 @@ export default {
             flex-wrap: wrap;
             margin-bottom: 10px;
             .title {
-                font-size: 4.8vw;
+                font-size: 3.8vw;
                 font-weight: 600;
                 height: 12vw;
                 line-height: 12vw;
@@ -320,7 +320,7 @@ export default {
                 border-radius: 8px;
             }
             .tishi{
-                font-size: 2vw;
+                font-size: 4vw;
                 padding: 1vw;
                 color: #999;
             }

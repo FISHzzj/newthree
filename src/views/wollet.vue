@@ -46,7 +46,7 @@
                     <span>USDT</span>
                 </div>
                 <div class="right">
-                    <div class="num" v-if="iconeyeclose">{{usdt}}</div>
+                    <div class="num" v-if="iconeyeclose">{{usdt_count}}</div>
                     <div class="num" v-else>* * * *</div>
                     <!-- <span class="num1" v-if="iconeyeclose">≈ {{usdttocny}}CNY</span>
                     <div class="num1" v-else>* * * *</div> -->
@@ -173,6 +173,7 @@ export default {
             filtocny: "",
             xchtocny: "",
             huilv:null,
+            usdt_count: "",
             
         };
     },

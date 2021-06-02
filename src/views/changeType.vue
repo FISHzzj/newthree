@@ -38,7 +38,9 @@
                 <div class="left" v-if="num < duihuannum">
                     {{type}}余额不足，<span @click="gorecharge(type)">请转入</span>
                 </div>
+                
                 <div class="right">可用余额：{{num}} {{type}}</div>
+                <div class="right" @click="quanbu" style="color:#6200A5">全部</div>
             </div>
             <!-- <div class="time_num flex flex_between">
                 <div class="left">
@@ -190,7 +192,8 @@ export default {
                 accountTan: accountTan,
                 feeTan: feeTan,
                 accountAcc: 'USDT',
-                feeAcc: feeTan / this.rates
+                feeAcc: this.receivenum
+                
             })
             if(!res) return false
             console.log(res)
@@ -234,6 +237,10 @@ export default {
         gorecharge(type){
             console.log(type)
             this.$router.push(`'/exchange/${type}/转入'`)
+        },
+        quanbu(){
+            if(this.num == 0) return false 
+            this.duihuannum = this.num
         }
     }
 };

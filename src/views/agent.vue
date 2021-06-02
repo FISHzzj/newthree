@@ -88,7 +88,7 @@
                             <div class="type">{{item.nickname}}</div>
                             <div class="time">{{item.createtime}}</div>
                         </div>
-                        <div class="right">{{item.yeji}}</div>
+                        <div class="right">{{item.yeji}} T</div>
                     </div>
                 </van-list>
                 
