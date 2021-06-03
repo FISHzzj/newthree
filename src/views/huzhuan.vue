@@ -16,10 +16,10 @@
            
 
             <div class="name">{{typetype}}{{type}}</div>
-            <div class="change flex ali_center" @click="show = true">
+            <!-- <div class="change flex ali_center" @click="show = true">
                 <span>{{typetype}}</span>
                 <van-icon name="arrow"></van-icon>
-            </div>
+            </div> -->
             <!-- <div v-if="type == 'USDT'" class="types flex ali_center">
                 <span>链类型：</span>
                 <div class="on" @click="changenav('ERC')">ERC20</div>
@@ -36,6 +36,8 @@
             <div class="num flex flex_between ali_center">
                 <div class="title">转让金额</div>
                 <input v-model="num" type="text" placeholder="输入可转让金额" />
+                <div class="tishi">可用 {{usdt_with}} USDT;可提现 {{'111'}} USDT</div>
+
             </div>
              <div class="num flex flex_between ali_center">
                 <div class="title">转让账号</div>
@@ -107,6 +109,7 @@ export default {
             ],
             typetype: "",
             accountType:"",
+            usdt_with: "",
           
 
         }
@@ -117,6 +120,7 @@ export default {
         //傳遞複製按鈕選擇器, 接受複製插件的 clipboard 實例
         // this.clipboard = copy('.copy')
         // this.getData()
+        this.getsoucang()
     },
     methods: {
         closePwd(e) {
@@ -149,6 +153,16 @@ export default {
             this.wallet = res.wallet
             this.payId = res.id
             this.baseimg = res.image
+        },
+        async getsoucang(){
+            let res = await $ajax('userInfowallet', {requstType: "wallet"})
+            if(!res) return false
+            console.log(res)
+            Object.keys(res).forEach((key)=>{
+                this[key] = res[key]
+                
+            })
+           
         },
         async afterRead(s) {
             console.log(s);
@@ -335,7 +349,7 @@ export default {
             flex-wrap: wrap;
             margin-bottom: 10px;
             .title {
-                font-size: 4.8vw;
+                font-size: 4.2vw;
                 font-weight: 600;
                 height: 12vw;
                 line-height: 12vw;
@@ -347,6 +361,11 @@ export default {
                 background: #eee;
                 padding: 10px 10px;
                 border-radius: 8px;
+            }
+            .tishi{
+                font-size: 4vw;
+                padding: 1vw;
+                color: #999;
             }
         }
         .img{

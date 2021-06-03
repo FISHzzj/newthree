@@ -20,7 +20,7 @@
                 <span class="recharge" @click="changetype(1)">转入</span>
                 <span class="cash" @click="changetype(2)">转出</span>
                 <span class="exchange" @click="changetype(3)">兑换</span>
-                <!-- <span class="huzhuan" @click="changetype(4)">互转</span> -->
+                <span class="huzhuan" @click="changetype(4)">互转</span>
             </div>
         </div>
         <div class="list">
@@ -142,7 +142,7 @@
                     <div class="type">余额：{{fil}}FIL</div>
                 </div>
             </div> -->
-            <div v-if="type != 1"  class="item flex ali_center" @click="gonext('XCH')">
+            <div v-if="type != 1 && type != 4 "  class="item flex ali_center" @click="gonext('XCH')">
                 <img src="@/assets/images/icon/6.png" alt="">
                 <div class="info">
                     <div class="num">XCH</div>

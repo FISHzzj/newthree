@@ -32,7 +32,7 @@
                 <input v-model="code" type="text" placeholder="请输入短信验证码">
                 <span @click="senVerifyCode()">{{timeAndTextOfSendcode}}</span>
             </div>
-            <div class="title1">邀请码(选填)</div>
+            <div class="title1">邀请码(必填)</div>
             <div class="spread">
                 <input type="text" v-model="spread" placeholder="请输入邀请码" />
             </div>
@@ -95,7 +95,7 @@ export default {
             console.log(this.pwd1)
             // if (!pwdRex.test(this.pwd1)) return Toast( '交易密碼(8至12位數字和字母組合)')
             if (!this.code) return Toast( '请输入短信验证码')
-            // if (!this.spread) return Toast( '请输入邀请码')
+            if (!this.spread) return Toast( '请输入邀请码')
 
              let res = await $ajax('register', {
                 mobile: this.mobile,
