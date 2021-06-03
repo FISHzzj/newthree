@@ -278,7 +278,7 @@ export default {
             word-break: break-all;
             text-align: center;
             font-weight: 600;
-            margin-top: 10vw;
+            margin-top: 5vw;
         }
         .btns {
             width: 100%;

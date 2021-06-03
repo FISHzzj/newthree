@@ -35,7 +35,7 @@
             <div class="num flex flex_between ali_center">
                 <div class="title">数量</div>
                 <input v-model="num" type="text" placeholder="输入提币数量" />
-                <div class="tishi">可用 {{usdt}} USDT  可提现 {{usdt_with}} USDT</div>
+                <div class="tishi" ><span v-if="type == 'USDT'"> 可用 {{usdt}} {{type}}  </span>  可提现 {{usdt_with}} {{type}}</div>
             </div>
              <div class="num flex flex_between ali_center">
                 <div class="title">提币地址</div>
@@ -55,7 +55,7 @@
             <div>4.提币审核会在24小时内完成，具体到账时间会受网络影响，可能有所延迟；</div>
             <div>5.如长时间未到账，请及时联系客服</div>
         </div>
-        <div class="submit" :class="{on: num}" @click="submit">确认提币</div>
+        <div class="submit" :class="{on: num}" @click.once="submit">确认提币</div>
         <van-action-sheet
             v-model="show"
             :actions="actions"

@@ -53,9 +53,9 @@
         <div class="tip">
             <div class="title">温馨提示：</div>
             <div class="grey">1.受汇率影响货币价格是是波动，请以最终兑换成功数量为准;</div>
-            <div class="grey">1.请确认兑换货币币种，一经兑换成功不可撤回;</div>
-            <div class="grey">1.ETH最低起兑换数量：0.1ETH;</div>
-            <div class="grey">1.、兑换由第三方大宗商家承兑;</div>
+            <div class="grey">2.请确认兑换货币币种，一经兑换成功不可撤回;</div>
+            <!-- <div class="grey">3.ETH最低起兑换数量：0.1ETH;</div> -->
+            <div class="grey">3.兑换由第三方大宗商家承兑;</div>
         </div>
         <div class="submit" @click="openPwd">确定兑换</div>
         <!-- <div @click="showService = true" class="flex service ali_center">

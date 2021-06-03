@@ -36,7 +36,7 @@
             <div class="num flex flex_between ali_center">
                 <div class="title">转让金额</div>
                 <input v-model="num" type="text" placeholder="输入可转让金额" />
-                <div class="tishi">可用 {{usdt}} USDT  可提现 {{usdt_with}} USDT</div>
+                <div class="tishi">可用 {{usdt}} USDT 可提现 {{usdt_with}} USDT</div>
 
             </div>
              <div class="num flex flex_between ali_center">
@@ -364,7 +364,7 @@ export default {
                 border-radius: 8px;
             }
             .tishi{
-                font-size: 4vw;
+                font-size: 3.5vw;
                 padding: 1vw;
                 color: #999;
             }
