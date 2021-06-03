@@ -321,7 +321,7 @@ export default {
                 border-radius: 8px;
             }
             .tishi{
-                font-size: 4vw;
+                font-size: 3.5vw;
                 padding: 1vw;
                 color: #999;
             }

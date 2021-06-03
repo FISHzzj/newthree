@@ -26,7 +26,7 @@
                             <div class="type">{{item.rechargeText || item.remark}}</div>
                         </div>
                         <div class="right">
-                                <div class="num">{{item.money}}</div>
+                                <div class="num">{{item.money}} USDT</div>
 
                             <!-- <div class="flex item1 flex_between ali_center">
                                 <span>用户</span>
