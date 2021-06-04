@@ -108,7 +108,7 @@ export default {
             // 如果爲 非 app 進入, 則跳轉下載頁面, 並終止函數
             if ( sessionStorage.getItem('noApp') ) {
                 // alert(222)
-                window.location.href = 'https://downloadpkg.app3c.cn/app/download?path=https://A6177180949236.qiniucdn.apicloud-system.com/a409431e2b84645a732a4e8be7b306e1_d'
+                window.location.href = 'https://downloadpkg.app3c.cn/app/download?path=https://A6177180949236.qiniucdn.apicloud-system.com/95e1dbb53fbf5c43efb942027cb4b4aa_d'
                 return false
             }
             // 進行登錄 提示
