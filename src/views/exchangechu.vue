@@ -35,7 +35,8 @@
             <div class="num flex flex_between ali_center">
                 <div class="title">数量</div>
                 <input v-model="num" type="text" placeholder="输入提币数量" />
-                <div class="tishi" ><span v-if="type == 'USDT'"> 可用 {{usdt}} {{type}}  </span>  可提现 {{usdt_with}} {{type}}</div>
+                <div class="tishi"  v-if="type == 'USDT'"><span> 可用 {{usdt}} {{type}}  </span>  可提现 {{usdt_with}} {{type}}</div>
+                <div class="tishi"  v-if="type == 'XCH'">可提现 {{xch}} {{type}}</div>
             </div>
              <div class="num flex flex_between ali_center">
                 <div class="title">提币地址</div>
@@ -98,6 +99,7 @@ export default {
             payId: "",
             usdt_with: "",
             usdt: "",
+            xch: "",
 
         }
     },
