@@ -28,12 +28,12 @@
                 </a>
             </div>
             <div class="zhiya flex ali_center flex_between" v-if="productInfo.catetype == 'FIL'" >
-                <div class="flex ali_center flex_between"><span>TOU价格</span><span>{{productInfo.free}}USDT</span></div>
+                <div class="flex ali_center flex_between"><span>TOU数量</span><span>{{productInfo.free}}USDT</span></div>
                 <!-- <div class="flex ali_center flex_between"><span>GAS手续费</span><span>{{productInfo.productprice*num}}FIL</span></div> -->
             </div>
             <div class="sub_btn flex ali_center flex_between">
                 <div class="left">
-                    <div>TOU价格<span>{{productInfo.fees * num}}</span>TOU</div> 
+                    <div>TOU数量<span>{{productInfo.fees * num}}</span>TOU</div> 
                     <div>USDT总价<span>{{all_money}}</span>USDT</div> 
                     
                 </div>

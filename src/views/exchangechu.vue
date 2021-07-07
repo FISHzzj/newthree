@@ -56,7 +56,7 @@
             <div>4.提币审核会在24小时内完成，具体到账时间会受网络影响，可能有所延迟；</div>
             <div>5.如长时间未到账，请及时联系客服</div>
         </div>
-        <div class="submit" :class="{on: num}" @click.once="submit">确认提币</div>
+        <div class="submit" :class="{on: num}" @click="submit">确认提币</div>
         <van-action-sheet
             v-model="show"
             :actions="actions"
@@ -67,19 +67,27 @@
             :showService="showService"
             @close="closeservice"
         ></service>
+        <pay-pwd
+            :show="showPwd"
+            @close="closePwd"
+            @noticehandle="noticePwd"
+        ></pay-pwd>
     </div>
 </template>
 <script>
 import service from "./common/service"
 import {copy} from '../func/copy'
+import payPwd from "./common/paypwd";
 
 export default {
     name: "exchangechu",
     components: {
-        service
+        service,
+        payPwd
     },
     data() {
         return {
+            showPwd: false,
             showService: false,
             img: require('@/assets/images/icon/jyjl.png'),
             show: false,
@@ -168,7 +176,7 @@ export default {
         closeservice(e) {
             this.showService = false;
         },
-        async submit() {
+        async noticePwd(e) {
             if(!this.num) return Toast("请输入数量!")
             if(!this.wallet) return Toast("输入转账地址!")
             let type = this.type.toLowerCase()
@@ -198,7 +206,18 @@ export default {
             console.log(res)
             Toast(res.msg)
             this.$router.go(-1)
-        }
+            
+
+        },
+        closePwd(e) {
+            this.showPwd = false;
+        },
+        async submit() {
+            if(!this.num) return Toast("请输入数量!")
+            if(!this.wallet) return Toast("输入转账地址!")
+            this.showPwd = true;
+        },
+        
     }
 };
 </script>
